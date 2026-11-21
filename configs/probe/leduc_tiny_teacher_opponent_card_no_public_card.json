@@ -1,0 +1,19 @@
+{
+  "run_version": "0.2.5",
+  "train_config": "configs/train/leduc_tiny_teacher_history_ordered_10k.json",
+  "checkpoint_path": "outputs/leduc_tiny_teacher_history_ordered_10k/model.pt",
+  "artifact_dir": "outputs/probes/leduc_tiny_teacher_opponent_card_no_public_card",
+  "target": "opponent_card",
+  "input_control": "mask_public_card",
+  "layers": [
+    "embedding_pool",
+    "body_hidden"
+  ],
+  "probe_seed": 97,
+  "control_seed": 101,
+  "epochs": 20,
+  "learning_rate": 0.05,
+  "batch_size": 512,
+  "device": "auto",
+  "random_label_control": true
+}

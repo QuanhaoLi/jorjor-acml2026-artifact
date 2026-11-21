@@ -1,0 +1,69 @@
+{
+  "artifact_type": "paper_figure_pack",
+  "checksum": "20c35ce98de878dba702268de0e2e8d5ae993cd57bcc0098c324daaf6c140556",
+  "figures": [
+    {
+      "figure_id": "Figure 2",
+      "figure_key": "figure_2",
+      "json_path": "outputs/paper/v1.16/figure_2_evidence_to_claim_trajectory.json",
+      "json_sha256": "1b568e77373eddb18d3b39ba3e0d53786c09a490c7598af48efa9448efe71b28",
+      "svg_path": "outputs/paper/v1.16/figure_2_evidence_to_claim_trajectory.svg",
+      "svg_sha256": "109f3366ad799fad11bd1d9c264da84c2f547ee313c2f26c9c40369d2ede8240",
+      "title": "Stronger gates change the supported claim"
+    },
+    {
+      "figure_id": "Figure 3",
+      "figure_key": "figure_3",
+      "json_path": "outputs/paper/v1.16/figure_3_composition_gate_per_seed.json",
+      "json_sha256": "6923c49ed6ef768805442c603596831ff9710c7f75fc1fb2dacd7f471fee3b69",
+      "svg_path": "outputs/paper/v1.16/figure_3_composition_gate_per_seed.svg",
+      "svg_sha256": "f9e552c4fca440c1e189fb8fbce04c61e8abbf86c1641bde88460a272f7cdf25",
+      "title": "Composition gate per seed"
+    },
+    {
+      "figure_id": "Figure 4",
+      "figure_key": "figure_4",
+      "json_path": "outputs/paper/v1.16/figure_4_matched_composition_decisive.json",
+      "json_sha256": "12a55c251b1801435ee9316e8b4e944eca21e1fafb457bb1115ae038d6cccce7",
+      "svg_path": "outputs/paper/v1.16/figure_4_matched_composition_decisive.svg",
+      "svg_sha256": "34b76886654e9697d0d6a01c656e48d3c6a21babd4f0b4edfea0d91159a7672d",
+      "title": "Residual hidden states do not beat composition priors inside matched buckets"
+    },
+    {
+      "figure_id": "Figure 5",
+      "figure_key": "figure_5",
+      "json_path": "outputs/paper/v1.16/figure_5_oracle_validation_ordered_vs_shortcut.json",
+      "json_sha256": "ec482653f410131d68e2c0e4e7a10d1d2e79a2b3666053f9c4f4eb3b8ecf486b",
+      "svg_path": "outputs/paper/v1.16/figure_5_oracle_validation_ordered_vs_shortcut.svg",
+      "svg_sha256": "9a05d4bddddddc4905af258d3e7e8ea9b3b1804433c5d0086e36d5a3760d419f",
+      "title": "Oracle validation ordered vs shortcut"
+    }
+  ],
+  "sources": {
+    "belief_shortcut_report": {
+      "path": "outputs/inspect/belief_shortcut_report.json",
+      "sha256": "997802eebc4c36457454a79b353563db0b90415548e8d298f03f8728d54e18f8"
+    },
+    "final_tables": {
+      "path": "outputs/paper/v1.13/paper_tables/final_diagnostic_tables.json",
+      "sha256": "dc82e1ff25c6b1c9c1c7132a1043d21b9c6937a57c0f1677333f73c80dcad9c3"
+    },
+    "learned_synthetic_report": {
+      "path": "outputs/experiments/v1.10/smoke/learned_synthetic_belief_report.json",
+      "sha256": "79fa751f92764dad6599d2ca33a1fa7bc4ee98b009437e1e7ffbfe2fc5dac7d2"
+    },
+    "matched_composition_report": {
+      "path": "outputs/inspect/matched_composition_report.json",
+      "sha256": "5119135bf1e832dd1fc6a467e727073ea870a5c21e4320dceee809f0c8eecd06"
+    },
+    "synthetic_oracle_report": {
+      "path": "outputs/experiments/v1.7/smoke/synthetic_oracle_belief_report.json",
+      "sha256": "15d425258dc399b4c0de55c6336fee04f98746525e9e5932c93b37cba175ca3d"
+    },
+    "toy_oracle_report": {
+      "path": "outputs/experiments/v1.15/smoke/toy_imperfect_info_oracle_report.json",
+      "sha256": "827a267e23c2c94acec7223a4e07917c9d319b61488a9a020932b038ea4cabaa"
+    }
+  },
+  "version": "v1.16"
+}

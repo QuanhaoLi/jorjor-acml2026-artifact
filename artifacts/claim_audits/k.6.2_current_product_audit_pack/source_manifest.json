@@ -1,0 +1,365 @@
+{
+  "schema_version": "1.0",
+  "sources": [
+    {
+      "path": "outputs/inspect_v119_smoke/belief_shortcut_report.json",
+      "present": true,
+      "required": true,
+      "role": "belief_shortcut_report.json",
+      "sha256": "997802eebc4c36457454a79b353563db0b90415548e8d298f03f8728d54e18f8",
+      "size_bytes": 2757
+    },
+    {
+      "path": "outputs/inspect_v119_smoke/belief_shortcut_report.md",
+      "present": true,
+      "required": true,
+      "role": "belief_shortcut_report.md",
+      "sha256": "661859a2fbd15173eb035cd5030f295afb55f9949ddcff0c76019cb3741feec9",
+      "size_bytes": 1561
+    },
+    {
+      "path": "outputs/inspect_v119_smoke/matched_composition_report.json",
+      "present": true,
+      "required": true,
+      "role": "matched_composition_report.json",
+      "sha256": "5119135bf1e832dd1fc6a467e727073ea870a5c21e4320dceee809f0c8eecd06",
+      "size_bytes": 2794
+    },
+    {
+      "path": "outputs/inspect_v119_smoke/matched_composition_report.md",
+      "present": true,
+      "required": true,
+      "role": "matched_composition_report.md",
+      "sha256": "3489517c25db15d9217a4790d8fbc5cd3e0e836158890ac66ff200bc079b8ed1",
+      "size_bytes": 726
+    },
+    {
+      "path": "outputs/inspect_v119_smoke/claim_gate_matrix.json",
+      "present": true,
+      "required": true,
+      "role": "claim_gate_matrix.json",
+      "sha256": "6be5df8ad2d29b0540c1a69c951cec159823dec1ecacf58936acaddb76cc21ff",
+      "size_bytes": 2298
+    },
+    {
+      "path": "outputs/inspect_v119_smoke/claim_gate_matrix.md",
+      "present": true,
+      "required": true,
+      "role": "claim_gate_matrix.md",
+      "sha256": "d4d2fddf64e217224fbc507eeb6da049f5655d9dd8832c8fc3a9e0f92ac7d92c",
+      "size_bytes": 1279
+    },
+    {
+      "path": "outputs/experiments/v1.5/seed_k_smoke/order_counterfactual_report.json",
+      "present": true,
+      "required": false,
+      "role": "order_counterfactual_report.json",
+      "sha256": "13f33819ff97d3424806cb64a5ef9448a6e9e9cae14d0714eba8ae427e776e88",
+      "size_bytes": 2275
+    },
+    {
+      "path": "outputs/experiments/v1.5/seed_k_smoke/order_counterfactual_report.md",
+      "present": true,
+      "required": false,
+      "role": "order_counterfactual_report.md",
+      "sha256": "c96552788dfd6994a6014656daed02fdb142ecc1e2d3a86cea3245221445e433",
+      "size_bytes": 862
+    },
+    {
+      "path": "outputs/experiments/v1.8/seed_k_smoke/prefix_trajectory_report.json",
+      "present": true,
+      "required": false,
+      "role": "prefix_trajectory_report.json",
+      "sha256": "061c94e3ed835d54c9e27939c5988b55fccae3b9dc0970bf237c316dbcbf8dd0",
+      "size_bytes": 1562
+    },
+    {
+      "path": "outputs/experiments/v1.8/seed_k_smoke/prefix_trajectory_report.md",
+      "present": true,
+      "required": false,
+      "role": "prefix_trajectory_report.md",
+      "sha256": "66922ef015d8ab9734e94d0d9a76d600af92afbf268b929c182ad3d7f809c140",
+      "size_bytes": 445
+    },
+    {
+      "path": "outputs/experiments/v1.8/seed_l_smoke/prefix_trajectory_report.json",
+      "present": true,
+      "required": false,
+      "role": "prefix_trajectory_report.json",
+      "sha256": "4325c662587dfe44f488cff1da26e8a8449ee24bf2628511f96b25331c3588f0",
+      "size_bytes": 1557
+    },
+    {
+      "path": "outputs/experiments/v1.8/seed_l_smoke/prefix_trajectory_report.md",
+      "present": true,
+      "required": false,
+      "role": "prefix_trajectory_report.md",
+      "sha256": "524954d3339cf7a319d424580055feab39b61db213f4aeb8ba3faee8919e70f0",
+      "size_bytes": 445
+    },
+    {
+      "path": "outputs/experiments/v1.8/seed_m_smoke/prefix_trajectory_report.json",
+      "present": true,
+      "required": false,
+      "role": "prefix_trajectory_report.json",
+      "sha256": "01ae7a26ff7f1ec13662f38546e28b828480e1701391cf0f61fb7c87c67d8ecf",
+      "size_bytes": 1557
+    },
+    {
+      "path": "outputs/experiments/v1.8/seed_m_smoke/prefix_trajectory_report.md",
+      "present": true,
+      "required": false,
+      "role": "prefix_trajectory_report.md",
+      "sha256": "f6ec7f99c4d06078ed00c74809fcdddab6da0750c6490fc448cecc9fc2861e06",
+      "size_bytes": 445
+    },
+    {
+      "path": "outputs/experiments/v1.9/seed_k_smoke/prefix_composition_baseline_report.json",
+      "present": true,
+      "required": false,
+      "role": "prefix_composition_baseline_report.json",
+      "sha256": "81be5e01e216ec22d680f9d4d1b4125e7f2bb90bc2b186dae11cdf0f3c3d502b",
+      "size_bytes": 735
+    },
+    {
+      "path": "outputs/experiments/v1.9/seed_k_smoke/prefix_composition_baseline_report.md",
+      "present": true,
+      "required": false,
+      "role": "prefix_composition_baseline_report.md",
+      "sha256": "81af61d366b309601bbc92ae7ba45667048dd7bb16338a513f3fbf6e2f4a01cc",
+      "size_bytes": 333
+    },
+    {
+      "path": "outputs/experiments/v1.9/seed_l_smoke/prefix_composition_baseline_report.json",
+      "present": true,
+      "required": false,
+      "role": "prefix_composition_baseline_report.json",
+      "sha256": "fa9a23a8d27d03032d3e4f4548e923109e2d479b9c9750fd4f2cbd3290522630",
+      "size_bytes": 735
+    },
+    {
+      "path": "outputs/experiments/v1.9/seed_l_smoke/prefix_composition_baseline_report.md",
+      "present": true,
+      "required": false,
+      "role": "prefix_composition_baseline_report.md",
+      "sha256": "96de27ab8eac460fa4f73855c5a2b960b64102d02cf1dbe79796750be4a43353",
+      "size_bytes": 333
+    },
+    {
+      "path": "outputs/experiments/v1.9/seed_m_smoke/prefix_composition_baseline_report.json",
+      "present": true,
+      "required": false,
+      "role": "prefix_composition_baseline_report.json",
+      "sha256": "e4fc3f3b6423cc2b487279985e59a4afac7f961ac40cc89fc2cb9d278729958d",
+      "size_bytes": 735
+    },
+    {
+      "path": "outputs/experiments/v1.9/seed_m_smoke/prefix_composition_baseline_report.md",
+      "present": true,
+      "required": false,
+      "role": "prefix_composition_baseline_report.md",
+      "sha256": "858f262d90fdaa0c6ff23413f5b4357cdfd8679770fcefc0f5685a4094a5717f",
+      "size_bytes": 333
+    },
+    {
+      "path": "outputs/experiments/v1.7/smoke/synthetic_oracle_belief_report.json",
+      "present": true,
+      "required": false,
+      "role": "synthetic_oracle_belief_report.json",
+      "sha256": "15d425258dc399b4c0de55c6336fee04f98746525e9e5932c93b37cba175ca3d",
+      "size_bytes": 1642
+    },
+    {
+      "path": "outputs/experiments/v1.7/smoke/synthetic_oracle_belief_report.md",
+      "present": true,
+      "required": false,
+      "role": "synthetic_oracle_belief_report.md",
+      "sha256": "9590096a309b4d225ae6dc1201053f64145219f9056538376ba154e793d19605",
+      "size_bytes": 438
+    },
+    {
+      "path": "outputs/experiments/v1.15/smoke/toy_imperfect_info_oracle_report.json",
+      "present": true,
+      "required": false,
+      "role": "toy_imperfect_info_oracle_report.json",
+      "sha256": "827a267e23c2c94acec7223a4e07917c9d319b61488a9a020932b038ea4cabaa",
+      "size_bytes": 1748
+    },
+    {
+      "path": "outputs/experiments/v1.15/smoke/toy_imperfect_info_oracle_report.md",
+      "present": true,
+      "required": false,
+      "role": "toy_imperfect_info_oracle_report.md",
+      "sha256": "95267dfe16a2a33bcce1e4c2f46eb6f46ad4206ad696b6246c6b41a0008d660c",
+      "size_bytes": 399
+    },
+    {
+      "path": "outputs/experiments/v1.10/smoke/learned_synthetic_belief_report.json",
+      "present": true,
+      "required": false,
+      "role": "learned_synthetic_belief_report.json",
+      "sha256": "79fa751f92764dad6599d2ca33a1fa7bc4ee98b009437e1e7ffbfe2fc5dac7d2",
+      "size_bytes": 2304
+    },
+    {
+      "path": "outputs/experiments/v1.10/smoke/learned_synthetic_belief_report.md",
+      "present": true,
+      "required": false,
+      "role": "learned_synthetic_belief_report.md",
+      "sha256": "8073818c1532f5f16061a95699422a337e978403d795363b0216f7550a77098d",
+      "size_bytes": 474
+    },
+    {
+      "path": "outputs/experiments/v1.20/smoke/explicit_belief_state_report.json",
+      "present": true,
+      "required": false,
+      "role": "explicit_belief_state_report.json",
+      "sha256": "0aac837bdec22d41c48be6123107473a7a8aa50af70dbc70b26cc76b0c82f529",
+      "size_bytes": 2385
+    },
+    {
+      "path": "outputs/experiments/v1.20/smoke/explicit_belief_state_report.md",
+      "present": true,
+      "required": false,
+      "role": "explicit_belief_state_report.md",
+      "sha256": "3a746b6d06618bda82b35e56c9dd2d00ff6a92033a6816adbe2d51a5b218ebc3",
+      "size_bytes": 590
+    },
+    {
+      "path": "outputs/k/paper/k.1_full_ci_fixed/k.1_latent_type_protocol_transfer_report.json",
+      "present": true,
+      "required": false,
+      "role": "k.1_latent_type_protocol_transfer_report.json",
+      "sha256": "9fe511bf28af9be546d7ec3d54494330232594e8b6301b70a645b6a607ec2259",
+      "size_bytes": 10957
+    },
+    {
+      "path": "outputs/k/paper/k.1_full_ci_fixed/k.1_latent_type_protocol_transfer_report.md",
+      "present": true,
+      "required": false,
+      "role": "k.1_latent_type_protocol_transfer_report.md",
+      "sha256": "545216ebed50f66c432efd59b0935671624932835a90ce10811fb6b612b61dc7",
+      "size_bytes": 1536
+    },
+    {
+      "path": "outputs/k/paper/k.1_full_ci_fixed/k.1_protocol_transfer_manifest.json",
+      "present": true,
+      "required": false,
+      "role": "k.1_protocol_transfer_manifest.json",
+      "sha256": "07503fe689da0adfb02bdbb37076554dc1ee88f659498abaf294d1aec715ac2a",
+      "size_bytes": 1751
+    },
+    {
+      "path": "outputs/k/k.2.6.3_llm_full_sweep_remote_qwen05_paper_table/k.2.6_llm_full_sweep_report.json",
+      "present": true,
+      "required": false,
+      "role": "k.2.6_llm_full_sweep_report.json",
+      "sha256": "720aad122ea3a7e052ea34befa7c7a204462f7029d7664e1bdf667a099d5a3b0",
+      "size_bytes": 30711
+    },
+    {
+      "path": "outputs/k/k.2.6.3_llm_full_sweep_remote_qwen05_paper_table/k.2.6_llm_full_sweep_report.md",
+      "present": true,
+      "required": false,
+      "role": "k.2.6_llm_full_sweep_report.md",
+      "sha256": "7bbcc3704289405a411d5570759fd7f30fcd1d9dc0ce10817e20821683c917ca",
+      "size_bytes": 4395
+    },
+    {
+      "path": "outputs/k/k.2.6.3_llm_full_sweep_remote_qwen05_paper_table/k.2.6_llm_full_sweep_manifest.json",
+      "present": true,
+      "required": false,
+      "role": "k.2.6_llm_full_sweep_manifest.json",
+      "sha256": "5c53b54d5e9b9ca0f263b23285c346a5df27273ea2314a5a531945c5498a230a",
+      "size_bytes": 1577
+    },
+    {
+      "path": "outputs/k/k.5.6_cbps_claim_ladder/k.5.3_cbps_claim_ladder.json",
+      "present": true,
+      "required": false,
+      "role": "cbps_claim_ladder",
+      "sha256": "3405b3eb3b475c6cbf1008dee93e19780cc665b38f8ab1f2571d200743306b48",
+      "size_bytes": 5349
+    },
+    {
+      "path": "outputs/k/k.5.6_cbps_claim_ladder/k.5.3_cbps_claim_ladder.md",
+      "present": true,
+      "required": false,
+      "role": "cbps_claim_ladder_md",
+      "sha256": "5e7d40240093e68f6f8b2bba1f26d9891b8b4505af9ef6b2fbe7ca17f4141403",
+      "size_bytes": 1146
+    },
+    {
+      "path": "outputs/k/k.5.6_cbps_claim_ladder/k.5.3_cbps_manifest.json",
+      "present": true,
+      "required": false,
+      "role": "cbps_claim_ladder_manifest",
+      "sha256": "75db8941a572460ea9a7abb8bd30bd16f21be2a451703ca8a18e54ba29131beb",
+      "size_bytes": 2335
+    },
+    {
+      "path": "outputs/k/k.5.6_cbps_claim_ladder/paper_table_cbps_claim_ladder.md",
+      "present": true,
+      "required": false,
+      "role": "cbps_claim_ladder_paper_table",
+      "sha256": "b8d7e8038cb5d28de365bfbd2c01dedeb88944ff12e68e9135634681c301ad25",
+      "size_bytes": 724
+    },
+    {
+      "path": "outputs/k/k.6.0_order_intervention/k.6.0_order_intervention_report.json",
+      "present": true,
+      "required": false,
+      "role": "order_intervention_report",
+      "sha256": "ab51ba4558a8159050c7fba9cd3420df15f5f8f0d2c771aa5c96c307634b5bdc",
+      "size_bytes": 7958
+    },
+    {
+      "path": "outputs/k/k.6.0_order_intervention/k.6.0_order_intervention_report.md",
+      "present": true,
+      "required": false,
+      "role": "order_intervention_report_md",
+      "sha256": "28290c78aaae545661aef89d863808e193807e5adb90ba587dea27e866f89688",
+      "size_bytes": 1433
+    },
+    {
+      "path": "outputs/k/k.6.0_order_intervention/k.6.0_order_intervention_manifest.json",
+      "present": true,
+      "required": false,
+      "role": "order_intervention_manifest",
+      "sha256": "36bb2436ee071ed7a3ee065de0273d95f86bf84fe6f92118aa8d575b8a3f033e",
+      "size_bytes": 914
+    },
+    {
+      "path": "outputs/paper/v1.13/reproduction_manifest.json",
+      "present": true,
+      "required": false,
+      "role": "one_command_reproduction_manifest",
+      "sha256": "6499b1438a64e47c14ed39ee64ac0d73887203fe1da77402bb14cca25e3c85c5",
+      "size_bytes": 3636
+    },
+    {
+      "path": "outputs/paper/v1.13/reproduction_manifest.md",
+      "present": true,
+      "required": false,
+      "role": "one_command_reproduction_manifest_md",
+      "sha256": "ffe989f7d8b20c843f3c842772ca1adf232c8372b96f9f66ff2107c8a3d8d7c2",
+      "size_bytes": 1373
+    },
+    {
+      "path": "outputs/k/k.2.3_strict_tables/limit_ar_range_supervised_positive_control_pack.json",
+      "present": true,
+      "required": false,
+      "role": "range_supervised_strict_gate",
+      "sha256": "bafcae1853cb08e1ed9f0ba5b355efd0b84672639cc81782f55495778a9b2cc8",
+      "size_bytes": 16188
+    },
+    {
+      "path": "outputs/k/k.2.3_strict_tables/probe_capacity_s6_s7_report.json",
+      "present": true,
+      "required": false,
+      "role": "probe_capacity_s6_s7",
+      "sha256": "3ae076d89259a64ec43c4d4d719c2195269c08df6e8d578b98c85afdca835c08",
+      "size_bytes": 16535
+    }
+  ]
+}

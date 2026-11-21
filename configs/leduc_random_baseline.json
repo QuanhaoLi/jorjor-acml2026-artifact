@@ -1,0 +1,9 @@
+{
+  "seed": 11,
+  "hand_count": 25,
+  "artifact_dir": "outputs/leduc_random_baseline",
+  "split_seed": 19,
+  "train_fraction": 0.8,
+  "validation_fraction": 0.1,
+  "test_fraction": 0.1
+}

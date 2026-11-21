@@ -1,0 +1,6 @@
+{
+  "run_version": "0.2.0",
+  "seed": 43,
+  "hand_count": 10000,
+  "artifact_dir": "outputs/leduc_teacher_10k"
+}

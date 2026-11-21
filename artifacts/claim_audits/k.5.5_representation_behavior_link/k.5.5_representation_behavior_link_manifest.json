@@ -1,0 +1,29 @@
+{
+  "archive_root": "checkpoints/remote_archive/v100s/2dfcb42",
+  "batch_size": 512,
+  "bootstrap_count": 1000,
+  "bootstrap_seed": 20260610,
+  "claim_scope": "poker_representation_to_behavior_link_not_causal_not_ordered_belief",
+  "expected_outputs": [
+    "k.5.5_representation_behavior_link_report.json",
+    "k.5.5_representation_behavior_link_report.md",
+    "k.5.5_representation_behavior_link_manifest.json"
+  ],
+  "final_diagnostic_label": "composition_bounded_behavior_link",
+  "learning_rate": 0.01,
+  "max_test_points": null,
+  "max_train_points": 30000,
+  "one_command_reproduction": ".venv/bin/python scripts/build_representation_behavior_link_report.py --archive-root checkpoints/remote_archive/v100s/2dfcb42 --output-dir outputs/k/k.5.5_representation_behavior_link --bootstrap-count 1000 --bootstrap-seed 20260610 --batch-size 512 --probe-epochs 20 --probe-batch-size 512 --learning-rate 0.01 --max-train-points 30000 --seed-names seed_k seed_l seed_m",
+  "output_dir": "outputs/k/k.5.5_representation_behavior_link",
+  "probe_batch_size": 512,
+  "probe_epochs": 20,
+  "report_checksum": "6af9cbfe3bc1b1c6c80c993bb8dd651910b4233af57dc3a16366215b8d56b0cf",
+  "report_type": "k.5.5_representation_behavior_link_manifest",
+  "seed_names": [
+    "seed_k",
+    "seed_l",
+    "seed_m"
+  ],
+  "target_leakage_guard": "composition baselines exclude current action label and terminal value target",
+  "version": "k.5.5"
+}

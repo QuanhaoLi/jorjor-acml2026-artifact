@@ -1,0 +1,10 @@
+{
+  "checksum_manifest": "MANIFEST_CHECKSUMS.sha256",
+  "excluded_files": [],
+  "file_count": 756,
+  "missing_readmes": [],
+  "missing_required": [],
+  "required_file_count": 15,
+  "root": ".",
+  "text_hygiene_issues": []
+}

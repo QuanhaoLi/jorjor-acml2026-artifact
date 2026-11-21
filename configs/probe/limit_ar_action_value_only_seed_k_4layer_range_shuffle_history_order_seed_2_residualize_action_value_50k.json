@@ -1,0 +1,21 @@
+{
+  "_header": {},
+  "artifact_dir": "outputs/probes/limit_ar_action_value_only_seed_k_4layer_range_shuffle_history_order_seed_2_residualize_action_value_50k",
+  "batch_size": 512,
+  "checkpoint_path": "outputs/limit_ar_action_value_only_seed_k_50k_4layer/model.pt",
+  "control_seed": 2221,
+  "device": "auto",
+  "epochs": 20,
+  "feature_control": "residualize_action_value",
+  "input_control": "shuffle_history_order_seed_2",
+  "label_control": "none",
+  "layers": [
+    "encoder_layer_2"
+  ],
+  "learning_rate": 0.02,
+  "probe_seed": 1221,
+  "random_label_control": true,
+  "run_version": "1.0.15",
+  "target": "opponent_hand",
+  "train_config": "configs/train/limit_ar_action_value_only_seed_k_50k_4layer.json"
+}

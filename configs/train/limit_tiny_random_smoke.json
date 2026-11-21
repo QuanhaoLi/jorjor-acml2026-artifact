@@ -1,0 +1,18 @@
+{
+  "artifact_dir": "outputs/limit_tiny_random_smoke",
+  "batch_size": 32,
+  "data_seed": 31,
+  "data_source": "random",
+  "device": "cpu",
+  "epochs": 3,
+  "hand_count": 60,
+  "hidden_size": 32,
+  "learning_rate": 0.01,
+  "run_version": "0.4.1",
+  "save_model": false,
+  "seed": 53,
+  "split_seed": 59,
+  "test_fraction": 0.2,
+  "train_fraction": 0.6,
+  "validation_fraction": 0.2
+}

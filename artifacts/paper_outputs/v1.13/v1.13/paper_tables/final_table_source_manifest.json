@@ -1,0 +1,21 @@
+{
+  "schema_version": "1.0",
+  "sources": [
+    {
+      "path": "outputs/paper/v1.13/packs/limit_ar_no_range_bootstrap_pack.json",
+      "present": true,
+      "required": true,
+      "role": "no_range_bootstrap_pack",
+      "sha256": "2ff5b3aecf4c3b8155140bd81c4a6e8389142d8193fc347a1c8a0ab443c6a65b",
+      "size_bytes": 9754
+    },
+    {
+      "path": "outputs/paper/v1.13/packs/limit_ar_no_range_composition_nuisance_pack.json",
+      "present": true,
+      "required": false,
+      "role": "composition_nuisance_pack",
+      "sha256": "0b67fb6d1f8d4d64842f3c613c1914fd7f859360b1b4d5d2887befba053c021a",
+      "size_bytes": 26080
+    }
+  ]
+}

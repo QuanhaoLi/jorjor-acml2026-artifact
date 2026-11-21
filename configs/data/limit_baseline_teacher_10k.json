@@ -1,0 +1,7 @@
+{
+  "artifact_dir": "outputs/limit_baseline_teacher_10k",
+  "data_source": "teacher",
+  "hand_count": 10000,
+  "run_version": "0.4.8",
+  "seed": 67
+}

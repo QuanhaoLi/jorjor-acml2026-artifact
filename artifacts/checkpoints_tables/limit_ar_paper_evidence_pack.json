@@ -1,0 +1,492 @@
+{
+  "claim": "Across three 10k independently trained 4-layer Limit Hold'em autoregressive models and one 50k same-architecture robustness run, hidden states linearly expose opponent-hand range information from betting history, and this range signal remains after linearly controlling for action and value labels.",
+  "core_4layer": {
+    "full_residual_delta_mean": 0.01505043605963389,
+    "full_residual_delta_min": 0.009792044758796692,
+    "history_residual_delta_mean": 0.012519662578900656,
+    "history_residual_delta_min": 0.009489193558692932,
+    "rows": [
+      {
+        "checksums": {
+          "full_action_value_only": "18b5ec3af775390c4fef2d9b880f818600294f664aa04cce5780984bca193d34",
+          "full_hidden": "4e5c6ff77c0abe598f85a430b4b9e9c3f1f2d0df8dfb37acf556d520823a8107",
+          "full_residualize_action_value": "d15b913535ec1945eb8cd4742e2e993be3dcc4f5f37f2a57c5811981689aa402",
+          "history_only_action_value_only": "c8b9e78435769b94351669f7cf5d1064235cfa782e3e9c41b3d6708363c3b75f",
+          "history_only_hidden": "cf60eeb3b0c9f2f8894d5345241b442f006e33142295ba7e20b46ee18f276431",
+          "history_only_residualize_action_value": "5a6bcae130867b1702106a9103a3869f688fda561be1c70a0624548c6edab399"
+        },
+        "full_action_value_only_top10": 0.13394799828529358,
+        "full_hidden_top10": 0.14451465010643005,
+        "full_residual_delta_vs_only": 0.01833626627922058,
+        "full_residualize_action_value_top10": 0.15228426456451416,
+        "history_only_action_value_only_top10": 0.13052937388420105,
+        "history_only_hidden_top10": 0.14596498012542725,
+        "history_only_residual_delta_vs_only": 0.013985276222229004,
+        "history_only_residualize_action_value_top10": 0.14451465010643005,
+        "seed": "seed_a"
+      },
+      {
+        "checksums": {
+          "full_action_value_only": "a0696c93ade55f8ee59325577addb70d2a2a616697400e405d42c5007e0f9a50",
+          "full_hidden": "8ec28cf49e5fd9470b42649c843605129e0d2172291fbaf0e5e2e545ed1d9cd9",
+          "full_residualize_action_value": "ea2735554bf2f978858358ab0ee0721b03c724248fe1b9b23237582aada5071e",
+          "history_only_action_value_only": "547e47e70d1da39515ffdde207350ecaf893562581fed1414a5784ee9c90e723",
+          "history_only_hidden": "7e530fda95a4eaf8c75cb30e6bb12e43c3d86310571cb1f56b5d34fdb8c6a61c",
+          "history_only_residualize_action_value": "58b5041edb68e7c17c4330bd6512550e209e26f4547bfa74b0a666339776de5a"
+        },
+        "full_action_value_only_top10": 0.12888844311237335,
+        "full_hidden_top10": 0.13851453363895416,
+        "full_residual_delta_vs_only": 0.0170229971408844,
+        "full_residualize_action_value_top10": 0.14591144025325775,
+        "history_only_action_value_only_top10": 0.1324348896741867,
+        "history_only_hidden_top10": 0.1381092220544815,
+        "history_only_residual_delta_vs_only": 0.01408451795578003,
+        "history_only_residualize_action_value_top10": 0.14651940762996674,
+        "seed": "seed_b"
+      },
+      {
+        "checksums": {
+          "full_action_value_only": "a39c0fc42c20be3e94fe6e0e6bc4b7ac71f83ced46b0ac2076519a2b54f87502",
+          "full_hidden": "60442dcaba56df325c499b6167f7394637207a3110e0a22597fd26db4cbb4c17",
+          "full_residualize_action_value": "cb6fa4d31c54151d2dd54c5f596b398fb96d9c6952eb6a66f0f39e9befff40aa",
+          "history_only_action_value_only": "78f99b4631da1a66da1f32ed7a416aca6b5ca925761a60fcf352c0e1727cb4f8",
+          "history_only_hidden": "da26f7f21af60f239c0eee6f66f88cd507e2ba4c2585b113c3421bcc5705e75a",
+          "history_only_residualize_action_value": "ad5f284255861f3ce53a002c1b969a778a5d97dc7ce983f5040b80a760359bfc"
+        },
+        "full_action_value_only_top10": 0.13012315332889557,
+        "full_hidden_top10": 0.1322430819272995,
+        "full_residual_delta_vs_only": 0.009792044758796692,
+        "full_residualize_action_value_top10": 0.13991519808769226,
+        "history_only_action_value_only_top10": 0.12971936166286469,
+        "history_only_hidden_top10": 0.14284272491931915,
+        "history_only_residual_delta_vs_only": 0.009489193558692932,
+        "history_only_residualize_action_value_top10": 0.13920855522155762,
+        "seed": "seed_c"
+      }
+    ],
+    "seed_count": 3,
+    "source": "v0.8.4"
+  },
+  "depth_boundary": "Depth robustness is not established: the stabilized 8-layer history-only residual range signal does not beat the action+value-only nuisance baseline under the tested recipe.",
+  "depth_default": {
+    "full_passes": false,
+    "full_residual_delta_vs_action_value_only": -0.006209313869476318,
+    "history_passes": false,
+    "history_residual_delta_vs_action_value_only": -0.0017025470733642578,
+    "label": "10k 8-layer default seed-e",
+    "model_sha256": "9c7d85b874bef59a7106ceee178637a7baf0c0249e5254b081dbabccf8e81c00",
+    "policy_accuracy": 0.5986980199813843,
+    "range_top10": 0.12658987939357758,
+    "rows": [
+      {
+        "best_control_score": 0.09253880381584167,
+        "best_layer": "encoder_layer_0",
+        "best_real_score": 0.12969453632831573,
+        "checkpoint_loaded": true,
+        "checksum": "92db91fbf497eb6c38d818d285ca75ddd94091625bfde61955cc136d6ad9c7d8",
+        "feature_control": "none",
+        "input_control": "none",
+        "probe": "limit_ar_teacher_seed_e_8layer_range_10k",
+        "target": "opponent_hand"
+      },
+      {
+        "best_control_score": 0.1011517271399498,
+        "best_layer": "nuisance",
+        "best_real_score": 0.13890835642814636,
+        "checkpoint_loaded": false,
+        "checksum": "4bb2bd94a833ffaaab3669370f80ee9fedb303a3644bfd669bc7a87364c223a6",
+        "feature_control": "action_value_only",
+        "input_control": "none",
+        "probe": "limit_ar_teacher_seed_e_8layer_range_action_value_only_10k",
+        "target": "opponent_hand"
+      },
+      {
+        "best_control_score": 0.08863294869661331,
+        "best_layer": "encoder_layer_0",
+        "best_real_score": 0.12779168784618378,
+        "checkpoint_loaded": true,
+        "checksum": "b14f2efbeb643a682d410a6a8aabe5cbea0441c3d17cbcf3b590ee2b261f626a",
+        "feature_control": "none",
+        "input_control": "history_only",
+        "probe": "limit_ar_teacher_seed_e_8layer_range_history_only_10k",
+        "target": "opponent_hand"
+      },
+      {
+        "best_control_score": 0.1011517271399498,
+        "best_layer": "nuisance",
+        "best_real_score": 0.13890835642814636,
+        "checkpoint_loaded": false,
+        "checksum": "40b53ee03c635e45d60099bdda1901add630ac3561f1e067335f7c8f80079d65",
+        "feature_control": "action_value_only",
+        "input_control": "history_only",
+        "probe": "limit_ar_teacher_seed_e_8layer_range_history_only_action_value_only_10k",
+        "target": "opponent_hand"
+      },
+      {
+        "best_control_score": 0.09574361145496368,
+        "best_layer": "encoder_layer_0",
+        "best_real_score": 0.1372058093547821,
+        "checkpoint_loaded": true,
+        "checksum": "0b324d22659237868f622b0155fd334d6159a5145feac3fb4bc0b665619f67d1",
+        "feature_control": "residualize_action_value",
+        "input_control": "history_only",
+        "probe": "limit_ar_teacher_seed_e_8layer_range_history_only_residualize_action_value_10k",
+        "target": "opponent_hand"
+      },
+      {
+        "best_control_score": 0.0993490219116211,
+        "best_layer": "encoder_layer_0",
+        "best_real_score": 0.13269904255867004,
+        "checkpoint_loaded": true,
+        "checksum": "792ac696b505e78a4df77978a32860288ec7973d7829c109ad7996ddaa46e2d2",
+        "feature_control": "residualize_action_value",
+        "input_control": "none",
+        "probe": "limit_ar_teacher_seed_e_8layer_range_residualize_action_value_10k",
+        "target": "opponent_hand"
+      }
+    ],
+    "source": "v0.9.1"
+  },
+  "depth_stabilized": {
+    "full_passes": true,
+    "full_residual_delta_vs_action_value_only": 0.0024036169052124023,
+    "history_passes": false,
+    "history_residual_delta_vs_action_value_only": -0.0072108060121536255,
+    "label": "10k 8-layer stabilized seed-e",
+    "model_sha256": "9185a100a707e2a7cdf97f62708338c1f642fbb63d454897da26f4b3c3875c36",
+    "policy_accuracy": 0.8400600552558899,
+    "range_top10": 0.14361542463302612,
+    "rows": [
+      {
+        "best_control_score": 0.09263895452022552,
+        "best_layer": "encoder_layer_3",
+        "best_real_score": 0.1362043023109436,
+        "checkpoint_loaded": true,
+        "checksum": "52d7f31941cc17b05d34ec7f16cf0c784d312c534766d7930d9676776ec77185",
+        "feature_control": "none",
+        "input_control": "none",
+        "probe": "limit_ar_teacher_seed_e_8layer_stable_range_10k",
+        "target": "opponent_hand"
+      },
+      {
+        "best_control_score": 0.09844767302274704,
+        "best_layer": "nuisance",
+        "best_real_score": 0.14461691677570343,
+        "checkpoint_loaded": false,
+        "checksum": "2cbc7ca941b86c87750edae511a48cf2e0e1d898eb0daf85189919f1d0843c40",
+        "feature_control": "action_value_only",
+        "input_control": "none",
+        "probe": "limit_ar_teacher_seed_e_8layer_stable_range_action_value_only_10k",
+        "target": "opponent_hand"
+      },
+      {
+        "best_control_score": 0.08693039417266846,
+        "best_layer": "encoder_layer_1",
+        "best_real_score": 0.139809712767601,
+        "checkpoint_loaded": true,
+        "checksum": "91b49d1f905c1ff39600cee37411d84cb89aa7e1adb09f9fbc2642bbb44f85f4",
+        "feature_control": "none",
+        "input_control": "history_only",
+        "probe": "limit_ar_teacher_seed_e_8layer_stable_range_history_only_10k",
+        "target": "opponent_hand"
+      },
+      {
+        "best_control_score": 0.09844767302274704,
+        "best_layer": "nuisance",
+        "best_real_score": 0.14461691677570343,
+        "checkpoint_loaded": false,
+        "checksum": "928e7efd24899701027e13b9b113ba6983e9a239c4ec643f85e9005fbde3ff71",
+        "feature_control": "action_value_only",
+        "input_control": "history_only",
+        "probe": "limit_ar_teacher_seed_e_8layer_stable_range_history_only_action_value_only_10k",
+        "target": "opponent_hand"
+      },
+      {
+        "best_control_score": 0.09644466638565063,
+        "best_layer": "encoder_layer_2",
+        "best_real_score": 0.1374061107635498,
+        "checkpoint_loaded": true,
+        "checksum": "01159cdb53e99ae29def052f259c439580b22106274253f2e6ba4d183b40e506",
+        "feature_control": "residualize_action_value",
+        "input_control": "history_only",
+        "probe": "limit_ar_teacher_seed_e_8layer_stable_range_history_only_residualize_action_value_10k",
+        "target": "opponent_hand"
+      },
+      {
+        "best_control_score": 0.09063595533370972,
+        "best_layer": "encoder_layer_7",
+        "best_real_score": 0.14702053368091583,
+        "checkpoint_loaded": true,
+        "checksum": "212908574cd50af4796b6baf71527a67601c89912898d6e400e4106ef03c2509",
+        "feature_control": "residualize_action_value",
+        "input_control": "none",
+        "probe": "limit_ar_teacher_seed_e_8layer_stable_range_residualize_action_value_10k",
+        "target": "opponent_hand"
+      }
+    ],
+    "source": "v0.9.2"
+  },
+  "recommendation": "Use 4-layer multi-seed plus 50k same-architecture robustness as the main claim block.",
+  "scale_robustness": {
+    "all_full_pass": true,
+    "all_history_pass": true,
+    "full_residual_delta_mean": 0.010596136252085367,
+    "full_residual_delta_min": 0.009689360857009888,
+    "history_residual_delta_mean": 0.0119630495707194,
+    "history_residual_delta_min": 0.008665934205055237,
+    "label": "50k 4-layer seed-d/f/g",
+    "rows": [
+      {
+        "full_passes": true,
+        "full_residual_delta_vs_action_value_only": 0.012334614992141724,
+        "history_passes": true,
+        "history_residual_delta_vs_action_value_only": 0.017757758498191833,
+        "label": "50k 4-layer seed-d",
+        "model_sha256": "a7783b5a955d25a6d5cd166c66755be5ae7b68c209ef20d4043087e22cfb646e",
+        "policy_accuracy": 0.8229933381080627,
+        "range_top10": 0.15839262306690216,
+        "rows": [
+          {
+            "best_control_score": 0.09111297130584717,
+            "best_layer": "encoder_layer_2",
+            "best_real_score": 0.13841260969638824,
+            "checkpoint_loaded": true,
+            "checksum": "e49b0b01c64415bcfa687e659507ab22d29e1dbe13629d914c219f3df0dee46e",
+            "feature_control": "none",
+            "input_control": "none",
+            "probe": "limit_ar_teacher_seed_d_4layer_range_50k",
+            "target": "opponent_hand"
+          },
+          {
+            "best_control_score": 0.09849334508180618,
+            "best_layer": "nuisance",
+            "best_real_score": 0.13380496203899384,
+            "checkpoint_loaded": false,
+            "checksum": "3ece4a4544452d428abda424ca80b2b344dafd7dc454d372e17fc0c046cd3660",
+            "feature_control": "action_value_only",
+            "input_control": "none",
+            "probe": "limit_ar_teacher_seed_d_4layer_range_action_value_only_50k",
+            "target": "opponent_hand"
+          },
+          {
+            "best_control_score": 0.09413035959005356,
+            "best_layer": "encoder_layer_3",
+            "best_real_score": 0.14096108078956604,
+            "checkpoint_loaded": true,
+            "checksum": "02a537d44812f1ede68559a1f9cbb40f1b3012fffa55b2497c95ba7254bdc5ca",
+            "feature_control": "none",
+            "input_control": "history_only",
+            "probe": "limit_ar_teacher_seed_d_4layer_range_history_only_50k",
+            "target": "opponent_hand"
+          },
+          {
+            "best_control_score": 0.09849334508180618,
+            "best_layer": "nuisance",
+            "best_real_score": 0.13380496203899384,
+            "checkpoint_loaded": false,
+            "checksum": "393edd1e9fafd701f6d267d20fd74c76d53ece92f636f19bbf99af7c38b5e651",
+            "feature_control": "action_value_only",
+            "input_control": "history_only",
+            "probe": "limit_ar_teacher_seed_d_4layer_range_history_only_action_value_only_50k",
+            "target": "opponent_hand"
+          },
+          {
+            "best_control_score": 0.09553711861371994,
+            "best_layer": "encoder_layer_3",
+            "best_real_score": 0.15156272053718567,
+            "checkpoint_loaded": true,
+            "checksum": "2a800ae4c6800e447a1ac8b4e1281e61b1dc0085f5ca9886d32e752c82559516",
+            "feature_control": "residualize_action_value",
+            "input_control": "history_only",
+            "probe": "limit_ar_teacher_seed_d_4layer_range_history_only_residualize_action_value_50k",
+            "target": "opponent_hand"
+          },
+          {
+            "best_control_score": 0.1033252477645874,
+            "best_layer": "encoder_layer_0",
+            "best_real_score": 0.14613957703113556,
+            "checkpoint_loaded": true,
+            "checksum": "d7de2312e9003e578855bed22cd529a3a8938d4de5edcbe494ecaae40fb20edf",
+            "feature_control": "residualize_action_value",
+            "input_control": "none",
+            "probe": "limit_ar_teacher_seed_d_4layer_range_residualize_action_value_50k",
+            "target": "opponent_hand"
+          }
+        ],
+        "source": "v0.9.0"
+      },
+      {
+        "full_passes": true,
+        "full_residual_delta_vs_action_value_only": 0.009764432907104492,
+        "history_passes": true,
+        "history_residual_delta_vs_action_value_only": 0.008665934205055237,
+        "label": "50k 4-layer seed-f",
+        "model_sha256": "e4a34f8229d812584de5a5f09253a2e9223d798735a8416fbf8fc9ee23dc4bf4",
+        "policy_accuracy": 0.8381748199462891,
+        "range_top10": 0.15147076547145844,
+        "rows": [
+          {
+            "best_control_score": 0.0912567600607872,
+            "best_layer": "encoder_layer_3",
+            "best_real_score": 0.1465885490179062,
+            "checkpoint_loaded": true,
+            "checksum": "3403b4cbf3ca89a4dd7d3dcdb168ec3224b53722189b569cc302f07cc034451d",
+            "feature_control": "none",
+            "input_control": "none",
+            "probe": "limit_ar_teacher_seed_f_4layer_range_50k",
+            "seed": "seed_f",
+            "target": "opponent_hand"
+          },
+          {
+            "best_control_score": 0.09660685807466507,
+            "best_layer": "nuisance",
+            "best_real_score": 0.1367224007844925,
+            "checkpoint_loaded": false,
+            "checksum": "82eee4bc3e82333d0247bb9ae3c79dfba01841a2249477e93af9b94a323b686b",
+            "feature_control": "action_value_only",
+            "input_control": "none",
+            "probe": "limit_ar_teacher_seed_f_4layer_range_action_value_only_50k",
+            "seed": "seed_f",
+            "target": "opponent_hand"
+          },
+          {
+            "best_control_score": 0.09601692110300064,
+            "best_layer": "encoder_layer_2",
+            "best_real_score": 0.14327271282672882,
+            "checkpoint_loaded": true,
+            "checksum": "091a016526b82080dca9a90b39a5644b538038f92ac6cb906d8af896b2f11993",
+            "feature_control": "none",
+            "input_control": "history_only",
+            "probe": "limit_ar_teacher_seed_f_4layer_range_history_only_50k",
+            "seed": "seed_f",
+            "target": "opponent_hand"
+          },
+          {
+            "best_control_score": 0.09660685807466507,
+            "best_layer": "nuisance",
+            "best_real_score": 0.1367224007844925,
+            "checkpoint_loaded": false,
+            "checksum": "c141e1478b91587471b4df0514293bd02b7525d19875c8613f762f78054675c4",
+            "feature_control": "action_value_only",
+            "input_control": "history_only",
+            "probe": "limit_ar_teacher_seed_f_4layer_range_history_only_action_value_only_50k",
+            "seed": "seed_f",
+            "target": "opponent_hand"
+          },
+          {
+            "best_control_score": 0.09837666153907776,
+            "best_layer": "encoder_layer_3",
+            "best_real_score": 0.14538833498954773,
+            "checkpoint_loaded": true,
+            "checksum": "c9fd5f270e4a8ce70d2f070cd6aa35714e3a0d610e589004178839d6aa821a69",
+            "feature_control": "residualize_action_value",
+            "input_control": "history_only",
+            "probe": "limit_ar_teacher_seed_f_4layer_range_history_only_residualize_action_value_50k",
+            "seed": "seed_f",
+            "target": "opponent_hand"
+          },
+          {
+            "best_control_score": 0.09546767175197601,
+            "best_layer": "encoder_layer_3",
+            "best_real_score": 0.14648683369159698,
+            "checkpoint_loaded": true,
+            "checksum": "d456638f3f695250870a9e15e60e3492acb96a1547321086250842f8cfb84122",
+            "feature_control": "residualize_action_value",
+            "input_control": "none",
+            "probe": "limit_ar_teacher_seed_f_4layer_range_residualize_action_value_50k",
+            "seed": "seed_f",
+            "target": "opponent_hand"
+          }
+        ],
+        "source": "v0.9.4"
+      },
+      {
+        "full_passes": true,
+        "full_residual_delta_vs_action_value_only": 0.009689360857009888,
+        "history_passes": true,
+        "history_residual_delta_vs_action_value_only": 0.009465456008911133,
+        "label": "50k 4-layer seed-g",
+        "model_sha256": "4577265c42a0baa96f5976b3b8b6c3650d93d4645248daa36b705f9c157bb343",
+        "policy_accuracy": 0.840634286403656,
+        "range_top10": 0.15099947154521942,
+        "rows": [
+          {
+            "best_control_score": 0.0961405336856842,
+            "best_layer": "encoder_layer_3",
+            "best_real_score": 0.13618043065071106,
+            "checkpoint_loaded": true,
+            "checksum": "b5bd0c0b2bcd56d887114242622ec0d027c02595bd6e782483d3987c38ec1a49",
+            "feature_control": "none",
+            "input_control": "none",
+            "probe": "limit_ar_teacher_seed_g_4layer_range_50k",
+            "seed": "seed_g",
+            "target": "opponent_hand"
+          },
+          {
+            "best_control_score": 0.09263933449983597,
+            "best_layer": "nuisance",
+            "best_real_score": 0.1342059224843979,
+            "checkpoint_loaded": false,
+            "checksum": "1a32670065d2eddd96ca75458402f1d2dc0e3148589ea48664004966e7458b8b",
+            "feature_control": "action_value_only",
+            "input_control": "none",
+            "probe": "limit_ar_teacher_seed_g_4layer_range_action_value_only_50k",
+            "seed": "seed_g",
+            "target": "opponent_hand"
+          },
+          {
+            "best_control_score": 0.09379961341619492,
+            "best_layer": "encoder_layer_3",
+            "best_real_score": 0.14462809264659882,
+            "checkpoint_loaded": true,
+            "checksum": "89f3bb1ff5b7907a9d3e501374546181641eeb95cb88c9162d6044320443c073",
+            "feature_control": "none",
+            "input_control": "history_only",
+            "probe": "limit_ar_teacher_seed_g_4layer_range_history_only_50k",
+            "seed": "seed_g",
+            "target": "opponent_hand"
+          },
+          {
+            "best_control_score": 0.09263933449983597,
+            "best_layer": "nuisance",
+            "best_real_score": 0.1342059224843979,
+            "checkpoint_loaded": false,
+            "checksum": "28f79f9984cf77338ffdb799e669667fbce0e963c30382d77097b9df9fd92fd5",
+            "feature_control": "action_value_only",
+            "input_control": "history_only",
+            "probe": "limit_ar_teacher_seed_g_4layer_range_history_only_action_value_only_50k",
+            "seed": "seed_g",
+            "target": "opponent_hand"
+          },
+          {
+            "best_control_score": 0.09265968948602676,
+            "best_layer": "encoder_layer_2",
+            "best_real_score": 0.14367137849330902,
+            "checkpoint_loaded": true,
+            "checksum": "6860c6b2b3df2041d64b7972beb3f8084dead4815d51868196b33d6440749db5",
+            "feature_control": "residualize_action_value",
+            "input_control": "history_only",
+            "probe": "limit_ar_teacher_seed_g_4layer_range_history_only_residualize_action_value_50k",
+            "seed": "seed_g",
+            "target": "opponent_hand"
+          },
+          {
+            "best_control_score": 0.0975247323513031,
+            "best_layer": "encoder_layer_3",
+            "best_real_score": 0.14389528334140778,
+            "checkpoint_loaded": true,
+            "checksum": "85a0a136e1d685c2018c2e5075f0f0e22922ca96ca8225b3f32adb0bd3fed78e",
+            "feature_control": "residualize_action_value",
+            "input_control": "none",
+            "probe": "limit_ar_teacher_seed_g_4layer_range_residualize_action_value_50k",
+            "seed": "seed_g",
+            "target": "opponent_hand"
+          }
+        ],
+        "source": "v0.9.4"
+      }
+    ],
+    "seed_count": 3,
+    "source": "v0.9.0+v0.9.4"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "claim_scope": "range_probe_subspace_behavior_footprint_stress_not_causal_mediation",
+  "expected_outputs": [
+    "k.6.3_range_subspace_ablation_report.json",
+    "k.6.3_range_subspace_ablation_report.md",
+    "k.6.3_range_subspace_ablation_manifest.json"
+  ],
+  "final_diagnostic_label": "range_subspace_behavior_footprint_not_supported",
+  "one_command_reproduction": ".venv/bin/python scripts/build_range_subspace_ablation_report.py --archive-root checkpoints/remote_archive/v100s/2dfcb42 --output-dir outputs/k/k.6.3_range_subspace_ablation --bootstrap-count 1000 --bootstrap-seed 20260610 --batch-size 512 --locked-layer sequence_hidden --probe-epochs 20 --probe-learning-rate 0.01 --random-subspace-count 8 --max-subspace-rank 16 --probe-top10-floor 0.08 --max-train-points 30000 --seed-names seed_k seed_l seed_m",
+  "output_dir": "outputs/k/k.6.3_range_subspace_ablation",
+  "report_checksum": "35cb7ca973e31f6e318a1211aeea4473957cd3a46bfd23856e80903dbec8045c",
+  "report_type": "k.6.3_range_subspace_ablation_manifest",
+  "version": "k.6.3"
+}

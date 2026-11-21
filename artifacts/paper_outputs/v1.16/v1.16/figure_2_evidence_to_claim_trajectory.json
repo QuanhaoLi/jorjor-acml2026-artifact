@@ -1,0 +1,67 @@
+{
+  "checksum": "705932ad18e828b571e926dcaee16939f1b9446f2e1eccbe0194403888968251",
+  "claim_level_legend": {
+    "1": "composition shortcut supported",
+    "2": "order evidence weak or inconclusive",
+    "3": "standard nuisance-controlled signal",
+    "4": "belief-like probe signal"
+  },
+  "figure_id": "Figure 2",
+  "gates": [
+    {
+      "diagnosis": "positive_intermediate_layer_signal",
+      "gate": "naive probe",
+      "source_metric": null,
+      "source_value": null,
+      "supported_claim_level": 4.0
+    },
+    {
+      "diagnosis": "passes",
+      "gate": "label control",
+      "source_metric": "label_control_delta_min",
+      "source_value": 0.04433797299861908,
+      "supported_claim_level": 4.0
+    },
+    {
+      "diagnosis": "passes",
+      "gate": "no-observation",
+      "source_metric": "presence_last_action_min_lower_delta",
+      "source_value": 0.0021144841269841353,
+      "supported_claim_level": 3.0
+    },
+    {
+      "diagnosis": "passes",
+      "gate": "history destruction",
+      "source_metric": "history_delta_ci_min_lower_delta",
+      "source_value": 0.0013276587301587284,
+      "supported_claim_level": 3.0
+    },
+    {
+      "diagnosis": "nuisance-controlled positive",
+      "gate": "action/value control",
+      "source_detail": {
+        "min_ci_lower": -0.0026856746031745948,
+        "seed_count": 3
+      },
+      "source_metric": "locked_action_value_residual_mean_delta",
+      "source_value": 0.00715878306878309,
+      "supported_claim_level": 3.0
+    },
+    {
+      "diagnosis": "composition_shortcut_supported",
+      "gate": "composition control",
+      "source_metric": "composition_residual_vs_action_value_composition_min_lower_delta",
+      "source_value": -0.0722447619047619,
+      "supported_claim_level": 1.0
+    },
+    {
+      "diagnosis": "composition_shortcut_supported",
+      "gate": "matched-composition",
+      "source_metric": "matched_bucket_min_ci_lower",
+      "source_value": -0.09394764581772785,
+      "supported_claim_level": 1.0
+    }
+  ],
+  "title": "Stronger gates change the supported claim",
+  "y_axis": "supported_claim_level"
+}

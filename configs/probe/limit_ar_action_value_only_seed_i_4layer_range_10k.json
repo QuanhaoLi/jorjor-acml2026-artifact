@@ -1,0 +1,26 @@
+{
+  "_header": {},
+  "artifact_dir": "outputs/probes/limit_ar_action_value_only_seed_i_4layer_range_10k",
+  "batch_size": 512,
+  "checkpoint_path": "outputs/limit_ar_action_value_only_seed_i_10k_4layer/model.pt",
+  "control_seed": 241,
+  "device": "auto",
+  "epochs": 20,
+  "feature_control": "none",
+  "input_control": "none",
+  "label_control": "none",
+  "layers": [
+    "embedding_final",
+    "encoder_layer_0",
+    "encoder_layer_1",
+    "encoder_layer_2",
+    "encoder_layer_3",
+    "sequence_hidden"
+  ],
+  "learning_rate": 0.02,
+  "probe_seed": 229,
+  "random_label_control": true,
+  "run_version": "1.0.2",
+  "target": "opponent_hand",
+  "train_config": "configs/train/limit_ar_action_value_only_seed_i_10k_4layer.json"
+}

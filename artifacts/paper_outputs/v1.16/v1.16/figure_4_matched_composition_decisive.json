@@ -1,0 +1,41 @@
+{
+  "checksum": "41c6c02c31b9884878bd5816d24e2e258a4adecce026a33df605223b00edd98b",
+  "figure_id": "Figure 4",
+  "metric": "bucket_bootstrap_delta_residual_minus_action_value_composition",
+  "rows": [
+    {
+      "action_value_composition_top10": 0.1663904607922393,
+      "ci_lower": -0.08036072822308594,
+      "ci_upper": -0.047149918195477515,
+      "delta": -0.0633523994293026,
+      "matched_bucket_count": 146,
+      "matched_point_count": 49480,
+      "point_delta": -0.04397736459175425,
+      "residual_top10": 0.12241309620048504,
+      "seed": "seed_k"
+    },
+    {
+      "action_value_composition_top10": 0.16545535750537985,
+      "ci_lower": -0.08100699142553684,
+      "ci_upper": -0.04544155627213806,
+      "delta": -0.06262285835110164,
+      "matched_bucket_count": 146,
+      "matched_point_count": 49258,
+      "point_delta": -0.04378984124406189,
+      "residual_top10": 0.12166551626131795,
+      "seed": "seed_l"
+    },
+    {
+      "action_value_composition_top10": 0.1665106244402833,
+      "ci_lower": -0.09394764581772785,
+      "ci_upper": -0.056333747465739666,
+      "delta": -0.07516773118577545,
+      "matched_bucket_count": 146,
+      "matched_point_count": 49132,
+      "point_delta": -0.05236912806317674,
+      "residual_top10": 0.11414149637710656,
+      "seed": "seed_m"
+    }
+  ],
+  "title": "Residual hidden states do not beat composition priors inside matched buckets"
+}

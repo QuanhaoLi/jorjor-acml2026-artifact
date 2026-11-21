@@ -1,0 +1,108 @@
+{
+  "provenance": {
+    "five_run_source": "supplement/camera_ready_rebuttal/source_reports/2026-08-31-k.8.0.md",
+    "five_run_result_checksum": "00236dc927bb4ae24e13c2e3cdca72a5e3d5f1a080e45455a38c184fd80acf8c",
+    "exact_posterior_source": "supplement/camera_ready_rebuttal/source_reports/2026-09-01-k.9.0.md",
+    "exact_posterior_repaired_result_checksum": "6cafa8302023c5760103c340c2f1db97c488c01853269b2b8f7723b6e031e3f5",
+    "note": "Verified run-level summaries only; no matched-pair observations are reconstructed. The legacy storage key G7 is retained for schema compatibility, but its displayed and claim-facing name is target-stratified S7."
+  },
+  "five_run_gates": {
+    "G5": {
+      "label": "G5: A/V-residual signal",
+      "runs": {
+        "k": [0.006797, 0.002038, 0.011616],
+        "l": [0.021302, 0.016309, 0.026271],
+        "m": [0.007224, 0.002576, 0.011817],
+        "n": [0.002022, -0.002804, 0.006857],
+        "o": [0.002676, -0.001733, 0.007194]
+      },
+      "across_run": [0.008004, -0.001675, 0.017683],
+      "summary": "3/5 positive; 2/5 inconclusive"
+    },
+    "G6": {
+      "label": "G6: conditional composition",
+      "runs": {
+        "k": [-0.060852, -0.065939, -0.055866],
+        "l": [-0.060344, -0.065468, -0.055308],
+        "m": [-0.061091, -0.066319, -0.055899],
+        "n": [-0.059831, -0.065054, -0.054626],
+        "o": [-0.060507, -0.066092, -0.054969]
+      },
+      "across_run": [-0.060525, -0.061127, -0.059923],
+      "summary": "5/5 negative"
+    },
+    "G7": {
+      "label": "S7: target-stratified match",
+      "runs": {
+        "k": [-0.076150, -0.093389, -0.059490],
+        "l": [-0.068584, -0.089531, -0.047799],
+        "m": [-0.072498, -0.090298, -0.055643],
+        "n": [-0.081641, -0.102087, -0.062800],
+        "o": [-0.073431, -0.091809, -0.056048]
+      },
+      "across_run": [-0.074461, -0.080476, -0.068446],
+      "summary": "5/5 negative"
+    }
+  },
+  "exact_posterior": {
+    "pointwise_kl_improvement": {
+      "label": "Pointwise KL/CE improvement",
+      "summary": "positive in 5/5 runs",
+      "runs": {
+        "k": [0.006294, 0.005928, 0.006664],
+        "l": [0.009537, 0.009077, 0.010003],
+        "m": [0.008034, 0.007591, 0.008469],
+        "n": [0.008464, 0.008036, 0.008893],
+        "o": [0.009826, 0.009384, 0.010257]
+      },
+      "across_run": [0.008431, 0.006687, 0.010175]
+    },
+    "pointwise_js_improvement": {
+      "runs": {
+        "k": [0.001757, 0.001670, 0.001844],
+        "l": [0.002766, 0.002654, 0.002884],
+        "m": [0.002263, 0.002154, 0.002367],
+        "n": [0.002303, 0.002199, 0.002406],
+        "o": [0.002783, 0.002674, 0.002891]
+      },
+      "across_run": [0.002374, 0.001848, 0.002901]
+    },
+    "pointwise_brier_improvement": {
+      "runs": {
+        "k": [0.0000419, 0.0000378, 0.0000461],
+        "l": [0.0000344, 0.0000299, 0.0000391],
+        "m": [0.0000366, 0.0000320, 0.0000411],
+        "n": [0.0000385, 0.0000341, 0.0000428],
+        "o": [0.0000489, 0.0000448, 0.0000530]
+      },
+      "across_run": [0.0000401, 0.0000330, 0.0000471]
+    },
+    "matched_pair_slope": {
+      "runs": {
+        "k": 0.00500,
+        "l": 0.00863,
+        "m": 0.00556,
+        "n": 0.00606,
+        "o": 0.00529
+      },
+      "across_run": [0.006107, 0.004291, 0.007923],
+      "faithful_reference": 1.0
+    },
+    "matched_pair_pearson_across_run": [0.128961, 0.089732, 0.168191],
+    "matched_pair_pearson_runs": {
+      "k": 0.0962,
+      "l": 0.1814,
+      "m": 0.1213,
+      "n": 0.1275,
+      "o": 0.1184
+    },
+    "pair_js_mae_improvement_runs": {
+      "k": [0.000379, -0.000121, 0.000880],
+      "l": [0.000416, -0.000202, 0.000999],
+      "m": [-0.000174, -0.000682, 0.000272],
+      "n": [0.000138, -0.000328, 0.000578],
+      "o": [0.000001, -0.000502, 0.000447]
+    },
+    "pair_js_mae_improvement_across_run": [0.000152, -0.000159, 0.000463]
+  }
+}

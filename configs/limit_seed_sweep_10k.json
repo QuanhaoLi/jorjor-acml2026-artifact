@@ -1,0 +1,22 @@
+{
+  "artifact_dir": "outputs/limit_seed_sweep_10k",
+  "run_missing_priors": true,
+  "run_version": "0.4.13",
+  "seeds": [
+    {
+      "name": "seed_a",
+      "ar_config": "configs/train/limit_ar_teacher_seed_a_10k.json",
+      "prior_config": "configs/data/limit_prior_teacher_seed_a_10k.json"
+    },
+    {
+      "name": "seed_b",
+      "ar_config": "configs/train/limit_ar_teacher_seed_b_10k.json",
+      "prior_config": "configs/data/limit_prior_teacher_seed_b_10k.json"
+    },
+    {
+      "name": "seed_c",
+      "ar_config": "configs/train/limit_ar_teacher_seed_c_10k.json",
+      "prior_config": "configs/data/limit_prior_teacher_seed_c_10k.json"
+    }
+  ]
+}

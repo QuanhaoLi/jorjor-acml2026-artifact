@@ -1,0 +1,12 @@
+{
+  "artifact_dir": "outputs/limit_seed_sweep_smoke",
+  "run_missing_priors": true,
+  "run_version": "0.4.13-smoke",
+  "seeds": [
+    {
+      "name": "seed_a_smoke",
+      "ar_config": "configs/train/limit_ar_teacher_seed_a_smoke.json",
+      "prior_config": "configs/data/limit_prior_teacher_seed_a_smoke.json"
+    }
+  ]
+}

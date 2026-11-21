@@ -1,0 +1,11 @@
+{
+  "artifact_dir": "outputs/limit_prior_teacher_seed_a_10k",
+  "data_source": "teacher",
+  "hand_count": 10000,
+  "run_version": "0.4.13",
+  "seed": 67,
+  "split_seed": 83,
+  "test_fraction": 0.2,
+  "train_fraction": 0.6,
+  "validation_fraction": 0.2
+}

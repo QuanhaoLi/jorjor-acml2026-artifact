@@ -1,0 +1,6 @@
+{
+  "run_version": "0.2.0",
+  "seed": 41,
+  "hand_count": 100,
+  "artifact_dir": "outputs/leduc_teacher_smoke"
+}

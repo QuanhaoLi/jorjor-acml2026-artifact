@@ -1,0 +1,214 @@
+{
+  "aggregate": {
+    "intervention_pair_count": 17337,
+    "label_counts": {
+      "order_sensitive_stress_supported": 3
+    },
+    "metrics": {
+      "mean_hidden_cosine_distance": {
+        "mean": 0.02731120259595908,
+        "seed_ci": {
+          "lower": 0.01968243158202124,
+          "mean": 0.02731120259595908,
+          "upper": 0.03147945592479192
+        }
+      },
+      "mean_policy_js": {
+        "mean": 0.011158923405844639,
+        "seed_ci": {
+          "lower": 0.0036592205410268456,
+          "mean": 0.011158923405844639,
+          "upper": 0.018403215675001697
+        }
+      },
+      "mean_range_head_js": {
+        "mean": 0.002491257236234464,
+        "seed_ci": {
+          "lower": 0.002132768304935948,
+          "mean": 0.002491257236234464,
+          "upper": 0.002991321305192017
+        }
+      },
+      "mean_value_abs_delta": {
+        "mean": 0.22823934963434964,
+        "seed_ci": {
+          "lower": 0.19593711510739645,
+          "mean": 0.22823934963434964,
+          "upper": 0.27857726759186896
+        }
+      },
+      "policy_argmax_changed_rate": {
+        "mean": 0.014217657434383732,
+        "seed_ci": {
+          "lower": 0.0038862391803568277,
+          "mean": 0.014217657434383732,
+          "upper": 0.024381984422621062
+        }
+      },
+      "range_argmax_changed_rate": {
+        "mean": 0.21816919599547133,
+        "seed_ci": {
+          "lower": 0.18422876949740039,
+          "mean": 0.21816919599547133,
+          "upper": 0.27945592651475004
+        }
+      }
+    },
+    "seed_count": 3
+  },
+  "allowed_paper_claim": "Under input-level same-composition order permutations, the frozen poker AR can be audited for order sensitivity. This is a stress test, not a legal poker causal proof.",
+  "archive_root": "checkpoints/remote_archive/v100s/2dfcb42",
+  "batch_size": 512,
+  "bootstrap_count": 1000,
+  "bootstrap_seed": 20260610,
+  "checksum": "ed2f32b3e225637e7c0b21943e91e3012edcc25bf2d2ffa83c0ca966d7fdd7a4",
+  "claim_scope": "input_level_order_stress_not_legal_poker_causality",
+  "confidence_level": 0.95,
+  "device": "cpu",
+  "final_diagnostic_label": "order_sensitive_stress_supported",
+  "forbidden_paper_claim": "This input permutation proves or disproves ordered opponent-belief tracking.",
+  "locked_layer": "encoder_layer_2",
+  "max_pairs": 10000,
+  "max_test_points": null,
+  "min_pairs_for_label": 100,
+  "movement_epsilon": 1e-06,
+  "report_type": "k.6.0_order_intervention",
+  "rows": [
+    {
+      "checkpoint_path": "checkpoints/remote_archive/v100s/2dfcb42/outputs/limit_ar_action_value_only_seed_k_50k_4layer/model.pt",
+      "checkpoint_sha256": "f7538bd7c09929b754de06738479d87bb3eaa646cca14ad4523f8dbbefa39376",
+      "eligible_point_count": 5906,
+      "final_diagnostic_label": "order_sensitive_stress_supported",
+      "intervention_pair_count": 5906,
+      "locked_layer": "encoder_layer_2",
+      "max_pairs": 10000,
+      "max_test_points": null,
+      "seed": "seed_k",
+      "summary": {
+        "hidden_cosine_distance_ci": {
+          "lower": 0.028928029869029932,
+          "mean": 0.03147945592479192,
+          "upper": 0.03393800488072033
+        },
+        "mean_hidden_cosine_distance": 0.03147945592479192,
+        "mean_hidden_l2_distance": 1.6351674708196475,
+        "mean_policy_js": 0.018403215675001697,
+        "mean_range_head_js": 0.002349682098575427,
+        "mean_value_abs_delta": 0.19593711510739648,
+        "policy_argmax_changed_rate": 0.024381984422621062,
+        "policy_js_ci": {
+          "lower": 0.01586975851939369,
+          "mean": 0.018403215675001697,
+          "upper": 0.020988853805657348
+        },
+        "range_argmax_changed_rate": 0.19082289197426347,
+        "range_head_js_ci": {
+          "lower": 0.0021523114086775506,
+          "mean": 0.002349682098575427,
+          "upper": 0.0025659919588810927
+        },
+        "value_abs_delta_ci": {
+          "lower": 0.18580299232734127,
+          "mean": 0.19593711510739648,
+          "upper": 0.20581632067253539
+        }
+      },
+      "test_points": 49480,
+      "train_config_path": "configs/train/limit_ar_action_value_only_seed_k_50k_4layer.json",
+      "train_config_sha256": "e0fcb9cff00ff9a3d2f057d352ad8d47e2083112190c7100644828e3182b5f66"
+    },
+    {
+      "checkpoint_path": "checkpoints/remote_archive/v100s/2dfcb42/outputs/limit_ar_action_value_only_seed_l_50k_4layer/model.pt",
+      "checkpoint_sha256": "e90a135e2d007088f8547b71dec72c8db3d37a494e5a789ad4adbdf7ea9d15b7",
+      "eligible_point_count": 5661,
+      "final_diagnostic_label": "order_sensitive_stress_supported",
+      "intervention_pair_count": 5661,
+      "locked_layer": "encoder_layer_2",
+      "max_pairs": 10000,
+      "max_test_points": null,
+      "seed": "seed_l",
+      "summary": {
+        "hidden_cosine_distance_ci": {
+          "lower": 0.018140389032713245,
+          "mean": 0.01968243158202124,
+          "upper": 0.02123837427391936
+        },
+        "mean_hidden_cosine_distance": 0.01968243158202124,
+        "mean_hidden_l2_distance": 1.4062258613424041,
+        "mean_policy_js": 0.0036592205410268456,
+        "mean_range_head_js": 0.002132768304935948,
+        "mean_value_abs_delta": 0.21020366620378347,
+        "policy_argmax_changed_rate": 0.0038862391803568272,
+        "policy_js_ci": {
+          "lower": 0.002921509227495719,
+          "mean": 0.0036592205410268456,
+          "upper": 0.004438792861942076
+        },
+        "range_argmax_changed_rate": 0.27945592651475004,
+        "range_head_js_ci": {
+          "lower": 0.0018783904213087598,
+          "mean": 0.002132768304935948,
+          "upper": 0.0024089184556045145
+        },
+        "value_abs_delta_ci": {
+          "lower": 0.1942908046360762,
+          "mean": 0.21020366620378347,
+          "upper": 0.227507456028273
+        }
+      },
+      "test_points": 49258,
+      "train_config_path": "configs/train/limit_ar_action_value_only_seed_l_50k_4layer.json",
+      "train_config_sha256": "bd388e4bf883cfafc98893a56ebf4f52675ed692576ede813b3aa3230390fbc0"
+    },
+    {
+      "checkpoint_path": "checkpoints/remote_archive/v100s/2dfcb42/outputs/limit_ar_action_value_only_seed_m_50k_4layer/model.pt",
+      "checkpoint_sha256": "ff22975f8ebf4f137034992d7a3ff6f8a0cfb5c7e00870c9edb74a983cf850d1",
+      "eligible_point_count": 5770,
+      "final_diagnostic_label": "order_sensitive_stress_supported",
+      "intervention_pair_count": 5770,
+      "locked_layer": "encoder_layer_2",
+      "max_pairs": 10000,
+      "max_test_points": null,
+      "seed": "seed_m",
+      "summary": {
+        "hidden_cosine_distance_ci": {
+          "lower": 0.028140056110350368,
+          "mean": 0.03077172028106408,
+          "upper": 0.0334382143863267
+        },
+        "mean_hidden_cosine_distance": 0.03077172028106408,
+        "mean_hidden_l2_distance": 1.6621324213417275,
+        "mean_policy_js": 0.011414334001505374,
+        "mean_range_head_js": 0.002991321305192017,
+        "mean_value_abs_delta": 0.27857726759186896,
+        "policy_argmax_changed_rate": 0.014384748700173311,
+        "policy_js_ci": {
+          "lower": 0.00996377002778464,
+          "mean": 0.011414334001505374,
+          "upper": 0.012832445563475502
+        },
+        "range_argmax_changed_rate": 0.18422876949740036,
+        "range_head_js_ci": {
+          "lower": 0.002721806833012511,
+          "mean": 0.002991321305192017,
+          "upper": 0.0032855943909502884
+        },
+        "value_abs_delta_ci": {
+          "lower": 0.2648818518560496,
+          "mean": 0.27857726759186896,
+          "upper": 0.2934205434091415
+        }
+      },
+      "test_points": 49132,
+      "train_config_path": "configs/train/limit_ar_action_value_only_seed_m_50k_4layer.json",
+      "train_config_sha256": "7ebfa4da517382bd29c83d6d5ef3eff7824aae8995cd0807901155286ac94188"
+    }
+  ],
+  "seed_names": [
+    "seed_k",
+    "seed_l",
+    "seed_m"
+  ],
+  "train_config_dir": "configs/train",
+  "version": "k.6.0"
+}

@@ -1,0 +1,18 @@
+{
+  "run_version": "0.2.1",
+  "data_source": "teacher",
+  "seed": 47,
+  "data_seed": 107,
+  "split_seed": 23,
+  "hand_count": 10000,
+  "artifact_dir": "outputs/leduc_tiny_teacher_10k",
+  "train_fraction": 0.8,
+  "validation_fraction": 0.1,
+  "test_fraction": 0.1,
+  "epochs": 8,
+  "learning_rate": 0.003,
+  "hidden_size": 64,
+  "batch_size": 512,
+  "device": "auto",
+  "save_model": true
+}

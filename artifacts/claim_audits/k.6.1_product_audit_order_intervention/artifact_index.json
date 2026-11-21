@@ -1,0 +1,11 @@
+{
+  "artifacts": [
+    "diagnostic_report.json",
+    "diagnostic_report.md",
+    "source_manifest.json",
+    "tables.json",
+    "gaps.json",
+    "reproducibility.md"
+  ],
+  "schema_version": "1.0"
+}

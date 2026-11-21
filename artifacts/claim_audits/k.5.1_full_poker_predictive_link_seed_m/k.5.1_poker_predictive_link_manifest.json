@@ -1,0 +1,23 @@
+{
+  "archive_root": "checkpoints/remote_archive/v100s/2dfcb42",
+  "batch_size": 512,
+  "bootstrap_count": 1000,
+  "bootstrap_seed": 20260612,
+  "cache_dir": "outputs/k/k.5.1_row_cache",
+  "claim_scope": "poker_behavior_predictive_link_not_causal_not_belief_upgrade",
+  "expected_outputs": [
+    "k.5.1_poker_predictive_link_report.json",
+    "k.5.1_poker_predictive_link_report.md",
+    "k.5.1_poker_predictive_link_manifest.json"
+  ],
+  "final_diagnostic_label": "predictive_supported",
+  "max_test_points": null,
+  "one_command_reproduction": ".venv/bin/python scripts/build_poker_predictive_link_report.py --archive-root checkpoints/remote_archive/v100s/2dfcb42 --output-dir outputs/k/k.5.1_full_poker_predictive_link_seed_m --bootstrap-count 1000 --bootstrap-seed 20260612 --batch-size 512 --cache-dir outputs/k/k.5.1_row_cache --seed-names seed_m",
+  "output_dir": "outputs/k/k.5.1_full_poker_predictive_link_seed_m",
+  "report_checksum": "4061725628b349ec3fd25562630fdfc82dddfcefa1df76a076c8472dba2be968",
+  "report_type": "k.5.1_poker_predictive_link_manifest",
+  "seed_names": [
+    "seed_m"
+  ],
+  "version": "k.5.1"
+}

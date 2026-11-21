@@ -1,0 +1,20 @@
+{
+  "_header": {},
+  "artifact_dir": "outputs/probes/limit_ar_teacher_seed_b_4layer_range_history_only_action_value_only_10k",
+  "batch_size": 512,
+  "checkpoint_path": "outputs/limit_ar_teacher_seed_b_10k_4layer/model.pt",
+  "control_seed": 181,
+  "device": "auto",
+  "epochs": 20,
+  "feature_control": "action_value_only",
+  "input_control": "history_only",
+  "layers": [
+    "nuisance"
+  ],
+  "learning_rate": 0.02,
+  "probe_seed": 179,
+  "random_label_control": true,
+  "run_version": "0.8.3",
+  "target": "opponent_hand",
+  "train_config": "configs/train/limit_ar_teacher_seed_b_10k_4layer.json"
+}

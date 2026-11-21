@@ -1,0 +1,21 @@
+{
+  "bootstrap_count": 1000,
+  "bootstrap_seed": 20260610,
+  "case_labels": {
+    "CBPS_state": "cbps_supported",
+    "composition_state": "composition_shortcut_supported",
+    "posterior_state": "posterior_tracking_supported"
+  },
+  "claim_scope": "synthetic_cbps_label_validation_not_poker_claim_upgrade",
+  "expected_outputs": [
+    "k.5.0_synthetic_cbps_report.json",
+    "k.5.0_synthetic_cbps_report.md",
+    "k.5.0_synthetic_cbps_manifest.json"
+  ],
+  "one_command_reproduction": ".venv/bin/python scripts/build_synthetic_cbps_report.py --output-dir outputs/k/k.5.0_synthetic_cbps_control --sequence-count 4096 --length 6 --max-pairs 4096 --bootstrap-count 1000 --bootstrap-seed 20260610",
+  "output_dir": "outputs/k/k.5.0_synthetic_cbps_control",
+  "report_checksum": "1ba24a235b0a10fb81cffc732edc6a8a9130164c78234d169346007ac19308a6",
+  "report_type": "k.5.0_synthetic_cbps_manifest",
+  "synthetic_cbps_control_passed": true,
+  "version": "k.5.0"
+}

@@ -1,0 +1,6 @@
+{
+  "artifact_dir": "outputs/limit_random_smoke",
+  "hand_count": 25,
+  "run_version": "0.3.1",
+  "seed": 31
+}

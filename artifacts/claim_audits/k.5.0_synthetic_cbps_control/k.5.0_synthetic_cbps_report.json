@@ -1,0 +1,246 @@
+{
+  "allowed_paper_claim": "In a known-control latent-order environment, the claim-gated protocol separates exact posterior tracking, raw composition shortcut, and composition-bounded predictive state.",
+  "bootstrap_count": 1000,
+  "bootstrap_seed": 20260610,
+  "cases": [
+    {
+      "composition_boundedness": {
+        "bounded_by_public_history_family": false,
+        "estimand": "unweighted_composition_bucket_mean",
+        "matched_bucket_count": 25,
+        "matched_posterior_gap_slope": 1.0,
+        "matched_posterior_gap_slope_ci": {
+          "lower": 1.0,
+          "point": 1.0,
+          "upper": 1.0
+        },
+        "mean_composition_js": 0.0,
+        "mean_posterior_js": 0.4290447727493031,
+        "mean_representation_js": 0.4290447727493031,
+        "pair_count": 4096,
+        "pair_weighted_mean_composition_js": 0.0,
+        "pair_weighted_mean_posterior_js": 0.48790272174618304,
+        "pair_weighted_mean_representation_js": 0.48790272174618304,
+        "posterior_gap_bins": [
+          {
+            "bin": "low_gap",
+            "mean_posterior_js": 0.18843537556697534,
+            "mean_representation_js": 0.18843537556697534,
+            "pair_count": 1365
+          },
+          {
+            "bin": "mid_gap",
+            "mean_posterior_js": 0.45977290759925565,
+            "mean_representation_js": 0.45977290759925565,
+            "pair_count": 1365
+          },
+          {
+            "bin": "high_gap",
+            "mean_posterior_js": 0.8152600598465976,
+            "mean_representation_js": 0.8152600598465976,
+            "pair_count": 1366
+          }
+        ],
+        "posterior_gap_tracking_failed": false,
+        "posterior_representation_correlation": 1.0000000000000002,
+        "representation_js_ci": {
+          "bootstrap_lower": 0.3926590739726237,
+          "bootstrap_mean": 0.4290447727493031,
+          "bootstrap_upper": 0.4614068854678697
+        }
+      },
+      "final_diagnostic_label": "posterior_tracking_supported",
+      "latent_metrics": {
+        "label_permutation_delta": 0.44790308697454156,
+        "latent_signal_positive": true,
+        "mean_js_to_oracle_posterior": 0.0,
+        "mean_js_to_shuffled_posterior": 0.44790308697454156,
+        "shuffled_top1_latent_accuracy": 0.266357421875,
+        "top1_label_delta": 0.733642578125,
+        "top1_latent_accuracy": 1.0
+      },
+      "mode": "posterior_state",
+      "predictive_metrics": {
+        "action_accuracy": 0.34130859375,
+        "composition_action_accuracy": 0.40283203125,
+        "composition_value_mse": 0.037802281754549194,
+        "predictive_action_delta_vs_C_min": -0.0615234375,
+        "predictive_action_delta_vs_prior": -0.097900390625,
+        "predictive_value_delta_vs_C_min": -0.06479352981325409,
+        "predictive_value_delta_vs_prior": -0.08962351687871715,
+        "prior_action_accuracy": 0.439208984375,
+        "prior_value_mse": 0.012972294689086132,
+        "target": "CBPS_public_behavior_target",
+        "value_mse": 0.10259581156780329
+      },
+      "representation_source": "exact_ordered_posterior",
+      "training_target": "none_analytic_known_control"
+    },
+    {
+      "composition_boundedness": {
+        "bounded_by_public_history_family": true,
+        "estimand": "unweighted_composition_bucket_mean",
+        "matched_bucket_count": 25,
+        "matched_posterior_gap_slope": 0.0,
+        "matched_posterior_gap_slope_ci": {
+          "lower": 0.0,
+          "point": 0.0,
+          "upper": 0.0
+        },
+        "mean_composition_js": 0.0,
+        "mean_posterior_js": 0.4290447727493031,
+        "mean_representation_js": 0.0,
+        "pair_count": 4096,
+        "pair_weighted_mean_composition_js": 0.0,
+        "pair_weighted_mean_posterior_js": 0.48790272174618304,
+        "pair_weighted_mean_representation_js": 0.0,
+        "posterior_gap_bins": [
+          {
+            "bin": "low_gap",
+            "mean_posterior_js": 0.18843537556697534,
+            "mean_representation_js": 0.0,
+            "pair_count": 1365
+          },
+          {
+            "bin": "mid_gap",
+            "mean_posterior_js": 0.45977290759925565,
+            "mean_representation_js": 0.0,
+            "pair_count": 1365
+          },
+          {
+            "bin": "high_gap",
+            "mean_posterior_js": 0.8152600598465976,
+            "mean_representation_js": 0.0,
+            "pair_count": 1366
+          }
+        ],
+        "posterior_gap_tracking_failed": true,
+        "posterior_representation_correlation": null,
+        "representation_js_ci": {
+          "bootstrap_lower": 0.0,
+          "bootstrap_mean": 0.0,
+          "bootstrap_upper": 0.0
+        }
+      },
+      "final_diagnostic_label": "composition_shortcut_supported",
+      "latent_metrics": {
+        "label_permutation_delta": 0.03524438115026629,
+        "latent_signal_positive": true,
+        "mean_js_to_oracle_posterior": 0.40237869029778034,
+        "mean_js_to_shuffled_posterior": 0.43762307144804663,
+        "shuffled_top1_latent_accuracy": 0.2451171875,
+        "top1_label_delta": -0.02197265625,
+        "top1_latent_accuracy": 0.22314453125
+      },
+      "mode": "composition_state",
+      "predictive_metrics": {
+        "action_accuracy": 0.40283203125,
+        "composition_action_accuracy": 0.40283203125,
+        "composition_value_mse": 0.037802281754549194,
+        "predictive_action_delta_vs_C_min": 0.0,
+        "predictive_action_delta_vs_prior": -0.036376953125,
+        "predictive_value_delta_vs_C_min": 0.0,
+        "predictive_value_delta_vs_prior": -0.024829987065463063,
+        "prior_action_accuracy": 0.439208984375,
+        "prior_value_mse": 0.012972294689086132,
+        "target": "CBPS_public_behavior_target",
+        "value_mse": 0.037802281754549194
+      },
+      "representation_source": "visible_composition_only",
+      "training_target": "none_analytic_known_control"
+    },
+    {
+      "composition_boundedness": {
+        "bounded_by_public_history_family": true,
+        "estimand": "unweighted_composition_bucket_mean",
+        "matched_bucket_count": 25,
+        "matched_posterior_gap_slope": -0.004273822692314583,
+        "matched_posterior_gap_slope_ci": {
+          "lower": -0.013733035050282219,
+          "point": -0.004273822692314583,
+          "upper": 0.0032302378944113414
+        },
+        "mean_composition_js": 0.0,
+        "mean_posterior_js": 0.4290447727493031,
+        "mean_representation_js": 0.03640941341634235,
+        "pair_count": 4096,
+        "pair_weighted_mean_composition_js": 0.0,
+        "pair_weighted_mean_posterior_js": 0.48790272174618304,
+        "pair_weighted_mean_representation_js": 0.05288683296242511,
+        "posterior_gap_bins": [
+          {
+            "bin": "low_gap",
+            "mean_posterior_js": 0.18843537556697534,
+            "mean_representation_js": 0.05358296166158269,
+            "pair_count": 1365
+          },
+          {
+            "bin": "mid_gap",
+            "mean_posterior_js": 0.45977290759925565,
+            "mean_representation_js": 0.0528405910814089,
+            "pair_count": 1365
+          },
+          {
+            "bin": "high_gap",
+            "mean_posterior_js": 0.8152600598465976,
+            "mean_representation_js": 0.052237421903300406,
+            "pair_count": 1366
+          }
+        ],
+        "posterior_gap_tracking_failed": true,
+        "posterior_representation_correlation": -0.029365565915984288,
+        "representation_js_ci": {
+          "bootstrap_lower": 0.03073096408362164,
+          "bootstrap_mean": 0.03640941341634235,
+          "bootstrap_upper": 0.041829965606751646
+        }
+      },
+      "final_diagnostic_label": "cbps_supported",
+      "latent_metrics": {
+        "label_permutation_delta": 0.01760264493944036,
+        "latent_signal_positive": true,
+        "mean_js_to_oracle_posterior": 0.2967206546811386,
+        "mean_js_to_shuffled_posterior": 0.314323299620579,
+        "shuffled_top1_latent_accuracy": 0.249755859375,
+        "top1_label_delta": -0.001953125,
+        "top1_latent_accuracy": 0.247802734375
+      },
+      "mode": "CBPS_state",
+      "predictive_metrics": {
+        "action_accuracy": 1.0,
+        "composition_action_accuracy": 0.40283203125,
+        "composition_value_mse": 0.037802281754549194,
+        "predictive_action_delta_vs_C_min": 0.59716796875,
+        "predictive_action_delta_vs_prior": 0.560791015625,
+        "predictive_value_delta_vs_C_min": 0.037802281754549194,
+        "predictive_value_delta_vs_prior": 0.012972294689086132,
+        "prior_action_accuracy": 0.439208984375,
+        "prior_value_mse": 0.012972294689086132,
+        "target": "CBPS_public_behavior_target",
+        "value_mse": 0.0
+      },
+      "representation_source": "public_history_predictive_compression",
+      "training_target": "none_analytic_known_control"
+    }
+  ],
+  "checksum": "1ba24a235b0a10fb81cffc732edc6a8a9130164c78234d169346007ac19308a6",
+  "claim_scope": "synthetic_cbps_label_validation_not_poker_claim_upgrade",
+  "confidence_level": 0.95,
+  "forbidden_paper_claim": "The synthetic CBPS result proves the poker model uses CBPS.",
+  "length": 6,
+  "matched_pair_threshold": 512,
+  "max_pairs": 4096,
+  "mean_posterior_js_threshold": 0.05,
+  "preflight": {
+    "behavior_target_not_fully_explained_by_C_min": true,
+    "environment_valid": true,
+    "matched_bucket_count": 25,
+    "matched_composition_pair_count": 4096,
+    "mean_matched_posterior_js": 0.4290447727493031
+  },
+  "report_type": "k.5.0_synthetic_cbps_control",
+  "sequence_count": 4096,
+  "signal_probability": 0.72,
+  "synthetic_cbps_control_passed": true,
+  "version": "k.5.0"
+}

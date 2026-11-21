@@ -1,0 +1,8 @@
+#
+# Minimal reviewer environment for artifact inspection.
+numpy<2
+scipy
+scikit-learn
+matplotlib
+pyyaml
+torch

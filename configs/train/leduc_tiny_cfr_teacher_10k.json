@@ -1,0 +1,18 @@
+{
+  "artifact_dir": "outputs/leduc_tiny_cfr_teacher_10k",
+  "batch_size": 512,
+  "data_seed": 149,
+  "data_source": "cfr_teacher",
+  "device": "auto",
+  "epochs": 8,
+  "hand_count": 10000,
+  "hidden_size": 64,
+  "learning_rate": 0.003,
+  "run_version": "0.5.1",
+  "save_model": true,
+  "seed": 47,
+  "split_seed": 23,
+  "test_fraction": 0.1,
+  "train_fraction": 0.8,
+  "validation_fraction": 0.1
+}

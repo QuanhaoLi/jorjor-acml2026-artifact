@@ -1,0 +1,7 @@
+{
+  "artifact_dir": "outputs/limit_teacher_smoke",
+  "evaluation_hand_count": 400,
+  "hand_count": 100,
+  "run_version": "0.4.2",
+  "seed": 67
+}

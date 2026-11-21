@@ -1,0 +1,265 @@
+{
+  "action_accuracy_threshold": 0.9,
+  "batch_size": 256,
+  "behavior_only_belief_supported": false,
+  "behavior_only_partial_support": true,
+  "bootstrap_count": 1000,
+  "bootstrap_seed": 20260605,
+  "cases": [
+    {
+      "final_diagnostic_label": "behavior_only_belief_like_supported",
+      "matched_composition_summary": {
+        "behavior_disagreement_fraction": 0.703369140625,
+        "estimand": "unweighted_composition_bucket_mean",
+        "matched_bucket_count": 25,
+        "mean_posterior_js": 0.4523389568356792,
+        "mean_representation_js": 0.4523389568356792,
+        "pair_count": 4096,
+        "pair_weighted_mean_posterior_js": 0.5112950996327847,
+        "pair_weighted_mean_representation_js": 0.5112950996327847,
+        "posterior_representation_correlation": 0.9999999999999999,
+        "representation_js_ci": {
+          "bootstrap_lower": 0.41114431634291404,
+          "bootstrap_mean": 0.4523389568356792,
+          "bootstrap_upper": 0.48496261825797116
+        }
+      },
+      "mode": "oracle_posterior_state",
+      "representation_source": "exact_posterior_state",
+      "summary": {
+        "mean_posterior_js": 0.0936600723087547,
+        "mean_representation_js": 0.0936600723087547,
+        "min_posterior_js": 0.02,
+        "posterior_representation_correlation": 1.0,
+        "skipped_transition_count": 1231,
+        "transition_count": 1329
+      },
+      "training_target": "none_oracle_state"
+    },
+    {
+      "final_diagnostic_label": "composition_shortcut_supported",
+      "matched_composition_summary": {
+        "behavior_disagreement_fraction": 0.703369140625,
+        "estimand": "unweighted_composition_bucket_mean",
+        "matched_bucket_count": 25,
+        "mean_posterior_js": 0.4523389568356792,
+        "mean_representation_js": 0.0,
+        "pair_count": 4096,
+        "pair_weighted_mean_posterior_js": 0.5112950996327847,
+        "pair_weighted_mean_representation_js": 0.0,
+        "posterior_representation_correlation": null,
+        "representation_js_ci": {
+          "bootstrap_lower": 0.0,
+          "bootstrap_mean": 0.0,
+          "bootstrap_upper": 0.0
+        }
+      },
+      "mode": "composition_shortcut_state",
+      "representation_source": "visible_composition_state",
+      "summary": {
+        "mean_posterior_js": 0.0936600723087547,
+        "mean_representation_js": 0.2409371636261524,
+        "min_posterior_js": 0.02,
+        "posterior_representation_correlation": 0.013998885826896667,
+        "skipped_transition_count": 1231,
+        "transition_count": 1329
+      },
+      "training_target": "none_shortcut_state"
+    },
+    {
+      "final_diagnostic_label": "inconclusive",
+      "interpretation": "behavior_output_readout_not_posterior_auxiliary",
+      "matched_composition_summary": {
+        "behavior_disagreement_fraction": 0.703369140625,
+        "estimand": "unweighted_composition_bucket_mean",
+        "matched_bucket_count": 25,
+        "mean_posterior_js": 0.4523389568356792,
+        "mean_representation_js": 0.4001157507706312,
+        "pair_count": 4096,
+        "pair_weighted_mean_posterior_js": 0.5112950996327847,
+        "pair_weighted_mean_representation_js": 0.44803680733907003,
+        "posterior_representation_correlation": 0.9166663894232818,
+        "representation_js_ci": {
+          "bootstrap_lower": 0.3623624883938177,
+          "bootstrap_mean": 0.4001157507706312,
+          "bootstrap_upper": 0.4302129164900059
+        }
+      },
+      "mode": "behavior_only_gru_q_head",
+      "representation_source": "gru_behavior_q_head_inverted_to_posterior",
+      "summary": {
+        "mean_posterior_js": 0.0936600723087547,
+        "mean_representation_js": 0.10331736740937462,
+        "min_posterior_js": 0.02,
+        "posterior_representation_correlation": -0.0032758559214904645,
+        "skipped_transition_count": 1231,
+        "transition_count": 1329
+      },
+      "train_metrics": {
+        "epoch_logs": [
+          {
+            "epoch": 0,
+            "loss": 1.820563884183164
+          },
+          {
+            "epoch": 79,
+            "loss": 0.0320361689551846
+          }
+        ],
+        "policy_accuracy": 1.0,
+        "posterior_loss_weight": 0.0,
+        "q_mse": 0.01406102068722248,
+        "train_row_count": 5460,
+        "value_mse": 0.013462234288454056
+      },
+      "training_target": "full_action_value_vector_behavior_only"
+    },
+    {
+      "final_diagnostic_label": "inconclusive",
+      "matched_composition_summary": {
+        "behavior_disagreement_fraction": 0.703369140625,
+        "estimand": "unweighted_composition_bucket_mean",
+        "matched_bucket_count": 25,
+        "mean_posterior_js": 0.4523389568356792,
+        "mean_representation_js": 0.5127316710826806,
+        "pair_count": 4096,
+        "pair_weighted_mean_posterior_js": 0.5112950996327847,
+        "pair_weighted_mean_representation_js": 0.5806966289110183,
+        "posterior_representation_correlation": 0.9237290183829265,
+        "representation_js_ci": {
+          "bootstrap_lower": 0.46089889137275564,
+          "bootstrap_mean": 0.5127316710826806,
+          "bootstrap_upper": 0.5564401708461911
+        }
+      },
+      "mode": "behavior_only_gru_hidden_probe",
+      "probe_metrics": {
+        "feature_count": 48,
+        "probe_cross_entropy": 0.6273283440987855,
+        "probe_mse": 0.5945051582660037,
+        "row_count": 5460
+      },
+      "representation_source": "gru_hidden_linear_probe",
+      "summary": {
+        "mean_posterior_js": 0.0936600723087547,
+        "mean_representation_js": 0.12124456192833463,
+        "min_posterior_js": 0.02,
+        "posterior_representation_correlation": 0.40547629667072077,
+        "skipped_transition_count": 1231,
+        "transition_count": 1329
+      },
+      "train_metrics": {
+        "epoch_logs": [
+          {
+            "epoch": 0,
+            "loss": 1.820563884183164
+          },
+          {
+            "epoch": 79,
+            "loss": 0.0320361689551846
+          }
+        ],
+        "policy_accuracy": 1.0,
+        "posterior_loss_weight": 0.0,
+        "q_mse": 0.01406102068722248,
+        "train_row_count": 5460,
+        "value_mse": 0.013462234288454056
+      },
+      "training_target": "action_value_only"
+    },
+    {
+      "final_diagnostic_label": "inconclusive",
+      "interpretation": "behavior_q_probe_not_posterior_auxiliary",
+      "matched_composition_summary": {
+        "behavior_disagreement_fraction": 0.703369140625,
+        "estimand": "unweighted_composition_bucket_mean",
+        "matched_bucket_count": 25,
+        "mean_posterior_js": 0.4523389568356792,
+        "mean_representation_js": 0.38730190192633934,
+        "pair_count": 4096,
+        "pair_weighted_mean_posterior_js": 0.5112950996327847,
+        "pair_weighted_mean_representation_js": 0.43278146513866467,
+        "posterior_representation_correlation": 0.9117872078088539,
+        "representation_js_ci": {
+          "bootstrap_lower": 0.3545604154079139,
+          "bootstrap_mean": 0.38730190192633934,
+          "bootstrap_upper": 0.4173735276149996
+        }
+      },
+      "mode": "behavior_only_gru_q_probe",
+      "probe_metrics": {
+        "feature_count": 48,
+        "probe_mse": 0.013238213009774626,
+        "probe_target": "behavior_q_values",
+        "row_count": 5460
+      },
+      "probe_target": "behavior_q_values_not_posterior",
+      "representation_source": "gru_hidden_linear_behavior_q_probe_inverted_to_posterior",
+      "summary": {
+        "mean_posterior_js": 0.0936600723087547,
+        "mean_representation_js": 0.09768582417668593,
+        "min_posterior_js": 0.02,
+        "posterior_representation_correlation": -0.010097236079414856,
+        "skipped_transition_count": 1231,
+        "transition_count": 1329
+      },
+      "train_metrics": {
+        "epoch_logs": [
+          {
+            "epoch": 0,
+            "loss": 1.820563884183164
+          },
+          {
+            "epoch": 79,
+            "loss": 0.0320361689551846
+          }
+        ],
+        "policy_accuracy": 1.0,
+        "posterior_loss_weight": 0.0,
+        "q_mse": 0.01406102068722248,
+        "train_row_count": 5460,
+        "value_mse": 0.013462234288454056
+      },
+      "training_target": "action_value_only"
+    }
+  ],
+  "checksum": "c9565e3086a6bca51130ebae4098a4bd7cecde83b6bf6c6ee1d4f41a8a037d00",
+  "claim_scope": "behavior_only_belief_required_non_poker_positive_control_not_poker_claim_upgrade",
+  "confidence_level": 0.95,
+  "correlation_threshold": 0.8,
+  "epochs": 80,
+  "hidden_size": 48,
+  "hidden_states": [
+    "s0",
+    "s1",
+    "s2",
+    "s3"
+  ],
+  "learning_rate": 0.01,
+  "length": 6,
+  "max_order_pairs": 4096,
+  "observations": [
+    "o0",
+    "o1",
+    "o2",
+    "o3"
+  ],
+  "preflight": {
+    "behavior_disagreement_fraction": 0.703369140625,
+    "behavior_disagreement_threshold": 0.25,
+    "belief_required": true,
+    "composition_action_accuracy_upper_bound": 0.490234375,
+    "length": 6,
+    "matched_bucket_count": 25,
+    "matched_pair_count": 4096,
+    "mean_posterior_js": 0.5112950996327847,
+    "signal_probability": 0.76
+  },
+  "report_type": "k.4.0_behavior_required_pomdp",
+  "seed": 20260605,
+  "sequence_count": 512,
+  "shortcut_upper_threshold": 1e-06,
+  "signal_probability": 0.76,
+  "trajectory_min_posterior_js": 0.02,
+  "version": "k.4.0"
+}

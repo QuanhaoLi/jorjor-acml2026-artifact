@@ -1,0 +1,9 @@
+{
+  "artifact_dir": "outputs/limit_abstract_cfr_teacher_smoke",
+  "deal_sample_count": 20,
+  "evaluation_hand_count": 100,
+  "hand_count": 100,
+  "iteration_count": 10,
+  "run_version": "0.6.1",
+  "seed": 181
+}

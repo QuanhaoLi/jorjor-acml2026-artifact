@@ -1,0 +1,7 @@
+{
+  "artifact_dir": "outputs/limit_abstraction_audit_smoke",
+  "data_source": "teacher",
+  "hand_count": 1000,
+  "run_version": "0.6.0",
+  "seed": 167
+}

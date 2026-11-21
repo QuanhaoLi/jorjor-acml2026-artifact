@@ -1,0 +1,215 @@
+{
+  "aggregate": {
+    "baseline_rows": {
+      "C_full": {
+        "action_accuracy_delta_seed_ci": {
+          "lower_delta": 0.05271513473907026,
+          "mean_delta": 0.05271513473907026,
+          "upper_delta": 0.05271513473907026
+        },
+        "mean_action_accuracy_delta_model_minus_baseline": 0.05271513473907026,
+        "mean_value_mse_delta_baseline_minus_model": 0.9650704110440216,
+        "value_mse_delta_seed_ci": {
+          "lower_delta": 0.9650704110440216,
+          "mean_delta": 0.9650704110440216,
+          "upper_delta": 0.9650704110440216
+        }
+      },
+      "C_mid": {
+        "action_accuracy_delta_seed_ci": {
+          "lower_delta": 0.050069201335178705,
+          "mean_delta": 0.050069201335178705,
+          "upper_delta": 0.050069201335178705
+        },
+        "mean_action_accuracy_delta_model_minus_baseline": 0.050069201335178705,
+        "mean_value_mse_delta_baseline_minus_model": 0.5324070059689954,
+        "value_mse_delta_seed_ci": {
+          "lower_delta": 0.5324070059689954,
+          "mean_delta": 0.5324070059689954,
+          "upper_delta": 0.5324070059689954
+        }
+      },
+      "C_min": {
+        "action_accuracy_delta_seed_ci": {
+          "lower_delta": 0.050069201335178705,
+          "mean_delta": 0.050069201335178705,
+          "upper_delta": 0.050069201335178705
+        },
+        "mean_action_accuracy_delta_model_minus_baseline": 0.050069201335178705,
+        "mean_value_mse_delta_baseline_minus_model": 0.5324070059689954,
+        "value_mse_delta_seed_ci": {
+          "lower_delta": 0.5324070059689954,
+          "mean_delta": 0.5324070059689954,
+          "upper_delta": 0.5324070059689954
+        }
+      },
+      "action_prior": {
+        "action_accuracy_delta_seed_ci": {
+          "lower_delta": 0.3590124562403322,
+          "mean_delta": 0.3590124562403322,
+          "upper_delta": 0.3590124562403322
+        },
+        "mean_action_accuracy_delta_model_minus_baseline": 0.3590124562403322,
+        "mean_value_mse_delta_baseline_minus_model": 0.8539452919776096,
+        "value_mse_delta_seed_ci": {
+          "lower_delta": 0.8539452919776096,
+          "mean_delta": 0.8539452919776096,
+          "upper_delta": 0.8539452919776096
+        }
+      }
+    },
+    "model_action_accuracy_mean": 0.8371122689896605,
+    "model_value_mse_mean": 29.913776602052238,
+    "seed_count": 1
+  },
+  "allowed_paper_claim": "The no-range poker AR behavior head predicts held-out action/value targets; this supports the predictive part of CBPS only when paired with boundedness and matched-composition failures.",
+  "archive_root": "checkpoints/remote_archive/v100s/2dfcb42",
+  "batch_size": 512,
+  "bootstrap_count": 1000,
+  "bootstrap_seed": 20260612,
+  "cache_dir": "outputs/k/k.5.1_row_cache",
+  "checksum": "4061725628b349ec3fd25562630fdfc82dddfcefa1df76a076c8472dba2be968",
+  "claim_scope": "poker_behavior_predictive_link_not_causal_not_belief_upgrade",
+  "confidence_level": 0.95,
+  "device": "cpu",
+  "final_diagnostic_label": "predictive_supported",
+  "forbidden_paper_claim": "This held-out prediction audit proves the range-correlated component causally drives policy.",
+  "max_test_points": null,
+  "report_type": "k.5.1_poker_predictive_link",
+  "rows": [
+    {
+      "archived_policy_accuracy": 0.837112307548523,
+      "archived_value_mse": 29.9138240814209,
+      "behavior_metrics": {
+        "baseline_rows": {
+          "C_full": {
+            "action_accuracy": 0.7843971342505902,
+            "action_accuracy_delta_ci": {
+              "lower_delta": 0.05017096800455915,
+              "mean_delta": 0.05271513473907026,
+              "upper_delta": 0.055422128144590084
+            },
+            "action_accuracy_delta_model_minus_baseline": 0.05271513473907026,
+            "bucket_count": 80592,
+            "effective_coverage": 1.0,
+            "fallback_counts": [
+              23097,
+              26035,
+              0,
+              0
+            ],
+            "global_fallback_count": 0,
+            "primary_coverage": 0.4701009525360254,
+            "value_mse": 30.878847013096138,
+            "value_mse_delta_baseline_minus_model": 0.9650704110440216,
+            "value_mse_delta_ci": {
+              "lower_delta": 0.78476574700239,
+              "mean_delta": 0.9650704110440216,
+              "upper_delta": 1.1590503828818253
+            }
+          },
+          "C_mid": {
+            "action_accuracy": 0.7870430676544818,
+            "action_accuracy_delta_ci": {
+              "lower_delta": 0.0475046812667915,
+              "mean_delta": 0.050069201335178705,
+              "upper_delta": 0.05238948139705284
+            },
+            "action_accuracy_delta_model_minus_baseline": 0.050069201335178705,
+            "bucket_count": 30,
+            "effective_coverage": 1.0,
+            "fallback_counts": [
+              49132,
+              0,
+              0
+            ],
+            "global_fallback_count": 0,
+            "primary_coverage": 1.0,
+            "value_mse": 30.446183608021116,
+            "value_mse_delta_baseline_minus_model": 0.5324070059689954,
+            "value_mse_delta_ci": {
+              "lower_delta": 0.3770860026140559,
+              "mean_delta": 0.5324070059689954,
+              "upper_delta": 0.6810552145998963
+            }
+          },
+          "C_min": {
+            "action_accuracy": 0.7870430676544818,
+            "action_accuracy_delta_ci": {
+              "lower_delta": 0.04738256126353497,
+              "mean_delta": 0.050069201335178705,
+              "upper_delta": 0.05271513473907026
+            },
+            "action_accuracy_delta_model_minus_baseline": 0.050069201335178705,
+            "bucket_count": 30,
+            "effective_coverage": 1.0,
+            "fallback_counts": [
+              49132,
+              0
+            ],
+            "global_fallback_count": 0,
+            "primary_coverage": 1.0,
+            "value_mse": 30.446183608021116,
+            "value_mse_delta_baseline_minus_model": 0.5324070059689954,
+            "value_mse_delta_ci": {
+              "lower_delta": 0.3764069333476224,
+              "mean_delta": 0.5324070059689954,
+              "upper_delta": 0.7088755768548358
+            }
+          },
+          "action_prior": {
+            "action_accuracy": 0.47809981274932833,
+            "action_accuracy_delta_ci": {
+              "lower_delta": 0.3547789627941057,
+              "mean_delta": 0.3590124562403322,
+              "upper_delta": 0.36412114304323046
+            },
+            "action_accuracy_delta_model_minus_baseline": 0.3590124562403322,
+            "bucket_count": 1,
+            "effective_coverage": 1.0,
+            "fallback_counts": [
+              49132
+            ],
+            "global_fallback_count": 0,
+            "primary_coverage": 1.0,
+            "value_mse": 30.767721894029904,
+            "value_mse_delta_baseline_minus_model": 0.8539452919776096,
+            "value_mse_delta_ci": {
+              "lower_delta": 0.6899965667960684,
+              "mean_delta": 0.8539452919776096,
+              "upper_delta": 1.0183505593409998
+            }
+          }
+        },
+        "checkpoint_load_info": {
+          "checkpoint_embedding_compat": false,
+          "checkpoint_embedding_rows": 185,
+          "model_embedding_rows": 185
+        },
+        "model_action_accuracy": 0.8371122689896605,
+        "model_action_cross_entropy": 0.3738020658493042,
+        "model_value_mse": 29.913776602052238,
+        "seed": "seed_m"
+      },
+      "cache_path": "outputs/k/k.5.1_row_cache/k.5.1_seed_m_87dc632d4f350c58.json",
+      "cache_status": "miss",
+      "checkpoint_path": "checkpoints/remote_archive/v100s/2dfcb42/outputs/limit_ar_action_value_only_seed_m_50k_4layer/model.pt",
+      "checkpoint_sha256": "ff22975f8ebf4f137034992d7a3ff6f8a0cfb5c7e00870c9edb74a983cf850d1",
+      "final_diagnostic_label": "predictive_supported",
+      "full_test_points": 49132,
+      "max_test_points": null,
+      "metrics_path": "checkpoints/remote_archive/v100s/2dfcb42/outputs/limit_ar_action_value_only_seed_m_50k_4layer/metrics.json",
+      "metrics_sha256": "0966bbd0364b5c66db39462c71824ad4687c0fad3fd9ad708649569bfae85f69",
+      "seed": "seed_m",
+      "test_points": 49132,
+      "train_config_path": "configs/train/limit_ar_action_value_only_seed_m_50k_4layer.json",
+      "train_config_sha256": "7ebfa4da517382bd29c83d6d5ef3eff7824aae8995cd0807901155286ac94188",
+      "train_points": 148186
+    }
+  ],
+  "seed_names": [
+    "seed_m"
+  ],
+  "train_config_dir": "configs/train",
+  "version": "k.5.1"
+}

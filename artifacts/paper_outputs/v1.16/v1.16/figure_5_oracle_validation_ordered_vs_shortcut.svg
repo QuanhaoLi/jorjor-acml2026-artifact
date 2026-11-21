@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="560" viewBox="0 0 1180 560" role="img">
+<title>Oracle validation ordered vs shortcut</title>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<style>text{font-family:Arial,Helvetica,sans-serif;letter-spacing:0}.title{font-size:24px;font-weight:700;fill:#1f1f1f}</style>
+<line x1="82.0" y1="78.0" x2="82.0" y2="438.0" stroke="#333333" stroke-width="1.5"/>
+<line x1="82.0" y1="438.0" x2="1110.0" y2="438.0" stroke="#333333" stroke-width="1.5"/>
+<line x1="82.0" y1="438.0" x2="1110.0" y2="438.0" stroke="#e0e0e0" stroke-width="1.0"/>
+<text x="32.0" y="442.0" font-size="12" text-anchor="start" fill="#555555">0.0</text>
+<line x1="82.0" y1="370.3" x2="1110.0" y2="370.3" stroke="#e0e0e0" stroke-width="1.0"/>
+<text x="32.0" y="374.3" font-size="12" text-anchor="start" fill="#555555">0.1</text>
+<line x1="82.0" y1="302.6" x2="1110.0" y2="302.6" stroke="#e0e0e0" stroke-width="1.0"/>
+<text x="32.0" y="306.6" font-size="12" text-anchor="start" fill="#555555">0.2</text>
+<line x1="82.0" y1="234.9" x2="1110.0" y2="234.9" stroke="#e0e0e0" stroke-width="1.0"/>
+<text x="32.0" y="238.9" font-size="12" text-anchor="start" fill="#555555">0.3</text>
+<line x1="82.0" y1="167.2" x2="1110.0" y2="167.2" stroke="#e0e0e0" stroke-width="1.0"/>
+<text x="32.0" y="171.2" font-size="12" text-anchor="start" fill="#555555">0.4</text>
+<rect x="130.7" y="125.4" width="34.0" height="312.6" fill="#2f5f9f" opacity="1.000"/>
+<rect x="170.7" y="125.4" width="34.0" height="312.6" fill="#d07a24" opacity="1.000"/>
+<text x="167.7" y="478.0" font-size="13" text-anchor="middle" fill="#222222"><tspan x="167.7" dy="0">analytic</tspan><tspan x="167.7" dy="16">ordered</tspan></text>
+<rect x="302.0" y="125.4" width="34.0" height="312.6" fill="#2f5f9f" opacity="1.000"/>
+<rect x="342.0" y="438.0" width="34.0" height="0.0" fill="#d07a24" opacity="1.000"/>
+<text x="339.0" y="478.0" font-size="13" text-anchor="middle" fill="#222222"><tspan x="339.0" dy="0">analytic</tspan><tspan x="339.0" dy="16">shortcut</tspan></text>
+<rect x="473.3" y="125.0" width="34.0" height="313.0" fill="#2f5f9f" opacity="1.000"/>
+<rect x="513.3" y="125.0" width="34.0" height="313.0" fill="#d07a24" opacity="1.000"/>
+<text x="510.3" y="478.0" font-size="13" text-anchor="middle" fill="#222222"><tspan x="510.3" dy="0">learned</tspan><tspan x="510.3" dy="16">ordered</tspan></text>
+<rect x="644.7" y="125.0" width="34.0" height="313.0" fill="#2f5f9f" opacity="1.000"/>
+<rect x="684.7" y="438.0" width="34.0" height="0.0" fill="#d07a24" opacity="1.000"/>
+<text x="681.7" y="478.0" font-size="13" text-anchor="middle" fill="#222222"><tspan x="681.7" dy="0">learned</tspan><tspan x="681.7" dy="16">shortcut</tspan></text>
+<rect x="816.0" y="178.9" width="34.0" height="259.1" fill="#2f5f9f" opacity="1.000"/>
+<rect x="856.0" y="178.9" width="34.0" height="259.1" fill="#d07a24" opacity="1.000"/>
+<text x="853.0" y="478.0" font-size="13" text-anchor="middle" fill="#222222">toy ordered</text>
+<rect x="987.3" y="178.9" width="34.0" height="259.1" fill="#2f5f9f" opacity="1.000"/>
+<rect x="1027.3" y="438.0" width="34.0" height="0.0" fill="#d07a24" opacity="1.000"/>
+<text x="1024.3" y="478.0" font-size="13" text-anchor="middle" fill="#222222">toy shortcut</text>
+<rect x="850.0" y="61.0" width="14.0" height="14.0" fill="#2f5f9f" opacity="1.000"/>
+<text x="872.0" y="72.0" font-size="12" text-anchor="start" fill="#333333">posterior JS</text>
+<rect x="850.0" y="83.0" width="14.0" height="14.0" fill="#d07a24" opacity="1.000"/>
+<text x="872.0" y="94.0" font-size="12" text-anchor="start" fill="#333333">representation JS</text>
+<text x="34.0" y="42.0" font-size="24" text-anchor="start" fill="#222222" class="title">Oracle validation ordered vs shortcut</text>
+<text x="82.0" y="526.0" font-size="13" text-anchor="start" fill="#555555">Ordered controls preserve representation divergence; shortcut controls collapse representation divergence.</text>
+</svg>

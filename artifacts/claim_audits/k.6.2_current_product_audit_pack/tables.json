@@ -1,0 +1,2848 @@
+{
+  "belief_shortcut": {
+    "archive_root": "checkpoints/remote_archive/v100s",
+    "artifact": "JorJor-Inspect",
+    "cases": [
+      {
+        "case": "action_value_only_no_range_ar",
+        "claim_implication": "No-range probe signal should be written as composition-shortcut evidence, not ordered belief tracking.",
+        "composition_nuisance_status": "composition_shortcut_supported",
+        "final_diagnostic_label": "composition_shortcut_supported",
+        "history_control_status": "passes",
+        "key_metrics": {
+          "action_value_composition_min_lower_delta": 0.021482023809523812,
+          "composition_only_min_lower_delta": 0.0066558333333333304,
+          "composition_residual_vs_action_value_composition_min_lower_delta": -0.0722447619047619,
+          "composition_residual_vs_action_value_min_lower_delta": -0.04543825396825396,
+          "count_preserving_min_lower_delta": -0.0007765476190476164,
+          "history_delta_ci_min_lower_delta": 0.0013276587301587284,
+          "label_control_delta_min": 0.04433797299861908,
+          "presence_last_action_min_lower_delta": 0.0021144841269841353
+        },
+        "label_control_status": "passes",
+        "naive_probe_status": "positive_intermediate_layer_signal",
+        "notes": [
+          "explicit action/value+composition nuisance has positive CI",
+          "composition-residual hidden states are below the action/value nuisance baseline",
+          "composition-residual hidden states do not beat action/value+composition nuisance"
+        ],
+        "order_control_status": "fails_strict_gate",
+        "presence_last_action_status": "passes"
+      }
+    ],
+    "gaps": [],
+    "sources": [
+      {
+        "bootstrap_count": 10000,
+        "bootstrap_seed": 20260602,
+        "commit_50k": "881534f",
+        "key": "fresh50_control",
+        "locked_layer": "encoder_layer_2",
+        "path": "checkpoints/remote_archive/v100s/881534f/outputs/tables/limit_ar_no_range_fresh50_control_pack.json",
+        "present": true,
+        "version": "1.0.13"
+      },
+      {
+        "bootstrap_count": 10000,
+        "bootstrap_seed": 20260602,
+        "commit": "1d9574f",
+        "key": "history_composition",
+        "locked_layer": "encoder_layer_2",
+        "path": "checkpoints/remote_archive/v100s/1d9574f/outputs/tables/limit_ar_no_range_history_composition_pack.json",
+        "present": true,
+        "row_count": 21,
+        "version": "1.0.15"
+      },
+      {
+        "bootstrap_count": 10000,
+        "bootstrap_seed": 20260602,
+        "commit": "2dfcb42",
+        "key": "composition_nuisance",
+        "locked_layer": "encoder_layer_2",
+        "path": "checkpoints/remote_archive/v100s/2dfcb42/outputs/tables/limit_ar_no_range_composition_nuisance_pack.json",
+        "present": true,
+        "row_count": 15,
+        "version": "1.0.16"
+      }
+    ],
+    "version": "1.1"
+  },
+  "cbps_claim_ladder": {
+    "checksum": "e95d7bef664f8dc1bfaac86a78763ab14d72cf6221d4e0651e325bf009cf21e0",
+    "claim_scope": "diagnostic_interpretation_not_ordered_belief",
+    "final_label": "cbps_supported",
+    "forbidden_claim": "The no-range poker AR model has ordered opponent-belief tracking.",
+    "gaps": [],
+    "git_commit": "07dbe74",
+    "output_contract": [
+      "k.5.3_cbps_claim_ladder.json",
+      "k.5.3_cbps_claim_ladder.md",
+      "k.5.3_cbps_manifest.json",
+      "paper_table_cbps_claim_ladder.md"
+    ],
+    "paper_safe_claim": "Positive hidden-state range probes are insufficient evidence for ordered belief tracking. For the no-range poker AR row, the best-supported diagnostic interpretation is composition-bounded predictive support: behavior prediction is positive, while strict matched-composition gates block an ordered-belief claim.",
+    "report_type": "k.5.3_cbps_claim_ladder",
+    "rows": [
+      {
+        "allowed_claim": "The audit can distinguish posterior, composition, and CBPS known states in a synthetic control.",
+        "capacity_sensitivity": "not_applicable",
+        "claim_scope": "diagnostic_label_validation",
+        "composition_bounded_gate": "cbps_supported",
+        "domain": "synthetic_latent_order",
+        "final_label": "synthetic_cbps_control_passed",
+        "label_artifact_gate": "not_applicable",
+        "latent_probe_gate": "cbps_supported",
+        "matched_range_label_proxy_gate": "not_applicable_exact_synthetic_posterior_available",
+        "model_or_state": "posterior/composition/CBPS known states",
+        "predictive_gate": "passed",
+        "representation_behavior_link_gate": "not_applicable_known_control",
+        "supervision": "analytic known-control"
+      },
+      {
+        "allowed_claim": "The no-range poker AR row is behavior-predictive but composition-bounded under the locked audit.",
+        "capacity_sensitivity": "mlp_inconclusive",
+        "claim_scope": "diagnostic_interpretation_not_ordered_belief",
+        "composition_bounded_gate": "composition_bounded_supported",
+        "domain": "limit_holdem",
+        "final_label": "cbps_supported",
+        "label_artifact_gate": "passed_from_prior_gates",
+        "latent_probe_gate": "positive_before_strict_composition_gates",
+        "matched_range_label_proxy_gate": "range_label_proxy_tracking_not_supported",
+        "model_or_state": "no-range 4-layer AR, seeds k/l/m",
+        "oracle_positive_control": "poker_oracle_gate_accepts_ordered_target",
+        "predictive_gate": "predictive_supported",
+        "representation_behavior_link_gate": "composition_bounded_behavior_link",
+        "supervision": "action/value only"
+      }
+    ],
+    "sources": {
+      "behavior_link_report": {
+        "path": "outputs/k/k.5.5_representation_behavior_link/k.5.5_representation_behavior_link_report.json",
+        "present": true,
+        "required": false,
+        "role": "behavior_link_report",
+        "sha256": "c741c3ddd4a03edf7f96bf1775bdfe79438ef54027d1c3e3e11cac762cf26721",
+        "size_bytes": 23599
+      },
+      "capacity_report": {
+        "path": "outputs/k/k.2.3_strict_tables/probe_capacity_s6_s7_report.json",
+        "present": true,
+        "required": false,
+        "role": "capacity_report",
+        "sha256": "3ae076d89259a64ec43c4d4d719c2195269c08df6e8d578b98c85afdca835c08",
+        "size_bytes": 16535
+      },
+      "composition_boundedness_report": {
+        "path": "outputs/k/k.5.2_composition_boundedness/k.5.2_composition_boundedness_report.json",
+        "present": true,
+        "required": true,
+        "role": "k.5.2_composition_boundedness_report.json",
+        "sha256": "e4cdcb668f5939e07e7ffbb07dffdf4d612792b13ee4547723a1c7342fdc9025",
+        "size_bytes": 12976
+      },
+      "composition_sensitivity_report": {
+        "path": "outputs/k/k.3.1_composition_feature_sensitivity/k.3.1_composition_feature_sensitivity_report.json",
+        "present": true,
+        "required": false,
+        "role": "composition_sensitivity_report",
+        "sha256": "73201bae8d6c0cab61900c931bc866b3b12b21390f037571a7f4102daa366dac",
+        "size_bytes": 2238
+      },
+      "poker_oracle_report": {
+        "path": "outputs/k/k.3.0_poker_oracle_positive_control/k.3.0_poker_oracle_positive_control_report.json",
+        "present": true,
+        "required": false,
+        "role": "poker_oracle_report",
+        "sha256": "8c348f9e80c7f56c509e8b2f36b64950dd6afbadbdea949bf0980d1e03a9c99f",
+        "size_bytes": 2946
+      },
+      "predictive_link_report": {
+        "path": "outputs/k/k.5.1_full_poker_predictive_link/k.5.1_poker_predictive_link_report.json",
+        "present": true,
+        "required": true,
+        "role": "k.5.1_poker_predictive_link_report.json",
+        "sha256": "c87a6b0cbff7cc773611a5660421acbf920ecfa8482565f084317c00dc4728f5",
+        "size_bytes": 19053
+      },
+      "synthetic_cbps_report": {
+        "path": "outputs/k/k.5.0_synthetic_cbps_control/k.5.0_synthetic_cbps_report.json",
+        "present": true,
+        "required": true,
+        "role": "k.5.0_synthetic_cbps_report.json",
+        "sha256": "3659c81eb0e00ddb4824f885a348dbc85974b6f3b6ad3f395547a353a33bace2",
+        "size_bytes": 9635
+      },
+      "threshold_manifest": {
+        "path": "outputs/k/k.3.3_g1_g4_threshold_manifest/k.3.3_g1_g4_threshold_manifest.json",
+        "present": true,
+        "required": false,
+        "role": "threshold_manifest",
+        "sha256": "8aade96fc80668fb4d8956a0fb0ce6b3bd2cb35fd211d99da5decbf3018e2dde",
+        "size_bytes": 3480
+      }
+    },
+    "version": "k.5.6"
+  },
+  "claim_gate_matrix": {
+    "artifact": "JorJor-Inspect",
+    "gaps": [],
+    "rows": [
+      {
+        "action_value_nuisance_ruled_out": "fail",
+        "case": "range_supervised_ar",
+        "composition_nuisance_ruled_out": "fail",
+        "final_diagnostic_label": "composition_shortcut_supported",
+        "history_prior_ruled_out": "not_primary_gate",
+        "label_artifact_ruled_out": "direct_range_supervision",
+        "matched_composition_residual_supported": "fail",
+        "probe_positive": "fail"
+      },
+      {
+        "action_value_nuisance_ruled_out": "pass",
+        "case": "action_value_only_no_range_ar",
+        "composition_nuisance_ruled_out": "fail",
+        "final_diagnostic_label": "composition_shortcut_supported",
+        "history_prior_ruled_out": "passes",
+        "label_artifact_ruled_out": "passes",
+        "matched_composition_residual_supported": "fail",
+        "probe_positive": "pass"
+      },
+      {
+        "action_value_nuisance_ruled_out": "pass",
+        "case": "action_value_only_no_range_ar_mlp_appendix",
+        "composition_nuisance_ruled_out": "inconclusive",
+        "final_diagnostic_label": "mlp_inconclusive",
+        "history_prior_ruled_out": "inherits_main_linear_gate",
+        "label_artifact_ruled_out": "inherits_main_linear_gate",
+        "matched_composition_residual_supported": "inconclusive",
+        "probe_positive": "pass"
+      }
+    ],
+    "sources": [
+      {
+        "key": "belief_shortcut_report",
+        "path": "outputs/inspect_v119_smoke/belief_shortcut_report.json",
+        "present": true
+      },
+      {
+        "key": "matched_composition_report",
+        "path": "outputs/inspect_v119_smoke/matched_composition_report.json",
+        "present": true
+      },
+      {
+        "key": "paper_evidence_pack",
+        "path": "checkpoints/tables/limit_ar_paper_evidence_pack.json",
+        "present": true
+      },
+      {
+        "key": "range_supervised_strict_gate",
+        "path": "checkpoints/remote_archive/v100s/64a2220/outputs/tables/limit_ar_range_supervised_positive_control_pack.json",
+        "present": true
+      },
+      {
+        "key": "probe_capacity_s6_s7",
+        "path": "checkpoints/remote_archive/v100s/64a2220/outputs/tables/probe_capacity_s6_s7_report.json",
+        "present": true
+      }
+    ],
+    "strict_table_dir": "checkpoints/remote_archive/v100s/64a2220/outputs/tables",
+    "version": "1.19"
+  },
+  "explicit_belief_state": [
+    {
+      "bootstrap_count": 1000,
+      "bootstrap_seed": 20260603,
+      "cases": [
+        {
+          "final_diagnostic_label": "belief_like_oracle_supported",
+          "mode": "explicit_belief_state_rnn",
+          "model_family": "synthetic_explicit_state_sequence_model",
+          "order_counterfactual_summary": {
+            "mean_posterior_js": 0.4628978016850169,
+            "mean_representation_js": 0.4628978016850169,
+            "pair_count": 1024,
+            "posterior_representation_correlation": 1.0000000000000002,
+            "representation_js_ci": {
+              "bootstrap_lower": 0.44672749674918083,
+              "bootstrap_mean": 0.4628978016850169,
+              "bootstrap_upper": 0.47858863123405065
+            }
+          },
+          "state_update": "bayes_posterior",
+          "summary": {
+            "mean_posterior_js": 0.04681285120634337,
+            "mean_representation_js": 0.04681285120634337,
+            "non_final_transition_count": 1024,
+            "posterior_representation_correlation": 0.9999999999999998,
+            "transition_count": 1280
+          }
+        },
+        {
+          "final_diagnostic_label": "composition_shortcut_supported",
+          "mode": "composition_state_rnn",
+          "model_family": "synthetic_explicit_state_sequence_model",
+          "order_counterfactual_summary": {
+            "mean_posterior_js": 0.4628978016850169,
+            "mean_representation_js": 0.0,
+            "pair_count": 1024,
+            "posterior_representation_correlation": null,
+            "representation_js_ci": {
+              "bootstrap_lower": 0.0,
+              "bootstrap_mean": 0.0,
+              "bootstrap_upper": 0.0
+            }
+          },
+          "state_update": "visible_composition",
+          "summary": {
+            "mean_posterior_js": 0.04681285120634337,
+            "mean_representation_js": 0.10753691218180111,
+            "non_final_transition_count": 1024,
+            "posterior_representation_correlation": 0.23188741305363608,
+            "transition_count": 1280
+          }
+        }
+      ],
+      "checksum": "932420183e099e2970d1fd682fbd5dead6b11ef22a14517560e2df429e991376",
+      "claim_scope": "methodology_validation_only_not_poker_evidence",
+      "confidence_level": 0.95,
+      "emission_mode": "position_dependent_order_sensitive",
+      "length": 6,
+      "max_order_pairs": 1024,
+      "observations": [
+        "x",
+        "y",
+        "z"
+      ],
+      "report_type": "explicit_belief_state_positive_control",
+      "seed": 20260603,
+      "sequence_count": 256,
+      "states": [
+        "A",
+        "B",
+        "C"
+      ],
+      "version": "1.20"
+    }
+  ],
+  "latent_protocol_transfer": [
+    {
+      "batch_size": 256,
+      "bootstrap_count": 1000,
+      "bootstrap_seed": 20260603,
+      "cases": [
+        {
+          "final_diagnostic_label": "belief_like_protocol_transfer_supported",
+          "matched_composition_summary": {
+            "estimand": "unweighted_composition_bucket_mean",
+            "matched_bucket_count": 111,
+            "mean_posterior_js": 0.47003741012312894,
+            "mean_representation_js": 0.47003741012312894,
+            "pair_count": 4096,
+            "pair_weighted_mean_posterior_js": 0.5105547518269558,
+            "pair_weighted_mean_representation_js": 0.5105547518269558,
+            "pair_weighted_posterior_representation_correlation": 0.9999999999999998,
+            "posterior_representation_correlation": 1.0,
+            "representation_js_ci": {
+              "bootstrap_lower": 0.46094963400433436,
+              "bootstrap_mean": 0.47003741012312894,
+              "bootstrap_upper": 0.47890570889551826
+            }
+          },
+          "mode": "oracle_posterior_state",
+          "representation_source": "exact_posterior_state",
+          "summary": {
+            "mean_posterior_js": 0.0705395858573488,
+            "mean_representation_js": 0.0705395858573488,
+            "non_final_transition_count": 6144,
+            "posterior_representation_correlation": 0.9999999999999998,
+            "transition_count": 8192
+          },
+          "training_target": "none_oracle_state"
+        },
+        {
+          "final_diagnostic_label": "composition_shortcut_supported",
+          "matched_composition_summary": {
+            "estimand": "unweighted_composition_bucket_mean",
+            "matched_bucket_count": 111,
+            "mean_posterior_js": 0.47003741012312894,
+            "mean_representation_js": 0.0,
+            "pair_count": 4096,
+            "pair_weighted_mean_posterior_js": 0.5105547518269558,
+            "pair_weighted_mean_representation_js": 0.0,
+            "pair_weighted_posterior_representation_correlation": null,
+            "posterior_representation_correlation": null,
+            "representation_js_ci": {
+              "bootstrap_lower": 0.0,
+              "bootstrap_mean": 0.0,
+              "bootstrap_upper": 0.0
+            }
+          },
+          "mode": "composition_shortcut_state",
+          "representation_source": "visible_composition_state",
+          "summary": {
+            "mean_posterior_js": 0.0705395858573488,
+            "mean_representation_js": 0.26390303855165714,
+            "non_final_transition_count": 6144,
+            "posterior_representation_correlation": -0.00660671478721721,
+            "transition_count": 8192
+          },
+          "training_target": "none_shortcut_state"
+        },
+        {
+          "final_diagnostic_label": "belief_like_protocol_transfer_supported",
+          "interpretation": "learned_supervised_readout_positive_capacity_check",
+          "matched_composition_summary": {
+            "estimand": "unweighted_composition_bucket_mean",
+            "matched_bucket_count": 111,
+            "mean_posterior_js": 0.47003741012312894,
+            "mean_representation_js": 0.46446844974027535,
+            "pair_count": 4096,
+            "pair_weighted_mean_posterior_js": 0.5105547518269558,
+            "pair_weighted_mean_representation_js": 0.5028127845569339,
+            "pair_weighted_posterior_representation_correlation": 0.9945092009162773,
+            "posterior_representation_correlation": 0.9613888275350823,
+            "representation_js_ci": {
+              "bootstrap_lower": 0.45477270075318615,
+              "bootstrap_mean": 0.46446844974027535,
+              "bootstrap_upper": 0.4735739165821614
+            }
+          },
+          "mode": "belief_aux_gru_posterior_head",
+          "representation_source": "gru_posterior_head",
+          "summary": {
+            "mean_posterior_js": 0.0705395858573488,
+            "mean_representation_js": 0.0709138472022806,
+            "non_final_transition_count": 6144,
+            "posterior_representation_correlation": 0.8876745219807023,
+            "transition_count": 8192
+          },
+          "train_metrics": {
+            "epoch_logs": [
+              {
+                "epoch": 0,
+                "loss": 4.016814300391681
+              },
+              {
+                "epoch": 79,
+                "loss": 1.2978833756488788
+              }
+            ],
+            "policy_accuracy": 1.0,
+            "posterior_cross_entropy": 0.6432538032531738,
+            "posterior_loss_weight": 2.0,
+            "train_row_count": 1364,
+            "value_mse": 0.00405157869681716
+          },
+          "training_target": "action_value_plus_oracle_posterior"
+        },
+        {
+          "final_diagnostic_label": "belief_like_protocol_transfer_supported",
+          "matched_composition_summary": {
+            "estimand": "unweighted_composition_bucket_mean",
+            "matched_bucket_count": 111,
+            "mean_posterior_js": 0.47003741012312894,
+            "mean_representation_js": 0.48466236845584454,
+            "pair_count": 4096,
+            "pair_weighted_mean_posterior_js": 0.5105547518269558,
+            "pair_weighted_mean_representation_js": 0.5229552056977477,
+            "pair_weighted_posterior_representation_correlation": 0.9921889222014242,
+            "posterior_representation_correlation": 0.9506090512864215,
+            "representation_js_ci": {
+              "bootstrap_lower": 0.47520521083473904,
+              "bootstrap_mean": 0.48466236845584454,
+              "bootstrap_upper": 0.49458734398863785
+            }
+          },
+          "mode": "belief_aux_gru_hidden_probe",
+          "probe_metrics": {
+            "feature_count": 48,
+            "probe_cross_entropy": 0.6450292097881233,
+            "probe_mse": 0.057071445721215176,
+            "row_count": 1364
+          },
+          "representation_source": "gru_hidden_linear_probe",
+          "summary": {
+            "mean_posterior_js": 0.0705395858573488,
+            "mean_representation_js": 0.07929951266441644,
+            "non_final_transition_count": 6144,
+            "posterior_representation_correlation": 0.8571838068891747,
+            "transition_count": 8192
+          },
+          "train_metrics": {
+            "epoch_logs": [
+              {
+                "epoch": 0,
+                "loss": 4.016814300391681
+              },
+              {
+                "epoch": 79,
+                "loss": 1.2978833756488788
+              }
+            ],
+            "policy_accuracy": 1.0,
+            "posterior_cross_entropy": 0.6432538032531738,
+            "posterior_loss_weight": 2.0,
+            "train_row_count": 1364,
+            "value_mse": 0.00405157869681716
+          },
+          "training_target": "action_value_plus_oracle_posterior"
+        },
+        {
+          "final_diagnostic_label": "composition_shortcut_supported",
+          "matched_composition_summary": {
+            "estimand": "unweighted_composition_bucket_mean",
+            "matched_bucket_count": 111,
+            "mean_posterior_js": 0.47003741012312894,
+            "mean_representation_js": 0.0,
+            "pair_count": 4096,
+            "pair_weighted_mean_posterior_js": 0.5105547518269558,
+            "pair_weighted_mean_representation_js": 0.0,
+            "pair_weighted_posterior_representation_correlation": null,
+            "posterior_representation_correlation": null,
+            "representation_js_ci": {
+              "bootstrap_lower": 0.0,
+              "bootstrap_mean": 0.0,
+              "bootstrap_upper": 0.0
+            }
+          },
+          "mode": "composition_biased_learned_state",
+          "probe_metrics": {
+            "feature_count": 10,
+            "probe_cross_entropy": 1.3849413474119867,
+            "probe_mse": 3.2740141372021725,
+            "row_count": 1364
+          },
+          "representation_source": "composition_features_linear_probe",
+          "summary": {
+            "mean_posterior_js": 0.0705395858573488,
+            "mean_representation_js": 0.1549892299804729,
+            "non_final_transition_count": 6144,
+            "posterior_representation_correlation": -0.07056809561303891,
+            "transition_count": 8192
+          },
+          "training_target": "posterior_probe_on_composition_features"
+        },
+        {
+          "final_diagnostic_label": "inconclusive",
+          "interpretation": "exploratory_behavior_only_row_not_poker_claim_upgrade",
+          "matched_composition_summary": {
+            "estimand": "unweighted_composition_bucket_mean",
+            "matched_bucket_count": 111,
+            "mean_posterior_js": 0.47003741012312894,
+            "mean_representation_js": 0.4914302391115533,
+            "pair_count": 4096,
+            "pair_weighted_mean_posterior_js": 0.5105547518269558,
+            "pair_weighted_mean_representation_js": 0.5217402357818488,
+            "pair_weighted_posterior_representation_correlation": 0.8293694154831545,
+            "posterior_representation_correlation": 0.5094435142439256,
+            "representation_js_ci": {
+              "bootstrap_lower": 0.47478768552990847,
+              "bootstrap_mean": 0.4914302391115533,
+              "bootstrap_upper": 0.5073086135631248
+            }
+          },
+          "mode": "action_value_only_gru_hidden_probe",
+          "probe_metrics": {
+            "feature_count": 48,
+            "probe_cross_entropy": 0.7490691187710716,
+            "probe_mse": 0.554426745087438,
+            "row_count": 1364
+          },
+          "representation_source": "gru_hidden_linear_probe",
+          "summary": {
+            "mean_posterior_js": 0.0705395858573488,
+            "mean_representation_js": 0.09558802104215187,
+            "non_final_transition_count": 6144,
+            "posterior_representation_correlation": 0.45339352755491646,
+            "transition_count": 8192
+          },
+          "train_metrics": {
+            "epoch_logs": [
+              {
+                "epoch": 0,
+                "loss": 1.2913617115915696
+              },
+              {
+                "epoch": 79,
+                "loss": 0.0036129831661445653
+              }
+            ],
+            "policy_accuracy": 1.0,
+            "posterior_cross_entropy": 1.5150392055511475,
+            "posterior_loss_weight": 0.0,
+            "train_row_count": 1364,
+            "value_mse": 0.0013597218785434961
+          },
+          "training_target": "action_value_only"
+        }
+      ],
+      "checksum": "a20326b4a5ab13e9ad49694a19e65d253d71ba19466a4cc3cee0241b5ac373f0",
+      "claim_scope": "protocol_transfer_validation_not_poker_belief_claim_upgrade",
+      "confidence_level": 0.95,
+      "correlation_threshold": 0.8,
+      "epochs": 80,
+      "events": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "hidden_size": 48,
+      "label_preflight": {
+        "allowed_interpretation": "action_value_only_rows_are_exploratory_until_composition_and_matched_gates_pass",
+        "rows": [
+          {
+            "bayes_optimal_dependency_note": "generated_from_exact_ordered_posterior_not_hidden_type_identifier",
+            "composition_bucket_count": 280,
+            "composition_buckets_with_multiple_values": 194,
+            "label": "action_label",
+            "unique_value_count": 3
+          },
+          {
+            "bayes_optimal_dependency_note": "generated_from_exact_ordered_posterior_not_hidden_type_identifier",
+            "composition_bucket_count": 280,
+            "composition_buckets_with_multiple_values": 212,
+            "label": "value_label",
+            "unique_value_count": 121
+          }
+        ]
+      },
+      "latent_types": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "learned_positive_capacity_supported": true,
+      "learning_rate": 0.01,
+      "length": 5,
+      "max_order_pairs": 4096,
+      "protocol_transfer_supported": true,
+      "report_type": "k.1_latent_type_protocol_transfer",
+      "seed": 20260603,
+      "sequence_count": 2048,
+      "shortcut_upper_threshold": 1e-06,
+      "signal_probability": 0.72,
+      "version": "k.1"
+    }
+  ],
+  "learned_synthetic_belief": [
+    {
+      "batch_size": 128,
+      "cases": [
+        {
+          "final_diagnostic_label": "belief_like_oracle_supported",
+          "mode": "ordered_belief_ar",
+          "model_family": "tiny_linear_sequence_ar",
+          "order_counterfactual_summary": {
+            "mean_posterior_js": 0.46246365307401965,
+            "mean_representation_js": 0.46246365307401954,
+            "pair_count": 4096,
+            "posterior_representation_correlation": 1.0
+          },
+          "summary": {
+            "mean_posterior_js": 0.046896487992061385,
+            "mean_representation_js": 0.046896487992061975,
+            "non_final_transition_count": 2048,
+            "posterior_representation_correlation": 1.0000000000000002,
+            "transition_count": 2560
+          },
+          "train_metrics": {
+            "feature_count": 19,
+            "train_cross_entropy": 0.5262448815288084,
+            "train_mse": 4.176995240892156e-29,
+            "train_row_count": 1092
+          },
+          "training_method": "torch_linear_pinv"
+        },
+        {
+          "final_diagnostic_label": "composition_shortcut_supported",
+          "mode": "composition_biased_ar",
+          "model_family": "tiny_linear_sequence_ar",
+          "order_counterfactual_summary": {
+            "mean_posterior_js": 0.46246365307401965,
+            "mean_representation_js": 0.0,
+            "pair_count": 4096,
+            "posterior_representation_correlation": null
+          },
+          "summary": {
+            "mean_posterior_js": 0.046896487992061385,
+            "mean_representation_js": 0.10399099299615738,
+            "non_final_transition_count": 2048,
+            "posterior_representation_correlation": -0.1981833686986967,
+            "transition_count": 2560
+          },
+          "train_metrics": {
+            "feature_count": 8,
+            "train_cross_entropy": 1.0949091408476406,
+            "train_mse": 3.007736476675872,
+            "train_row_count": 1092
+          },
+          "training_method": "torch_linear_pinv"
+        }
+      ],
+      "checksum": "e65ad8a0d819e5f7f3fe744aa5d20ea4e2308468d8827b7b32971b857b307d8a",
+      "epochs": 80,
+      "hidden_size": 24,
+      "length": 6,
+      "max_order_pairs": 4096,
+      "observations": [
+        "x",
+        "y",
+        "z"
+      ],
+      "prior": [
+        0.3333333333333333,
+        0.3333333333333333,
+        0.3333333333333333
+      ],
+      "report_type": "learned_synthetic_belief",
+      "seed": 20260602,
+      "sequence_count": 512,
+      "states": [
+        "A",
+        "B",
+        "C"
+      ],
+      "version": "1.10"
+    }
+  ],
+  "llm_full_sweep": [
+    {
+      "aggregate_mode": "rebuilt_from_existing_run_reports",
+      "backends": [
+        "oracle_posterior",
+        "composition",
+        "order_only",
+        "surface_noise",
+        "hf_causal_lm"
+      ],
+      "checksum": "056799f0efaeefdbd761f6109d7a11ac6737f20a7a90bea6be8b4071399b363d",
+      "claim_scope": "multi_config_frozen_lm_transfer_stress_test_not_belief_claim",
+      "final_sweep_label": "order_information_supported",
+      "hf_rows": [
+        {
+          "analysis_role": "appendix_layer_curve",
+          "backend": "hf_causal_lm",
+          "final_diagnostic_label": "composition_shortcut_supported",
+          "layer_id": 0,
+          "locked_layer_id": 12,
+          "matched_bucket_count": 208,
+          "matched_mean_representation_distance": 0.0,
+          "matched_pair_count": 8192,
+          "matched_representation_ci_lower": 0.0,
+          "matched_representation_ci_upper": 0.0,
+          "model_id": "/root/jorjor_runs/hf_models/Qwen2.5-0.5B-Instruct",
+          "model_role": "main",
+          "posterior_equivalence_bucket_count": 25,
+          "posterior_equivalence_mean_representation_distance": 0.0,
+          "posterior_equivalence_pair_count": 8192,
+          "posterior_equivalence_representation_ci_lower": 0.0,
+          "posterior_equivalence_representation_ci_upper": 0.0,
+          "posterior_representation_correlation": null,
+          "run_id": "Qwen2.5-0.5B-Instruct_main_length6_layer0",
+          "surface_equivalence_bucket_count": 4096,
+          "surface_equivalence_mean_representation_distance": 0.0,
+          "surface_equivalence_pair_count": 4096,
+          "surface_equivalence_representation_ci_lower": 0.0,
+          "surface_equivalence_representation_ci_upper": 0.0
+        },
+        {
+          "analysis_role": "locked_main",
+          "backend": "hf_causal_lm",
+          "final_diagnostic_label": "order_information_supported",
+          "layer_id": 12,
+          "locked_layer_id": 12,
+          "matched_bucket_count": 208,
+          "matched_mean_representation_distance": 9.97986817981872e-05,
+          "matched_pair_count": 8192,
+          "matched_representation_ci_lower": 9.332307064805552e-05,
+          "matched_representation_ci_upper": 0.00010714635704203947,
+          "model_id": "/root/jorjor_runs/hf_models/Qwen2.5-0.5B-Instruct",
+          "model_role": "main",
+          "posterior_equivalence_bucket_count": 25,
+          "posterior_equivalence_mean_representation_distance": 0.00022429159133090847,
+          "posterior_equivalence_pair_count": 8192,
+          "posterior_equivalence_representation_ci_lower": 0.00019124226598395025,
+          "posterior_equivalence_representation_ci_upper": 0.00025742842947532914,
+          "posterior_representation_correlation": 0.03881840510867297,
+          "run_id": "Qwen2.5-0.5B-Instruct_main_length6_layer12",
+          "surface_equivalence_bucket_count": 4096,
+          "surface_equivalence_mean_representation_distance": 0.0017119340417099625,
+          "surface_equivalence_pair_count": 4096,
+          "surface_equivalence_representation_ci_lower": 0.0016942172994987288,
+          "surface_equivalence_representation_ci_upper": 0.0017281228677919298
+        },
+        {
+          "analysis_role": "appendix_layer_curve",
+          "backend": "hf_causal_lm",
+          "final_diagnostic_label": "composition_shortcut_supported",
+          "layer_id": -1,
+          "locked_layer_id": 12,
+          "matched_bucket_count": 208,
+          "matched_mean_representation_distance": 0.0,
+          "matched_pair_count": 8192,
+          "matched_representation_ci_lower": 0.0,
+          "matched_representation_ci_upper": 0.0,
+          "model_id": "/root/jorjor_runs/hf_models/Qwen2.5-0.5B-Instruct",
+          "model_role": "main",
+          "posterior_equivalence_bucket_count": 25,
+          "posterior_equivalence_mean_representation_distance": 0.0,
+          "posterior_equivalence_pair_count": 8192,
+          "posterior_equivalence_representation_ci_lower": 0.0,
+          "posterior_equivalence_representation_ci_upper": 0.0,
+          "posterior_representation_correlation": null,
+          "run_id": "Qwen2.5-0.5B-Instruct_main_length6_layerm1",
+          "surface_equivalence_bucket_count": 4096,
+          "surface_equivalence_mean_representation_distance": 0.0,
+          "surface_equivalence_pair_count": 4096,
+          "surface_equivalence_representation_ci_lower": 0.0,
+          "surface_equivalence_representation_ci_upper": 0.0
+        }
+      ],
+      "hf_run_count": 3,
+      "layer_curve_rows": [
+        {
+          "analysis_role": "appendix_layer_curve",
+          "backend": "hf_causal_lm",
+          "final_diagnostic_label": "composition_shortcut_supported",
+          "layer_id": 0,
+          "locked_layer_id": 12,
+          "matched_bucket_count": 208,
+          "matched_mean_representation_distance": 0.0,
+          "matched_pair_count": 8192,
+          "matched_representation_ci_lower": 0.0,
+          "matched_representation_ci_upper": 0.0,
+          "model_id": "/root/jorjor_runs/hf_models/Qwen2.5-0.5B-Instruct",
+          "model_role": "main",
+          "posterior_equivalence_bucket_count": 25,
+          "posterior_equivalence_mean_representation_distance": 0.0,
+          "posterior_equivalence_pair_count": 8192,
+          "posterior_equivalence_representation_ci_lower": 0.0,
+          "posterior_equivalence_representation_ci_upper": 0.0,
+          "posterior_representation_correlation": null,
+          "run_id": "Qwen2.5-0.5B-Instruct_main_length6_layer0",
+          "surface_equivalence_bucket_count": 4096,
+          "surface_equivalence_mean_representation_distance": 0.0,
+          "surface_equivalence_pair_count": 4096,
+          "surface_equivalence_representation_ci_lower": 0.0,
+          "surface_equivalence_representation_ci_upper": 0.0
+        },
+        {
+          "analysis_role": "appendix_layer_curve",
+          "backend": "hf_causal_lm",
+          "final_diagnostic_label": "composition_shortcut_supported",
+          "layer_id": -1,
+          "locked_layer_id": 12,
+          "matched_bucket_count": 208,
+          "matched_mean_representation_distance": 0.0,
+          "matched_pair_count": 8192,
+          "matched_representation_ci_lower": 0.0,
+          "matched_representation_ci_upper": 0.0,
+          "model_id": "/root/jorjor_runs/hf_models/Qwen2.5-0.5B-Instruct",
+          "model_role": "main",
+          "posterior_equivalence_bucket_count": 25,
+          "posterior_equivalence_mean_representation_distance": 0.0,
+          "posterior_equivalence_pair_count": 8192,
+          "posterior_equivalence_representation_ci_lower": 0.0,
+          "posterior_equivalence_representation_ci_upper": 0.0,
+          "posterior_representation_correlation": null,
+          "run_id": "Qwen2.5-0.5B-Instruct_main_length6_layerm1",
+          "surface_equivalence_bucket_count": 4096,
+          "surface_equivalence_mean_representation_distance": 0.0,
+          "surface_equivalence_pair_count": 4096,
+          "surface_equivalence_representation_ci_lower": 0.0,
+          "surface_equivalence_representation_ci_upper": 0.0
+        }
+      ],
+      "lengths": [
+        6
+      ],
+      "main_hf_rows": [
+        {
+          "analysis_role": "locked_main",
+          "backend": "hf_causal_lm",
+          "final_diagnostic_label": "order_information_supported",
+          "layer_id": 12,
+          "locked_layer_id": 12,
+          "matched_bucket_count": 208,
+          "matched_mean_representation_distance": 9.97986817981872e-05,
+          "matched_pair_count": 8192,
+          "matched_representation_ci_lower": 9.332307064805552e-05,
+          "matched_representation_ci_upper": 0.00010714635704203947,
+          "model_id": "/root/jorjor_runs/hf_models/Qwen2.5-0.5B-Instruct",
+          "model_role": "main",
+          "posterior_equivalence_bucket_count": 25,
+          "posterior_equivalence_mean_representation_distance": 0.00022429159133090847,
+          "posterior_equivalence_pair_count": 8192,
+          "posterior_equivalence_representation_ci_lower": 0.00019124226598395025,
+          "posterior_equivalence_representation_ci_upper": 0.00025742842947532914,
+          "posterior_representation_correlation": 0.03881840510867297,
+          "run_id": "Qwen2.5-0.5B-Instruct_main_length6_layer12",
+          "surface_equivalence_bucket_count": 4096,
+          "surface_equivalence_mean_representation_distance": 0.0017119340417099625,
+          "surface_equivalence_pair_count": 4096,
+          "surface_equivalence_representation_ci_lower": 0.0016942172994987288,
+          "surface_equivalence_representation_ci_upper": 0.0017281228677919298
+        }
+      ],
+      "main_hf_run_count": 1,
+      "main_sweep_label": "order_information_supported",
+      "model_specs": [
+        {
+          "layer_ids": [
+            12,
+            0,
+            -1
+          ],
+          "locked_layer_id": 12,
+          "model_id": "/root/jorjor_runs/hf_models/Qwen2.5-0.5B-Instruct",
+          "model_role": "main"
+        }
+      ],
+      "report_type": "k.2.6_llm_full_sweep",
+      "run_count": 3,
+      "runs": [
+        {
+          "analysis_role": "appendix_layer_curve",
+          "case_summaries": [
+            {
+              "analysis_role": "appendix_layer_curve",
+              "backend": "oracle_posterior",
+              "final_diagnostic_label": "belief_like_transfer_supported",
+              "layer_id": 0,
+              "locked_layer_id": 12,
+              "matched_bucket_count": 208,
+              "matched_mean_representation_distance": 0.475565794493836,
+              "matched_pair_count": 8192,
+              "matched_representation_ci_lower": 0.46199873806475483,
+              "matched_representation_ci_upper": 0.4903349274644182,
+              "model_id": "/root/jorjor_runs/hf_models/Qwen2.5-0.5B-Instruct",
+              "model_role": "main",
+              "posterior_equivalence_bucket_count": 25,
+              "posterior_equivalence_mean_representation_distance": 5.2944814994518645e-18,
+              "posterior_equivalence_pair_count": 8192,
+              "posterior_equivalence_representation_ci_lower": 8.246686486938658e-19,
+              "posterior_equivalence_representation_ci_upper": 9.944320235576661e-18,
+              "posterior_representation_correlation": 1.0,
+              "run_id": "Qwen2.5-0.5B-Instruct_main_length6_layer0",
+              "surface_equivalence_bucket_count": 4096,
+              "surface_equivalence_mean_representation_distance": 0.0,
+              "surface_equivalence_pair_count": 4096,
+              "surface_equivalence_representation_ci_lower": 0.0,
+              "surface_equivalence_representation_ci_upper": 0.0
+            },
+            {
+              "analysis_role": "appendix_layer_curve",
+              "backend": "composition",
+              "final_diagnostic_label": "composition_shortcut_supported",
+              "layer_id": 0,
+              "locked_layer_id": 12,
+              "matched_bucket_count": 208,
+              "matched_mean_representation_distance": 0.0,
+              "matched_pair_count": 8192,
+              "matched_representation_ci_lower": 0.0,
+              "matched_representation_ci_upper": 0.0,
+              "model_id": "/root/jorjor_runs/hf_models/Qwen2.5-0.5B-Instruct",
+              "model_role": "main",
+              "posterior_equivalence_bucket_count": 25,
+              "posterior_equivalence_mean_representation_distance": 0.19449496238150538,
+              "posterior_equivalence_pair_count": 8192,
+              "posterior_equivalence_representation_ci_lower": 0.17473560220605036,
+              "posterior_equivalence_representation_ci_upper": 0.21128138753579256,
+              "posterior_representation_correlation": null,
+              "run_id": "Qwen2.5-0.5B-Instruct_main_length6_layer0",
+              "surface_equivalence_bucket_count": 4096,
+              "surface_equivalence_mean_representation_distance": 0.0,
+              "surface_equivalence_pair_count": 4096,
+              "surface_equivalence_representation_ci_lower": 0.0,
+              "surface_equivalence_representation_ci_upper": 0.0
+            },
+            {
+              "analysis_role": "appendix_layer_curve",
+              "backend": "order_only",
+              "final_diagnostic_label": "order_information_supported",
+              "layer_id": 0,
+              "locked_layer_id": 12,
+              "matched_bucket_count": 208,
+              "matched_mean_representation_distance": 1.0,
+              "matched_pair_count": 8192,
+              "matched_representation_ci_lower": 1.0,
+              "matched_representation_ci_upper": 1.0,
+              "model_id": "/root/jorjor_runs/hf_models/Qwen2.5-0.5B-Instruct",
+              "model_role": "main",
+              "posterior_equivalence_bucket_count": 25,
+              "posterior_equivalence_mean_representation_distance": 1.0,
+              "posterior_equivalence_pair_count": 8192,
+              "posterior_equivalence_representation_ci_lower": 1.0,
+              "posterior_equivalence_representation_ci_upper": 1.0,
+              "posterior_representation_correlation": null,
+              "run_id": "Qwen2.5-0.5B-Instruct_main_length6_layer0",
+              "surface_equivalence_bucket_count": 4096,
+              "surface_equivalence_mean_representation_distance": 1.0,
+              "surface_equivalence_pair_count": 4096,
+              "surface_equivalence_representation_ci_lower": 1.0,
+              "surface_equivalence_representation_ci_upper": 1.0
+            },
+            {
+              "analysis_role": "appendix_layer_curve",
+              "backend": "surface_noise",
+              "final_diagnostic_label": "order_information_supported",
+              "layer_id": 0,
+              "locked_layer_id": 12,
+              "matched_bucket_count": 208,
+              "matched_mean_representation_distance": 0.237782897246918,
+              "matched_pair_count": 8192,
+              "matched_representation_ci_lower": 0.23086860751783156,
+              "matched_representation_ci_upper": 0.24449977111801294,
+              "model_id": "/root/jorjor_runs/hf_models/Qwen2.5-0.5B-Instruct",
+              "model_role": "main",
+              "posterior_equivalence_bucket_count": 25,
+              "posterior_equivalence_mean_representation_distance": 2.6472407497259323e-18,
+              "posterior_equivalence_pair_count": 8192,
+              "posterior_equivalence_representation_ci_lower": 4.574854442187349e-19,
+              "posterior_equivalence_representation_ci_upper": 5.016505261032483e-18,
+              "posterior_representation_correlation": 1.0,
+              "run_id": "Qwen2.5-0.5B-Instruct_main_length6_layer0",
+              "surface_equivalence_bucket_count": 4096,
+              "surface_equivalence_mean_representation_distance": 0.5,
+              "surface_equivalence_pair_count": 4096,
+              "surface_equivalence_representation_ci_lower": 0.5,
+              "surface_equivalence_representation_ci_upper": 0.5
+            },
+            {
+              "analysis_role": "appendix_layer_curve",
+              "backend": "hf_causal_lm",
+              "final_diagnostic_label": "composition_shortcut_supported",
+              "layer_id": 0,
+              "locked_layer_id": 12,
+              "matched_bucket_count": 208,
+              "matched_mean_representation_distance": 0.0,
+              "matched_pair_count": 8192,
+              "matched_representation_ci_lower": 0.0,
+              "matched_representation_ci_upper": 0.0,
+              "model_id": "/root/jorjor_runs/hf_models/Qwen2.5-0.5B-Instruct",
+              "model_role": "main",
+              "posterior_equivalence_bucket_count": 25,
+              "posterior_equivalence_mean_representation_distance": 0.0,
+              "posterior_equivalence_pair_count": 8192,
+              "posterior_equivalence_representation_ci_lower": 0.0,
+              "posterior_equivalence_representation_ci_upper": 0.0,
+              "posterior_representation_correlation": null,
+              "run_id": "Qwen2.5-0.5B-Instruct_main_length6_layer0",
+              "surface_equivalence_bucket_count": 4096,
+              "surface_equivalence_mean_representation_distance": 0.0,
+              "surface_equivalence_pair_count": 4096,
+              "surface_equivalence_representation_ci_lower": 0.0,
+              "surface_equivalence_representation_ci_upper": 0.0
+            }
+          ],
+          "checksum": "2a4b41efba386c4db76d79c7bcfd5636e6a1cca39e3e15de77664f870b9d76d0",
+          "layer_id": 0,
+          "length": 6,
+          "locked_layer_id": 12,
+          "model_id": "/root/jorjor_runs/hf_models/Qwen2.5-0.5B-Instruct",
+          "model_role": "main",
+          "run_dir": "outputs/k/k.2.6.2_llm_full_sweep_remote_qwen05/runs/Qwen2.5-0.5B-Instruct_main_length6_layer0",
+          "run_id": "Qwen2.5-0.5B-Instruct_main_length6_layer0",
+          "surface_template_count": 3
+        },
+        {
+          "analysis_role": "locked_main",
+          "case_summaries": [
+            {
+              "analysis_role": "locked_main",
+              "backend": "oracle_posterior",
+              "final_diagnostic_label": "belief_like_transfer_supported",
+              "layer_id": 12,
+              "locked_layer_id": 12,
+              "matched_bucket_count": 208,
+              "matched_mean_representation_distance": 0.475565794493836,
+              "matched_pair_count": 8192,
+              "matched_representation_ci_lower": 0.4624825476591693,
+              "matched_representation_ci_upper": 0.48823219336500273,
+              "model_id": "/root/jorjor_runs/hf_models/Qwen2.5-0.5B-Instruct",
+              "model_role": "main",
+              "posterior_equivalence_bucket_count": 25,
+              "posterior_equivalence_mean_representation_distance": 5.2944814994518645e-18,
+              "posterior_equivalence_pair_count": 8192,
+              "posterior_equivalence_representation_ci_lower": 8.814648143300554e-19,
+              "posterior_equivalence_representation_ci_upper": 1.0006915592458522e-17,
+              "posterior_representation_correlation": 1.0,
+              "run_id": "Qwen2.5-0.5B-Instruct_main_length6_layer12",
+              "surface_equivalence_bucket_count": 4096,
+              "surface_equivalence_mean_representation_distance": 0.0,
+              "surface_equivalence_pair_count": 4096,
+              "surface_equivalence_representation_ci_lower": 0.0,
+              "surface_equivalence_representation_ci_upper": 0.0
+            },
+            {
+              "analysis_role": "locked_main",
+              "backend": "composition",
+              "final_diagnostic_label": "composition_shortcut_supported",
+              "layer_id": 12,
+              "locked_layer_id": 12,
+              "matched_bucket_count": 208,
+              "matched_mean_representation_distance": 0.0,
+              "matched_pair_count": 8192,
+              "matched_representation_ci_lower": 0.0,
+              "matched_representation_ci_upper": 0.0,
+              "model_id": "/root/jorjor_runs/hf_models/Qwen2.5-0.5B-Instruct",
+              "model_role": "main",
+              "posterior_equivalence_bucket_count": 25,
+              "posterior_equivalence_mean_representation_distance": 0.19449496238150538,
+              "posterior_equivalence_pair_count": 8192,
+              "posterior_equivalence_representation_ci_lower": 0.17688173205101415,
+              "posterior_equivalence_representation_ci_upper": 0.21143453110810678,
+              "posterior_representation_correlation": null,
+              "run_id": "Qwen2.5-0.5B-Instruct_main_length6_layer12",
+              "surface_equivalence_bucket_count": 4096,
+              "surface_equivalence_mean_representation_distance": 0.0,
+              "surface_equivalence_pair_count": 4096,
+              "surface_equivalence_representation_ci_lower": 0.0,
+              "surface_equivalence_representation_ci_upper": 0.0
+            },
+            {
+              "analysis_role": "locked_main",
+              "backend": "order_only",
+              "final_diagnostic_label": "order_information_supported",
+              "layer_id": 12,
+              "locked_layer_id": 12,
+              "matched_bucket_count": 208,
+              "matched_mean_representation_distance": 1.0,
+              "matched_pair_count": 8192,
+              "matched_representation_ci_lower": 1.0,
+              "matched_representation_ci_upper": 1.0,
+              "model_id": "/root/jorjor_runs/hf_models/Qwen2.5-0.5B-Instruct",
+              "model_role": "main",
+              "posterior_equivalence_bucket_count": 25,
+              "posterior_equivalence_mean_representation_distance": 1.0,
+              "posterior_equivalence_pair_count": 8192,
+              "posterior_equivalence_representation_ci_lower": 1.0,
+              "posterior_equivalence_representation_ci_upper": 1.0,
+              "posterior_representation_correlation": null,
+              "run_id": "Qwen2.5-0.5B-Instruct_main_length6_layer12",
+              "surface_equivalence_bucket_count": 4096,
+              "surface_equivalence_mean_representation_distance": 1.0,
+              "surface_equivalence_pair_count": 4096,
+              "surface_equivalence_representation_ci_lower": 1.0,
+              "surface_equivalence_representation_ci_upper": 1.0
+            },
+            {
+              "analysis_role": "locked_main",
+              "backend": "surface_noise",
+              "final_diagnostic_label": "order_information_supported",
+              "layer_id": 12,
+              "locked_layer_id": 12,
+              "matched_bucket_count": 208,
+              "matched_mean_representation_distance": 0.237782897246918,
+              "matched_pair_count": 8192,
+              "matched_representation_ci_lower": 0.23084267127950725,
+              "matched_representation_ci_upper": 0.24474457190728316,
+              "model_id": "/root/jorjor_runs/hf_models/Qwen2.5-0.5B-Instruct",
+              "model_role": "main",
+              "posterior_equivalence_bucket_count": 25,
+              "posterior_equivalence_mean_representation_distance": 2.6472407497259323e-18,
+              "posterior_equivalence_pair_count": 8192,
+              "posterior_equivalence_representation_ci_lower": 4.14184011049532e-19,
+              "posterior_equivalence_representation_ci_upper": 5.16717661370069e-18,
+              "posterior_representation_correlation": 1.0,
+              "run_id": "Qwen2.5-0.5B-Instruct_main_length6_layer12",
+              "surface_equivalence_bucket_count": 4096,
+              "surface_equivalence_mean_representation_distance": 0.5,
+              "surface_equivalence_pair_count": 4096,
+              "surface_equivalence_representation_ci_lower": 0.5,
+              "surface_equivalence_representation_ci_upper": 0.5
+            },
+            {
+              "analysis_role": "locked_main",
+              "backend": "hf_causal_lm",
+              "final_diagnostic_label": "order_information_supported",
+              "layer_id": 12,
+              "locked_layer_id": 12,
+              "matched_bucket_count": 208,
+              "matched_mean_representation_distance": 9.97986817981872e-05,
+              "matched_pair_count": 8192,
+              "matched_representation_ci_lower": 9.332307064805552e-05,
+              "matched_representation_ci_upper": 0.00010714635704203947,
+              "model_id": "/root/jorjor_runs/hf_models/Qwen2.5-0.5B-Instruct",
+              "model_role": "main",
+              "posterior_equivalence_bucket_count": 25,
+              "posterior_equivalence_mean_representation_distance": 0.00022429159133090847,
+              "posterior_equivalence_pair_count": 8192,
+              "posterior_equivalence_representation_ci_lower": 0.00019124226598395025,
+              "posterior_equivalence_representation_ci_upper": 0.00025742842947532914,
+              "posterior_representation_correlation": 0.03881840510867297,
+              "run_id": "Qwen2.5-0.5B-Instruct_main_length6_layer12",
+              "surface_equivalence_bucket_count": 4096,
+              "surface_equivalence_mean_representation_distance": 0.0017119340417099625,
+              "surface_equivalence_pair_count": 4096,
+              "surface_equivalence_representation_ci_lower": 0.0016942172994987288,
+              "surface_equivalence_representation_ci_upper": 0.0017281228677919298
+            }
+          ],
+          "checksum": "1605c700703131023b813ada900a369ab4793ab5b0a20ac44456311c7f0640dd",
+          "layer_id": 12,
+          "length": 6,
+          "locked_layer_id": 12,
+          "model_id": "/root/jorjor_runs/hf_models/Qwen2.5-0.5B-Instruct",
+          "model_role": "main",
+          "run_dir": "outputs/k/k.2.6.2_llm_full_sweep_remote_qwen05/runs/Qwen2.5-0.5B-Instruct_main_length6_layer12",
+          "run_id": "Qwen2.5-0.5B-Instruct_main_length6_layer12",
+          "surface_template_count": 3
+        },
+        {
+          "analysis_role": "appendix_layer_curve",
+          "case_summaries": [
+            {
+              "analysis_role": "appendix_layer_curve",
+              "backend": "oracle_posterior",
+              "final_diagnostic_label": "belief_like_transfer_supported",
+              "layer_id": -1,
+              "locked_layer_id": 12,
+              "matched_bucket_count": 208,
+              "matched_mean_representation_distance": 0.475565794493836,
+              "matched_pair_count": 8192,
+              "matched_representation_ci_lower": 0.4618697462182867,
+              "matched_representation_ci_upper": 0.489610651122281,
+              "model_id": "/root/jorjor_runs/hf_models/Qwen2.5-0.5B-Instruct",
+              "model_role": "main",
+              "posterior_equivalence_bucket_count": 25,
+              "posterior_equivalence_mean_representation_distance": 5.2944814994518645e-18,
+              "posterior_equivalence_pair_count": 8192,
+              "posterior_equivalence_representation_ci_lower": 8.374268164368822e-19,
+              "posterior_equivalence_representation_ci_upper": 1.1187303237321941e-17,
+              "posterior_representation_correlation": 1.0,
+              "run_id": "Qwen2.5-0.5B-Instruct_main_length6_layerm1",
+              "surface_equivalence_bucket_count": 4096,
+              "surface_equivalence_mean_representation_distance": 0.0,
+              "surface_equivalence_pair_count": 4096,
+              "surface_equivalence_representation_ci_lower": 0.0,
+              "surface_equivalence_representation_ci_upper": 0.0
+            },
+            {
+              "analysis_role": "appendix_layer_curve",
+              "backend": "composition",
+              "final_diagnostic_label": "composition_shortcut_supported",
+              "layer_id": -1,
+              "locked_layer_id": 12,
+              "matched_bucket_count": 208,
+              "matched_mean_representation_distance": 0.0,
+              "matched_pair_count": 8192,
+              "matched_representation_ci_lower": 0.0,
+              "matched_representation_ci_upper": 0.0,
+              "model_id": "/root/jorjor_runs/hf_models/Qwen2.5-0.5B-Instruct",
+              "model_role": "main",
+              "posterior_equivalence_bucket_count": 25,
+              "posterior_equivalence_mean_representation_distance": 0.19449496238150538,
+              "posterior_equivalence_pair_count": 8192,
+              "posterior_equivalence_representation_ci_lower": 0.1779873065337007,
+              "posterior_equivalence_representation_ci_upper": 0.2118330771663801,
+              "posterior_representation_correlation": null,
+              "run_id": "Qwen2.5-0.5B-Instruct_main_length6_layerm1",
+              "surface_equivalence_bucket_count": 4096,
+              "surface_equivalence_mean_representation_distance": 0.0,
+              "surface_equivalence_pair_count": 4096,
+              "surface_equivalence_representation_ci_lower": 0.0,
+              "surface_equivalence_representation_ci_upper": 0.0
+            },
+            {
+              "analysis_role": "appendix_layer_curve",
+              "backend": "order_only",
+              "final_diagnostic_label": "order_information_supported",
+              "layer_id": -1,
+              "locked_layer_id": 12,
+              "matched_bucket_count": 208,
+              "matched_mean_representation_distance": 1.0,
+              "matched_pair_count": 8192,
+              "matched_representation_ci_lower": 1.0,
+              "matched_representation_ci_upper": 1.0,
+              "model_id": "/root/jorjor_runs/hf_models/Qwen2.5-0.5B-Instruct",
+              "model_role": "main",
+              "posterior_equivalence_bucket_count": 25,
+              "posterior_equivalence_mean_representation_distance": 1.0,
+              "posterior_equivalence_pair_count": 8192,
+              "posterior_equivalence_representation_ci_lower": 1.0,
+              "posterior_equivalence_representation_ci_upper": 1.0,
+              "posterior_representation_correlation": null,
+              "run_id": "Qwen2.5-0.5B-Instruct_main_length6_layerm1",
+              "surface_equivalence_bucket_count": 4096,
+              "surface_equivalence_mean_representation_distance": 1.0,
+              "surface_equivalence_pair_count": 4096,
+              "surface_equivalence_representation_ci_lower": 1.0,
+              "surface_equivalence_representation_ci_upper": 1.0
+            },
+            {
+              "analysis_role": "appendix_layer_curve",
+              "backend": "surface_noise",
+              "final_diagnostic_label": "order_information_supported",
+              "layer_id": -1,
+              "locked_layer_id": 12,
+              "matched_bucket_count": 208,
+              "matched_mean_representation_distance": 0.237782897246918,
+              "matched_pair_count": 8192,
+              "matched_representation_ci_lower": 0.23104901247112525,
+              "matched_representation_ci_upper": 0.24497606908136918,
+              "model_id": "/root/jorjor_runs/hf_models/Qwen2.5-0.5B-Instruct",
+              "model_role": "main",
+              "posterior_equivalence_bucket_count": 25,
+              "posterior_equivalence_mean_representation_distance": 2.6472407497259323e-18,
+              "posterior_equivalence_pair_count": 8192,
+              "posterior_equivalence_representation_ci_lower": 3.3061956414132144e-19,
+              "posterior_equivalence_representation_ci_upper": 5.0090130551823456e-18,
+              "posterior_representation_correlation": 1.0,
+              "run_id": "Qwen2.5-0.5B-Instruct_main_length6_layerm1",
+              "surface_equivalence_bucket_count": 4096,
+              "surface_equivalence_mean_representation_distance": 0.5,
+              "surface_equivalence_pair_count": 4096,
+              "surface_equivalence_representation_ci_lower": 0.5,
+              "surface_equivalence_representation_ci_upper": 0.5
+            },
+            {
+              "analysis_role": "appendix_layer_curve",
+              "backend": "hf_causal_lm",
+              "final_diagnostic_label": "composition_shortcut_supported",
+              "layer_id": -1,
+              "locked_layer_id": 12,
+              "matched_bucket_count": 208,
+              "matched_mean_representation_distance": 0.0,
+              "matched_pair_count": 8192,
+              "matched_representation_ci_lower": 0.0,
+              "matched_representation_ci_upper": 0.0,
+              "model_id": "/root/jorjor_runs/hf_models/Qwen2.5-0.5B-Instruct",
+              "model_role": "main",
+              "posterior_equivalence_bucket_count": 25,
+              "posterior_equivalence_mean_representation_distance": 0.0,
+              "posterior_equivalence_pair_count": 8192,
+              "posterior_equivalence_representation_ci_lower": 0.0,
+              "posterior_equivalence_representation_ci_upper": 0.0,
+              "posterior_representation_correlation": null,
+              "run_id": "Qwen2.5-0.5B-Instruct_main_length6_layerm1",
+              "surface_equivalence_bucket_count": 4096,
+              "surface_equivalence_mean_representation_distance": 0.0,
+              "surface_equivalence_pair_count": 4096,
+              "surface_equivalence_representation_ci_lower": 0.0,
+              "surface_equivalence_representation_ci_upper": 0.0
+            }
+          ],
+          "checksum": "3aa3ad3dd3b61f0e9c939c602b78563561b2c6ef3875ad276b300b93eec4df8b",
+          "layer_id": -1,
+          "length": 6,
+          "locked_layer_id": 12,
+          "model_id": "/root/jorjor_runs/hf_models/Qwen2.5-0.5B-Instruct",
+          "model_role": "main",
+          "run_dir": "outputs/k/k.2.6.2_llm_full_sweep_remote_qwen05/runs/Qwen2.5-0.5B-Instruct_main_length6_layerm1",
+          "run_id": "Qwen2.5-0.5B-Instruct_main_length6_layerm1",
+          "surface_template_count": 3
+        }
+      ],
+      "source_run_reports": [
+        "outputs/k/k.2.6.2_llm_full_sweep_remote_qwen05/runs/Qwen2.5-0.5B-Instruct_main_length6_layer0/k.2_llm_latent_order_report.json",
+        "outputs/k/k.2.6.2_llm_full_sweep_remote_qwen05/runs/Qwen2.5-0.5B-Instruct_main_length6_layer12/k.2_llm_latent_order_report.json",
+        "outputs/k/k.2.6.2_llm_full_sweep_remote_qwen05/runs/Qwen2.5-0.5B-Instruct_main_length6_layerm1/k.2_llm_latent_order_report.json"
+      ],
+      "version": "k.2.6"
+    }
+  ],
+  "llm_latent_order": [],
+  "matched_composition": {
+    "artifact": "JorJor-Inspect",
+    "bootstrap_count": 10000,
+    "bootstrap_seed": 20260602,
+    "bucket_key": [
+      "acting_player",
+      "round",
+      "legal_actions",
+      "action_label",
+      "terminal_return",
+      "history_length",
+      "action_counts",
+      "last_action"
+    ],
+    "commit": "2dfcb42",
+    "confidence_level": 0.95,
+    "final_diagnostic_label": "composition_shortcut_supported",
+    "min_bucket_bootstrap_lower_delta": -0.09394764581772785,
+    "min_delta_residual_minus_prior": -0.05236912806317674,
+    "rows": [
+      {
+        "action_value_composition_correct": 8233,
+        "action_value_composition_top10": 0.1663904607922393,
+        "all_joined_point_count": 49480,
+        "bucket_bootstrap_lower_delta": -0.08036072822308594,
+        "bucket_bootstrap_mean_delta": -0.0633523994293026,
+        "bucket_bootstrap_upper_delta": -0.047149918195477515,
+        "bucket_count": 146,
+        "bucket_mean_delta": -0.0633523994293026,
+        "delta_residual_minus_prior": -0.04397736459175425,
+        "dropped_fraction": 0.0,
+        "dropped_point_count": 0,
+        "matched_bucket_count": 146,
+        "matched_point_count": 49480,
+        "residual_correct": 6057,
+        "residual_top10": 0.12241309620048504,
+        "seed": "seed_k",
+        "singleton_bucket_count": 0
+      },
+      {
+        "action_value_composition_correct": 8150,
+        "action_value_composition_top10": 0.16545535750537985,
+        "all_joined_point_count": 49258,
+        "bucket_bootstrap_lower_delta": -0.08100699142553684,
+        "bucket_bootstrap_mean_delta": -0.06262285835110164,
+        "bucket_bootstrap_upper_delta": -0.04544155627213806,
+        "bucket_count": 146,
+        "bucket_mean_delta": -0.06262285835110164,
+        "delta_residual_minus_prior": -0.04378984124406189,
+        "dropped_fraction": 0.0,
+        "dropped_point_count": 0,
+        "matched_bucket_count": 146,
+        "matched_point_count": 49258,
+        "residual_correct": 5993,
+        "residual_top10": 0.12166551626131795,
+        "seed": "seed_l",
+        "singleton_bucket_count": 0
+      },
+      {
+        "action_value_composition_correct": 8181,
+        "action_value_composition_top10": 0.1665106244402833,
+        "all_joined_point_count": 49132,
+        "bucket_bootstrap_lower_delta": -0.09394764581772785,
+        "bucket_bootstrap_mean_delta": -0.07516773118577545,
+        "bucket_bootstrap_upper_delta": -0.056333747465739666,
+        "bucket_count": 146,
+        "bucket_mean_delta": -0.07516773118577545,
+        "delta_residual_minus_prior": -0.05236912806317674,
+        "dropped_fraction": 0.0,
+        "dropped_point_count": 0,
+        "matched_bucket_count": 146,
+        "matched_point_count": 49132,
+        "residual_correct": 5608,
+        "residual_top10": 0.11414149637710656,
+        "seed": "seed_m",
+        "singleton_bucket_count": 0
+      }
+    ],
+    "version": "1.2"
+  },
+  "one_command_reproduction_manifest": {
+    "archive_root": "checkpoints/remote_archive/v100s",
+    "bootstrap_count": 200,
+    "bootstrap_seed": 20260602,
+    "checksum": "55378d5eeab4a3a6d087c254472c07dc3fd4180e0fcfa7f6e76731e391e88631",
+    "code_commit": "41b79be",
+    "command": "python scripts/reproduce_paper_tables.py --archive-root checkpoints/remote_archive/v100s --output-dir outputs/paper/v1.13 --fresh50-commit 2dfcb42 --composition-commit 2dfcb42 --bootstrap-count 200 --bootstrap-seed 20260602",
+    "composition_commit": "2dfcb42",
+    "confidence_level": 0.95,
+    "environment_hash": "ce884ad2b8f3801d3c8dcd0fe07130855ee1dc1b6d15c34e8025abba9fbe7d1d",
+    "expected_outputs": [
+      "limit_ar_no_range_bootstrap_pack.json",
+      "limit_ar_no_range_bootstrap_pack.md",
+      "final_diagnostic_tables.json",
+      "final_diagnostic_tables.md",
+      "final_table_source_manifest.json",
+      "limit_ar_no_range_composition_nuisance_pack.json",
+      "limit_ar_no_range_composition_nuisance_pack.md"
+    ],
+    "fresh50_commit": "2dfcb42",
+    "history_composition_commit": null,
+    "missing_optional_packs": [],
+    "output_dir": "outputs/paper/v1.13",
+    "outputs": [
+      {
+        "name": "limit_ar_no_range_bootstrap_pack.json",
+        "path": "outputs/paper/v1.13/packs/limit_ar_no_range_bootstrap_pack.json",
+        "present": true,
+        "relative_path": "packs/limit_ar_no_range_bootstrap_pack.json",
+        "sha256": "2ff5b3aecf4c3b8155140bd81c4a6e8389142d8193fc347a1c8a0ab443c6a65b",
+        "size_bytes": 9754
+      },
+      {
+        "name": "limit_ar_no_range_bootstrap_pack.md",
+        "path": "outputs/paper/v1.13/packs/limit_ar_no_range_bootstrap_pack.md",
+        "present": true,
+        "relative_path": "packs/limit_ar_no_range_bootstrap_pack.md",
+        "sha256": "8cea0f6ceacbe758a4a7af327a7f066027aab40868ece81c6cd2dbfb9e1b195a",
+        "size_bytes": 1203
+      },
+      {
+        "name": "final_diagnostic_tables.json",
+        "path": "outputs/paper/v1.13/paper_tables/final_diagnostic_tables.json",
+        "present": true,
+        "relative_path": "paper_tables/final_diagnostic_tables.json",
+        "sha256": "dc82e1ff25c6b1c9c1c7132a1043d21b9c6937a57c0f1677333f73c80dcad9c3",
+        "size_bytes": 65025
+      },
+      {
+        "name": "final_diagnostic_tables.md",
+        "path": "outputs/paper/v1.13/paper_tables/final_diagnostic_tables.md",
+        "present": true,
+        "relative_path": "paper_tables/final_diagnostic_tables.md",
+        "sha256": "62a23bafef2f60dfb955d77f8336fea3a97ce7f939c383ba9c54452591b463ff",
+        "size_bytes": 4414
+      },
+      {
+        "name": "final_table_source_manifest.json",
+        "path": "outputs/paper/v1.13/paper_tables/final_table_source_manifest.json",
+        "present": true,
+        "relative_path": "paper_tables/final_table_source_manifest.json",
+        "sha256": "61d2e1e839c6b38c6c8723218becf52a0b9ab136d64c466b505897fa6b1e9fc7",
+        "size_bytes": 646
+      },
+      {
+        "name": "limit_ar_no_range_composition_nuisance_pack.json",
+        "path": "outputs/paper/v1.13/packs/limit_ar_no_range_composition_nuisance_pack.json",
+        "present": true,
+        "relative_path": "packs/limit_ar_no_range_composition_nuisance_pack.json",
+        "sha256": "0b67fb6d1f8d4d64842f3c613c1914fd7f859360b1b4d5d2887befba053c021a",
+        "size_bytes": 26080
+      },
+      {
+        "name": "limit_ar_no_range_composition_nuisance_pack.md",
+        "path": "outputs/paper/v1.13/packs/limit_ar_no_range_composition_nuisance_pack.md",
+        "present": true,
+        "relative_path": "packs/limit_ar_no_range_composition_nuisance_pack.md",
+        "sha256": "86b40197b7d7d49f950633abfed458bf008203ab22682cec1e73c3b66c39420d",
+        "size_bytes": 2415
+      }
+    ],
+    "version": "1.13"
+  },
+  "order_counterfactual": [
+    {
+      "checkpoint_load_info": {
+        "checkpoint_loaded": false
+      },
+      "checkpoint_path": "checkpoints/remote_archive/v100s/2dfcb42/outputs/limit_ar_action_value_only_seed_k_50k_4layer/model.pt",
+      "checksum": "bf9c8704badc465056dfa8b5ab8f5bd45ebd298dc1cdad8823b8779552fde583",
+      "coverage_profiles": [
+        {
+          "bucket_count": 40881,
+          "order_pair_group_count": 0,
+          "order_varying_bucket_count": 0,
+          "points_in_order_varying_buckets": 0,
+          "profile": "strict"
+        },
+        {
+          "bucket_count": 27413,
+          "order_pair_group_count": 0,
+          "order_varying_bucket_count": 0,
+          "points_in_order_varying_buckets": 0,
+          "profile": "no_private"
+        },
+        {
+          "bucket_count": 35456,
+          "order_pair_group_count": 0,
+          "order_varying_bucket_count": 0,
+          "points_in_order_varying_buckets": 0,
+          "profile": "no_value"
+        },
+        {
+          "bucket_count": 146,
+          "order_pair_group_count": 0,
+          "order_varying_bucket_count": 0,
+          "points_in_order_varying_buckets": 0,
+          "profile": "no_cards"
+        },
+        {
+          "bucket_count": 30,
+          "order_pair_group_count": 0,
+          "order_varying_bucket_count": 0,
+          "points_in_order_varying_buckets": 0,
+          "profile": "core"
+        }
+      ],
+      "device": "cpu",
+      "final_diagnostic_label": "insufficient_pairs",
+      "gaps": [
+        "retained pair count 0 is below required minimum 1"
+      ],
+      "layers": [
+        "encoder_layer_2",
+        "sequence_hidden"
+      ],
+      "max_pairs": 8,
+      "min_group_size": 1,
+      "min_pairs": 1,
+      "min_posterior_js": 0.0,
+      "order_group_count": 40881,
+      "pair_count": 0,
+      "report_type": "order_counterfactual_causal",
+      "separation_threshold": 0.001,
+      "summary": {
+        "layer_summary": [
+          {
+            "layer": "encoder_layer_2",
+            "mean_hidden_cosine_distance": 0.0,
+            "mean_hidden_l2_distance": 0.0
+          },
+          {
+            "layer": "sequence_hidden",
+            "mean_hidden_cosine_distance": 0.0,
+            "mean_hidden_l2_distance": 0.0
+          }
+        ],
+        "mean_policy_js": 0.0,
+        "mean_posterior_js": 0.0,
+        "mean_range_logit_js": 0.0,
+        "mean_value_abs_delta": 0.0
+      },
+      "test_point_count": 49480,
+      "train_config": "checkpoints/remote_archive/v100s/2dfcb42/configs/train/limit_ar_action_value_only_seed_k_50k_4layer.json",
+      "version": "1.5"
+    }
+  ],
+  "order_intervention": {
+    "aggregate": {
+      "intervention_pair_count": 17337,
+      "label_counts": {
+        "order_sensitive_stress_supported": 3
+      },
+      "metrics": {
+        "mean_hidden_cosine_distance": {
+          "mean": 0.02731120259595908,
+          "seed_ci": {
+            "lower": 0.01968243158202124,
+            "mean": 0.02731120259595908,
+            "upper": 0.03147945592479192
+          }
+        },
+        "mean_policy_js": {
+          "mean": 0.011158923405844639,
+          "seed_ci": {
+            "lower": 0.0036592205410268456,
+            "mean": 0.011158923405844639,
+            "upper": 0.018403215675001697
+          }
+        },
+        "mean_range_head_js": {
+          "mean": 0.002491257236234464,
+          "seed_ci": {
+            "lower": 0.002132768304935948,
+            "mean": 0.002491257236234464,
+            "upper": 0.002991321305192017
+          }
+        },
+        "mean_value_abs_delta": {
+          "mean": 0.22823934963434964,
+          "seed_ci": {
+            "lower": 0.19593711510739645,
+            "mean": 0.22823934963434964,
+            "upper": 0.27857726759186896
+          }
+        },
+        "policy_argmax_changed_rate": {
+          "mean": 0.014217657434383732,
+          "seed_ci": {
+            "lower": 0.0038862391803568277,
+            "mean": 0.014217657434383732,
+            "upper": 0.024381984422621062
+          }
+        },
+        "range_argmax_changed_rate": {
+          "mean": 0.21816919599547133,
+          "seed_ci": {
+            "lower": 0.18422876949740039,
+            "mean": 0.21816919599547133,
+            "upper": 0.27945592651475004
+          }
+        }
+      },
+      "seed_count": 3
+    },
+    "allowed_paper_claim": "Under input-level same-composition order permutations, the frozen poker AR can be audited for order sensitivity. This is a stress test, not a legal poker causal proof.",
+    "archive_root": "checkpoints/remote_archive/v100s/2dfcb42",
+    "batch_size": 512,
+    "bootstrap_count": 1000,
+    "bootstrap_seed": 20260610,
+    "checksum": "ed2f32b3e225637e7c0b21943e91e3012edcc25bf2d2ffa83c0ca966d7fdd7a4",
+    "claim_scope": "input_level_order_stress_not_legal_poker_causality",
+    "confidence_level": 0.95,
+    "device": "cpu",
+    "final_diagnostic_label": "order_sensitive_stress_supported",
+    "forbidden_paper_claim": "This input permutation proves or disproves ordered opponent-belief tracking.",
+    "locked_layer": "encoder_layer_2",
+    "max_pairs": 10000,
+    "max_test_points": null,
+    "min_pairs_for_label": 100,
+    "movement_epsilon": 1e-06,
+    "report_type": "k.6.0_order_intervention",
+    "rows": [
+      {
+        "checkpoint_path": "checkpoints/remote_archive/v100s/2dfcb42/outputs/limit_ar_action_value_only_seed_k_50k_4layer/model.pt",
+        "checkpoint_sha256": "f7538bd7c09929b754de06738479d87bb3eaa646cca14ad4523f8dbbefa39376",
+        "eligible_point_count": 5906,
+        "final_diagnostic_label": "order_sensitive_stress_supported",
+        "intervention_pair_count": 5906,
+        "locked_layer": "encoder_layer_2",
+        "max_pairs": 10000,
+        "max_test_points": null,
+        "seed": "seed_k",
+        "summary": {
+          "hidden_cosine_distance_ci": {
+            "lower": 0.028928029869029932,
+            "mean": 0.03147945592479192,
+            "upper": 0.03393800488072033
+          },
+          "mean_hidden_cosine_distance": 0.03147945592479192,
+          "mean_hidden_l2_distance": 1.6351674708196475,
+          "mean_policy_js": 0.018403215675001697,
+          "mean_range_head_js": 0.002349682098575427,
+          "mean_value_abs_delta": 0.19593711510739648,
+          "policy_argmax_changed_rate": 0.024381984422621062,
+          "policy_js_ci": {
+            "lower": 0.01586975851939369,
+            "mean": 0.018403215675001697,
+            "upper": 0.020988853805657348
+          },
+          "range_argmax_changed_rate": 0.19082289197426347,
+          "range_head_js_ci": {
+            "lower": 0.0021523114086775506,
+            "mean": 0.002349682098575427,
+            "upper": 0.0025659919588810927
+          },
+          "value_abs_delta_ci": {
+            "lower": 0.18580299232734127,
+            "mean": 0.19593711510739648,
+            "upper": 0.20581632067253539
+          }
+        },
+        "test_points": 49480,
+        "train_config_path": "configs/train/limit_ar_action_value_only_seed_k_50k_4layer.json",
+        "train_config_sha256": "e0fcb9cff00ff9a3d2f057d352ad8d47e2083112190c7100644828e3182b5f66"
+      },
+      {
+        "checkpoint_path": "checkpoints/remote_archive/v100s/2dfcb42/outputs/limit_ar_action_value_only_seed_l_50k_4layer/model.pt",
+        "checkpoint_sha256": "e90a135e2d007088f8547b71dec72c8db3d37a494e5a789ad4adbdf7ea9d15b7",
+        "eligible_point_count": 5661,
+        "final_diagnostic_label": "order_sensitive_stress_supported",
+        "intervention_pair_count": 5661,
+        "locked_layer": "encoder_layer_2",
+        "max_pairs": 10000,
+        "max_test_points": null,
+        "seed": "seed_l",
+        "summary": {
+          "hidden_cosine_distance_ci": {
+            "lower": 0.018140389032713245,
+            "mean": 0.01968243158202124,
+            "upper": 0.02123837427391936
+          },
+          "mean_hidden_cosine_distance": 0.01968243158202124,
+          "mean_hidden_l2_distance": 1.4062258613424041,
+          "mean_policy_js": 0.0036592205410268456,
+          "mean_range_head_js": 0.002132768304935948,
+          "mean_value_abs_delta": 0.21020366620378347,
+          "policy_argmax_changed_rate": 0.0038862391803568272,
+          "policy_js_ci": {
+            "lower": 0.002921509227495719,
+            "mean": 0.0036592205410268456,
+            "upper": 0.004438792861942076
+          },
+          "range_argmax_changed_rate": 0.27945592651475004,
+          "range_head_js_ci": {
+            "lower": 0.0018783904213087598,
+            "mean": 0.002132768304935948,
+            "upper": 0.0024089184556045145
+          },
+          "value_abs_delta_ci": {
+            "lower": 0.1942908046360762,
+            "mean": 0.21020366620378347,
+            "upper": 0.227507456028273
+          }
+        },
+        "test_points": 49258,
+        "train_config_path": "configs/train/limit_ar_action_value_only_seed_l_50k_4layer.json",
+        "train_config_sha256": "bd388e4bf883cfafc98893a56ebf4f52675ed692576ede813b3aa3230390fbc0"
+      },
+      {
+        "checkpoint_path": "checkpoints/remote_archive/v100s/2dfcb42/outputs/limit_ar_action_value_only_seed_m_50k_4layer/model.pt",
+        "checkpoint_sha256": "ff22975f8ebf4f137034992d7a3ff6f8a0cfb5c7e00870c9edb74a983cf850d1",
+        "eligible_point_count": 5770,
+        "final_diagnostic_label": "order_sensitive_stress_supported",
+        "intervention_pair_count": 5770,
+        "locked_layer": "encoder_layer_2",
+        "max_pairs": 10000,
+        "max_test_points": null,
+        "seed": "seed_m",
+        "summary": {
+          "hidden_cosine_distance_ci": {
+            "lower": 0.028140056110350368,
+            "mean": 0.03077172028106408,
+            "upper": 0.0334382143863267
+          },
+          "mean_hidden_cosine_distance": 0.03077172028106408,
+          "mean_hidden_l2_distance": 1.6621324213417275,
+          "mean_policy_js": 0.011414334001505374,
+          "mean_range_head_js": 0.002991321305192017,
+          "mean_value_abs_delta": 0.27857726759186896,
+          "policy_argmax_changed_rate": 0.014384748700173311,
+          "policy_js_ci": {
+            "lower": 0.00996377002778464,
+            "mean": 0.011414334001505374,
+            "upper": 0.012832445563475502
+          },
+          "range_argmax_changed_rate": 0.18422876949740036,
+          "range_head_js_ci": {
+            "lower": 0.002721806833012511,
+            "mean": 0.002991321305192017,
+            "upper": 0.0032855943909502884
+          },
+          "value_abs_delta_ci": {
+            "lower": 0.2648818518560496,
+            "mean": 0.27857726759186896,
+            "upper": 0.2934205434091415
+          }
+        },
+        "test_points": 49132,
+        "train_config_path": "configs/train/limit_ar_action_value_only_seed_m_50k_4layer.json",
+        "train_config_sha256": "7ebfa4da517382bd29c83d6d5ef3eff7824aae8995cd0807901155286ac94188"
+      }
+    ],
+    "seed_names": [
+      "seed_k",
+      "seed_l",
+      "seed_m"
+    ],
+    "train_config_dir": "configs/train",
+    "version": "k.6.0"
+  },
+  "prefix_composition_baseline": [
+    {
+      "checksum": "4c6d16e3606b6ac8a0297a5e4f8ca401bea9801e9a410cd4fe2b9bb7af021141",
+      "final_diagnostic_label": "composition_shortcut_supported",
+      "gaps": [],
+      "max_points": 256,
+      "min_non_final_transitions": 10,
+      "report_type": "prefix_composition_baseline",
+      "summary": {
+        "mean_composition_prior_js": 0.019522239588245827,
+        "mean_posterior_js": 0.7827017197913978,
+        "non_final_transition_count": 149,
+        "posterior_composition_prior_correlation": 0.5709995908655485,
+        "transition_count": 202
+      },
+      "test_prefix_example_count": 256,
+      "train_config": "checkpoints/remote_archive/v100s/2dfcb42/configs/train/limit_ar_action_value_only_seed_k_50k_4layer.json",
+      "train_prior_bucket_count": 25,
+      "version": "1.9"
+    },
+    {
+      "checksum": "bc50407709e6111163de15820ca0862b52325f325d5314762ffce923e311f00e",
+      "final_diagnostic_label": "composition_shortcut_supported",
+      "gaps": [],
+      "max_points": 256,
+      "min_non_final_transitions": 10,
+      "report_type": "prefix_composition_baseline",
+      "summary": {
+        "mean_composition_prior_js": 0.023658538287457162,
+        "mean_posterior_js": 0.7862068965517242,
+        "non_final_transition_count": 145,
+        "posterior_composition_prior_correlation": 0.5466783084014835,
+        "transition_count": 200
+      },
+      "test_prefix_example_count": 256,
+      "train_config": "checkpoints/remote_archive/v100s/2dfcb42/configs/train/limit_ar_action_value_only_seed_l_50k_4layer.json",
+      "train_prior_bucket_count": 26,
+      "version": "1.9"
+    },
+    {
+      "checksum": "19f6b99a66d9bf3cbdf972769e8485735489efad4ba0360bf7edfefb2febd73e",
+      "final_diagnostic_label": "composition_shortcut_supported",
+      "gaps": [],
+      "max_points": 256,
+      "min_non_final_transitions": 10,
+      "report_type": "prefix_composition_baseline",
+      "summary": {
+        "mean_composition_prior_js": 0.021857838030637365,
+        "mean_posterior_js": 0.7971014492753623,
+        "non_final_transition_count": 138,
+        "posterior_composition_prior_correlation": 0.5380714553509421,
+        "transition_count": 197
+      },
+      "test_prefix_example_count": 256,
+      "train_config": "checkpoints/remote_archive/v100s/2dfcb42/configs/train/limit_ar_action_value_only_seed_m_50k_4layer.json",
+      "train_prior_bucket_count": 25,
+      "version": "1.9"
+    }
+  ],
+  "prefix_trajectory": [
+    {
+      "alignment_threshold": 0.05,
+      "checkpoint_load_info": {
+        "checkpoint_embedding_compat": false,
+        "checkpoint_embedding_rows": 185,
+        "model_embedding_rows": 185
+      },
+      "checkpoint_path": "checkpoints/remote_archive/v100s/2dfcb42/outputs/limit_ar_action_value_only_seed_k_50k_4layer/model.pt",
+      "checksum": "289a9eeffd3b2f9b1b4f0509d0fadaa22cba12a7d79c145dc7df408d50c2d6f1",
+      "device": "cpu",
+      "final_diagnostic_label": "trajectory_aligned_supported",
+      "gaps": [],
+      "layers": [
+        "encoder_layer_2",
+        "sequence_hidden"
+      ],
+      "max_points": 256,
+      "min_non_final_transitions": 10,
+      "prefix_example_count": 256,
+      "report_type": "prefix_belief_trajectory",
+      "summary": {
+        "layer_summary": [
+          {
+            "layer": "encoder_layer_2",
+            "mean_hidden_cosine_distance": 0.44321787767362275
+          },
+          {
+            "layer": "sequence_hidden",
+            "mean_hidden_cosine_distance": 0.314494680288254
+          }
+        ],
+        "max_mean_hidden_cosine_distance": 0.44321787767362275,
+        "mean_policy_js": 0.23417025742462577,
+        "mean_posterior_js": 0.7827017197913978,
+        "mean_range_logit_js": 0.021123984154345406,
+        "mean_value_abs_delta": 0.6107670965310711,
+        "non_final_transition_count": 149,
+        "posterior_policy_update_correlation": 0.14501680351523713,
+        "posterior_range_update_correlation": 0.21448164241178935,
+        "transition_count": 202
+      },
+      "test_point_count": 49480,
+      "train_config": "checkpoints/remote_archive/v100s/2dfcb42/configs/train/limit_ar_action_value_only_seed_k_50k_4layer.json",
+      "version": "1.8"
+    },
+    {
+      "alignment_threshold": 0.05,
+      "checkpoint_load_info": {
+        "checkpoint_embedding_compat": false,
+        "checkpoint_embedding_rows": 185,
+        "model_embedding_rows": 185
+      },
+      "checkpoint_path": "checkpoints/remote_archive/v100s/2dfcb42/outputs/limit_ar_action_value_only_seed_l_50k_4layer/model.pt",
+      "checksum": "23cf27358aaa7653070bf017ee8f53b2ea21e4da8047c7cefcb0e9b5f074b770",
+      "device": "cpu",
+      "final_diagnostic_label": "trajectory_aligned_supported",
+      "gaps": [],
+      "layers": [
+        "encoder_layer_2",
+        "sequence_hidden"
+      ],
+      "max_points": 256,
+      "min_non_final_transitions": 10,
+      "prefix_example_count": 256,
+      "report_type": "prefix_belief_trajectory",
+      "summary": {
+        "layer_summary": [
+          {
+            "layer": "encoder_layer_2",
+            "mean_hidden_cosine_distance": 0.401429625857493
+          },
+          {
+            "layer": "sequence_hidden",
+            "mean_hidden_cosine_distance": 0.25257992789406203
+          }
+        ],
+        "max_mean_hidden_cosine_distance": 0.401429625857493,
+        "mean_policy_js": 0.228735010346043,
+        "mean_posterior_js": 0.7862068965517242,
+        "mean_range_logit_js": 0.018415047850518933,
+        "mean_value_abs_delta": 0.780724803692308,
+        "non_final_transition_count": 145,
+        "posterior_policy_update_correlation": 0.14591506638487042,
+        "posterior_range_update_correlation": 0.10392824155823906,
+        "transition_count": 200
+      },
+      "test_point_count": 49258,
+      "train_config": "checkpoints/remote_archive/v100s/2dfcb42/configs/train/limit_ar_action_value_only_seed_l_50k_4layer.json",
+      "version": "1.8"
+    },
+    {
+      "alignment_threshold": 0.05,
+      "checkpoint_load_info": {
+        "checkpoint_embedding_compat": false,
+        "checkpoint_embedding_rows": 185,
+        "model_embedding_rows": 185
+      },
+      "checkpoint_path": "checkpoints/remote_archive/v100s/2dfcb42/outputs/limit_ar_action_value_only_seed_m_50k_4layer/model.pt",
+      "checksum": "5ee278151e888d21ebdd073a4092eef48f92e43f3c38d7354b24f857784e3b5d",
+      "device": "cpu",
+      "final_diagnostic_label": "trajectory_aligned_supported",
+      "gaps": [],
+      "layers": [
+        "encoder_layer_2",
+        "sequence_hidden"
+      ],
+      "max_points": 256,
+      "min_non_final_transitions": 10,
+      "prefix_example_count": 256,
+      "report_type": "prefix_belief_trajectory",
+      "summary": {
+        "layer_summary": [
+          {
+            "layer": "encoder_layer_2",
+            "mean_hidden_cosine_distance": 0.5461284618527777
+          },
+          {
+            "layer": "sequence_hidden",
+            "mean_hidden_cosine_distance": 0.418966066605155
+          }
+        ],
+        "max_mean_hidden_cosine_distance": 0.5461284618527777,
+        "mean_policy_js": 0.349981873349131,
+        "mean_posterior_js": 0.7971014492753623,
+        "mean_range_logit_js": 0.041285091231369996,
+        "mean_value_abs_delta": 0.9822711360411368,
+        "non_final_transition_count": 138,
+        "posterior_policy_update_correlation": 0.15357274916681252,
+        "posterior_range_update_correlation": 0.1652540576281495,
+        "transition_count": 197
+      },
+      "test_point_count": 49132,
+      "train_config": "checkpoints/remote_archive/v100s/2dfcb42/configs/train/limit_ar_action_value_only_seed_m_50k_4layer.json",
+      "version": "1.8"
+    }
+  ],
+  "probe_capacity_s6_s7": {
+    "appendix_probe_family": "mlp",
+    "bootstrap_count": 10000,
+    "bootstrap_seed": 20260603,
+    "c1_min_lower_delta": 0.008363253968253962,
+    "c2_max_upper_delta": 7.84920634920617e-05,
+    "c2_min_lower_delta": -0.01568380952380952,
+    "c3_max_upper_delta": 0.013989607833103,
+    "c3_min_lower_delta": -0.016435461498308716,
+    "checksum": "9d9004ea6e0ebcead758e8d32ba8493ff7cd39001d681625e8ebbb2ea59fd8c5",
+    "claim_rule": "MLP rows are appendix-only and can only create a capacity caveat, not replace main linear rows.",
+    "confidence_level": 0.95,
+    "final_verdict": "mlp_inconclusive",
+    "linear_commit": "2dfcb42",
+    "locked_layer": "encoder_layer_2",
+    "main_probe_family": "linear",
+    "mlp_commit": "64a2220",
+    "model_family": "limit_ar_no_range_50k_4layer",
+    "row_count": 9,
+    "rows": [
+      {
+        "baseline_correctness_sha256": "ce9d102f9cec4970c01eb7b80a6d67c17896825ebf51adc0447fc3ac96359bd0",
+        "baseline_family": "linear_nuisance",
+        "baseline_metrics_path": "/root/jorjor_runs/2dfcb42/outputs/probes/limit_ar_action_value_only_seed_k_4layer_range_history_only_action_value_only_50k/probe_metrics.json",
+        "baseline_top10": 0.13459983831851252,
+        "bootstrap_count": 10000,
+        "bootstrap_engine": "numpy_multinomial",
+        "bootstrap_seed": 20260603,
+        "confidence_level": 0.95,
+        "decision_point_lower_delta": 0.01645109135004042,
+        "decision_point_mean_delta": 0.02021018593371059,
+        "decision_point_upper_delta": 0.024130962004850445,
+        "gate": "C1_mlp_action_value_residual",
+        "hand_count": 10000,
+        "layer": "encoder_layer_2",
+        "lower_delta": 0.011246071428571432,
+        "mean_delta": 0.016204801587301587,
+        "mlp_correctness_sha256": "c0c65105d1c734c0c720435576895ee29df5fceee94e32272a36d64045a364a2",
+        "mlp_metrics_path": "/root/jorjor_runs/64a2220/outputs/probes/limit_ar_action_value_only_seed_k_4layer_range_history_only_residualize_action_value_mlp_50k/probe_metrics.json",
+        "mlp_top10": 0.15481002425222312,
+        "model_family": "limit_ar_no_range_50k_4layer",
+        "paired_outcomes": {
+          "baseline_only_correct": 4181,
+          "both_correct": 2479,
+          "both_wrong": 37639,
+          "residual_only_correct": 5181
+        },
+        "probe_family": "mlp",
+        "resampling_unit": "hand_id",
+        "sample_count": 49480,
+        "seed": "seed_k",
+        "table_role": "appendix",
+        "unique_value_count": 50,
+        "upper_delta": 0.02115619047619047
+      },
+      {
+        "baseline_correctness_sha256": "6c8a4b26ce362f0ec0bf7c6df39177418338d77e70786d38a19dff7266cea8a4",
+        "baseline_family": "linear_nuisance",
+        "baseline_metrics_path": "/root/jorjor_runs/2dfcb42/outputs/probes/limit_ar_action_value_only_seed_k_4layer_range_action_value_history_composition_only_50k/probe_metrics.json",
+        "baseline_top10": 0.1663904607922393,
+        "bootstrap_count": 10000,
+        "bootstrap_engine": "numpy_multinomial",
+        "bootstrap_seed": 20260603,
+        "confidence_level": 0.95,
+        "decision_point_lower_delta": -0.01166127728375101,
+        "decision_point_mean_delta": -0.007821341956345998,
+        "decision_point_upper_delta": -0.004122877930476961,
+        "gate": "C2_mlp_composition_residual",
+        "hand_count": 10000,
+        "layer": "encoder_layer_2",
+        "lower_delta": -0.009086507936507934,
+        "mean_delta": -0.004539484126984127,
+        "mlp_correctness_sha256": "f115d72fd690aeb97b560e09ce2e12d6b5a2bafcdae7d4aa286cfa696734f0ff",
+        "mlp_metrics_path": "/root/jorjor_runs/64a2220/outputs/probes/limit_ar_action_value_only_seed_k_4layer_range_residualize_action_value_history_composition_mlp_50k/probe_metrics.json",
+        "mlp_top10": 0.15856911883589328,
+        "model_family": "limit_ar_no_range_50k_4layer",
+        "paired_outcomes": {
+          "baseline_only_correct": 4905,
+          "both_correct": 3328,
+          "both_wrong": 36729,
+          "residual_only_correct": 4518
+        },
+        "probe_family": "mlp",
+        "resampling_unit": "hand_id",
+        "sample_count": 49480,
+        "seed": "seed_k",
+        "table_role": "appendix",
+        "unique_value_count": 50,
+        "upper_delta": 7.84920634920617e-05
+      },
+      {
+        "baseline_correctness_sha256": "6c8a4b26ce362f0ec0bf7c6df39177418338d77e70786d38a19dff7266cea8a4",
+        "baseline_family": "linear_action_value_composition",
+        "baseline_metrics_path": "/root/jorjor_runs/2dfcb42/outputs/probes/limit_ar_action_value_only_seed_k_4layer_range_action_value_history_composition_only_50k/probe_metrics.json",
+        "baseline_top10": 0.1663904607922393,
+        "bootstrap_count": 10000,
+        "bootstrap_engine": "numpy_multinomial",
+        "bootstrap_seed": 20260603,
+        "bucket_count": 146,
+        "bucket_source": "train_config",
+        "confidence_level": 0.95,
+        "decision_point_lower_delta": -1.0,
+        "decision_point_mean_delta": -0.007821341956345998,
+        "decision_point_upper_delta": 1.0,
+        "dropped_fraction": 0.0,
+        "dropped_point_count": 0,
+        "gate": "C3_mlp_matched_composition",
+        "hand_count": 10000,
+        "layer": "encoder_layer_2",
+        "lower_delta": -0.016435461498308716,
+        "matched_bucket_count": 146,
+        "mean_delta": -0.0013819655529432135,
+        "mlp_correctness_sha256": "f115d72fd690aeb97b560e09ce2e12d6b5a2bafcdae7d4aa286cfa696734f0ff",
+        "mlp_metrics_path": "/root/jorjor_runs/64a2220/outputs/probes/limit_ar_action_value_only_seed_k_4layer_range_residualize_action_value_history_composition_mlp_50k/probe_metrics.json",
+        "mlp_top10": 0.15856911883589328,
+        "model_family": "limit_ar_no_range_50k_4layer",
+        "paired_outcomes": {
+          "baseline_only_correct": 4905,
+          "both_correct": 3328,
+          "both_wrong": 36729,
+          "residual_only_correct": 4518
+        },
+        "probe_family": "mlp",
+        "resampling_unit": "matched_composition_bucket",
+        "sample_count": 49480,
+        "seed": "seed_k",
+        "singleton_bucket_count": 0,
+        "table_role": "appendix",
+        "unique_value_count": 115,
+        "upper_delta": 0.013989607833103
+      },
+      {
+        "baseline_correctness_sha256": "3e188affbc094316a1933ddd611679c98183411ffa1366028c7c417029ef5b99",
+        "baseline_family": "linear_nuisance",
+        "baseline_metrics_path": "/root/jorjor_runs/2dfcb42/outputs/probes/limit_ar_action_value_only_seed_l_4layer_range_history_only_action_value_only_50k/probe_metrics.json",
+        "baseline_top10": 0.134049291485647,
+        "bootstrap_count": 10000,
+        "bootstrap_engine": "numpy_multinomial",
+        "bootstrap_seed": 20260603,
+        "confidence_level": 0.95,
+        "decision_point_lower_delta": 0.01544926712412197,
+        "decision_point_mean_delta": 0.019164399691420683,
+        "decision_point_upper_delta": 0.022778025904421618,
+        "gate": "C1_mlp_action_value_residual",
+        "hand_count": 10000,
+        "layer": "encoder_layer_2",
+        "lower_delta": 0.010096150793650796,
+        "mean_delta": 0.015125753968253969,
+        "mlp_correctness_sha256": "72de435fbd3f030149bb75d6380e247154aee3adc1c1a375b1acec2027101dda",
+        "mlp_metrics_path": "/root/jorjor_runs/64a2220/outputs/probes/limit_ar_action_value_only_seed_l_4layer_range_history_only_residualize_action_value_mlp_50k/probe_metrics.json",
+        "mlp_top10": 0.15321369117706768,
+        "model_family": "limit_ar_no_range_50k_4layer",
+        "paired_outcomes": {
+          "baseline_only_correct": 3665,
+          "both_correct": 2938,
+          "both_wrong": 38046,
+          "residual_only_correct": 4609
+        },
+        "probe_family": "mlp",
+        "resampling_unit": "hand_id",
+        "sample_count": 49258,
+        "seed": "seed_l",
+        "table_role": "appendix",
+        "unique_value_count": 53,
+        "upper_delta": 0.02011916666666666
+      },
+      {
+        "baseline_correctness_sha256": "a93138f302cefe0466f0b4a83def4b2b0b95faffddb96adcb2c890f1b6b19d0c",
+        "baseline_family": "linear_nuisance",
+        "baseline_metrics_path": "/root/jorjor_runs/2dfcb42/outputs/probes/limit_ar_action_value_only_seed_l_4layer_range_action_value_history_composition_only_50k/probe_metrics.json",
+        "baseline_top10": 0.16545535750537985,
+        "bootstrap_count": 10000,
+        "bootstrap_engine": "numpy_multinomial",
+        "bootstrap_seed": 20260603,
+        "confidence_level": 0.95,
+        "decision_point_lower_delta": -0.013622152746761948,
+        "decision_point_mean_delta": -0.00988671890860368,
+        "decision_point_upper_delta": -0.006191887612164521,
+        "gate": "C2_mlp_composition_residual",
+        "hand_count": 10000,
+        "layer": "encoder_layer_2",
+        "lower_delta": -0.01504182539682539,
+        "mean_delta": -0.010345158730158729,
+        "mlp_correctness_sha256": "e292dca049a563053e87c0319dd20d8df9785e588eb22f6e1cd5e9ebc9591a62",
+        "mlp_metrics_path": "/root/jorjor_runs/64a2220/outputs/probes/limit_ar_action_value_only_seed_l_4layer_range_residualize_action_value_history_composition_mlp_50k/probe_metrics.json",
+        "mlp_top10": 0.15556863859677617,
+        "model_family": "limit_ar_no_range_50k_4layer",
+        "paired_outcomes": {
+          "baseline_only_correct": 4536,
+          "both_correct": 3614,
+          "both_wrong": 37059,
+          "residual_only_correct": 4049
+        },
+        "probe_family": "mlp",
+        "resampling_unit": "hand_id",
+        "sample_count": 49258,
+        "seed": "seed_l",
+        "table_role": "appendix",
+        "unique_value_count": 49,
+        "upper_delta": -0.0057512301587301605
+      },
+      {
+        "baseline_correctness_sha256": "a93138f302cefe0466f0b4a83def4b2b0b95faffddb96adcb2c890f1b6b19d0c",
+        "baseline_family": "linear_action_value_composition",
+        "baseline_metrics_path": "/root/jorjor_runs/2dfcb42/outputs/probes/limit_ar_action_value_only_seed_l_4layer_range_action_value_history_composition_only_50k/probe_metrics.json",
+        "baseline_top10": 0.16545535750537985,
+        "bootstrap_count": 10000,
+        "bootstrap_engine": "numpy_multinomial",
+        "bootstrap_seed": 20260603,
+        "bucket_count": 146,
+        "bucket_source": "train_config",
+        "confidence_level": 0.95,
+        "decision_point_lower_delta": -1.0,
+        "decision_point_mean_delta": -0.00988671890860368,
+        "decision_point_upper_delta": 1.0,
+        "dropped_fraction": 0.0,
+        "dropped_point_count": 0,
+        "gate": "C3_mlp_matched_composition",
+        "hand_count": 10000,
+        "layer": "encoder_layer_2",
+        "lower_delta": -0.011540590944151996,
+        "matched_bucket_count": 146,
+        "mean_delta": 0.0004947797490108663,
+        "mlp_correctness_sha256": "e292dca049a563053e87c0319dd20d8df9785e588eb22f6e1cd5e9ebc9591a62",
+        "mlp_metrics_path": "/root/jorjor_runs/64a2220/outputs/probes/limit_ar_action_value_only_seed_l_4layer_range_residualize_action_value_history_composition_mlp_50k/probe_metrics.json",
+        "mlp_top10": 0.15556863859677617,
+        "model_family": "limit_ar_no_range_50k_4layer",
+        "paired_outcomes": {
+          "baseline_only_correct": 4536,
+          "both_correct": 3614,
+          "both_wrong": 37059,
+          "residual_only_correct": 4049
+        },
+        "probe_family": "mlp",
+        "resampling_unit": "matched_composition_bucket",
+        "sample_count": 49258,
+        "seed": "seed_l",
+        "singleton_bucket_count": 0,
+        "table_role": "appendix",
+        "unique_value_count": 121,
+        "upper_delta": 0.012546394127992598
+      },
+      {
+        "baseline_correctness_sha256": "8a7fbe3196e055e4c50aeef8f6627c066694e010ab21eefdef336335423392b0",
+        "baseline_family": "linear_nuisance",
+        "baseline_metrics_path": "/root/jorjor_runs/2dfcb42/outputs/probes/limit_ar_action_value_only_seed_m_4layer_range_history_only_action_value_only_50k/probe_metrics.json",
+        "baseline_top10": 0.13585850362289342,
+        "bootstrap_count": 10000,
+        "bootstrap_engine": "numpy_multinomial",
+        "bootstrap_seed": 20260603,
+        "confidence_level": 0.95,
+        "decision_point_lower_delta": 0.010461613612309696,
+        "decision_point_mean_delta": 0.014247333713262233,
+        "decision_point_upper_delta": 0.018073760481966947,
+        "gate": "C1_mlp_action_value_residual",
+        "hand_count": 10000,
+        "layer": "encoder_layer_2",
+        "lower_delta": 0.008363253968253962,
+        "mean_delta": 0.013297460317460317,
+        "mlp_correctness_sha256": "75c4b74c50f287bf0a857421f5f710bda1e56d0635a2c8cc6be609248793bf64",
+        "mlp_metrics_path": "/root/jorjor_runs/64a2220/outputs/probes/limit_ar_action_value_only_seed_m_4layer_range_history_only_residualize_action_value_mlp_50k/probe_metrics.json",
+        "mlp_top10": 0.15010583733615565,
+        "model_family": "limit_ar_no_range_50k_4layer",
+        "paired_outcomes": {
+          "baseline_only_correct": 4266,
+          "both_correct": 2409,
+          "both_wrong": 37491,
+          "residual_only_correct": 4966
+        },
+        "probe_family": "mlp",
+        "resampling_unit": "hand_id",
+        "sample_count": 49132,
+        "seed": "seed_m",
+        "table_role": "appendix",
+        "unique_value_count": 54,
+        "upper_delta": 0.01830170634920635
+      },
+      {
+        "baseline_correctness_sha256": "c302a6fcedf7dffc241420197a6baf41bc34f26bb423cbaff829dde109628b24",
+        "baseline_family": "linear_nuisance",
+        "baseline_metrics_path": "/root/jorjor_runs/2dfcb42/outputs/probes/limit_ar_action_value_only_seed_m_4layer_range_action_value_history_composition_only_50k/probe_metrics.json",
+        "baseline_top10": 0.1665106244402833,
+        "bootstrap_count": 10000,
+        "bootstrap_engine": "numpy_multinomial",
+        "bootstrap_seed": 20260603,
+        "confidence_level": 0.95,
+        "decision_point_lower_delta": -0.016241960433118943,
+        "decision_point_mean_delta": -0.01245624033216641,
+        "decision_point_upper_delta": -0.00871122689896605,
+        "gate": "C2_mlp_composition_residual",
+        "hand_count": 10000,
+        "layer": "encoder_layer_2",
+        "lower_delta": -0.01568380952380952,
+        "mean_delta": -0.011085238095238096,
+        "mlp_correctness_sha256": "46404a7063d5270cf34e5a30a384cb6520f84598f530c22db1efae5c2d013db0",
+        "mlp_metrics_path": "/root/jorjor_runs/64a2220/outputs/probes/limit_ar_action_value_only_seed_m_4layer_range_residualize_action_value_history_composition_mlp_50k/probe_metrics.json",
+        "mlp_top10": 0.15405438410811692,
+        "model_family": "limit_ar_no_range_50k_4layer",
+        "paired_outcomes": {
+          "baseline_only_correct": 4927,
+          "both_correct": 3254,
+          "both_wrong": 36636,
+          "residual_only_correct": 4315
+        },
+        "probe_family": "mlp",
+        "resampling_unit": "hand_id",
+        "sample_count": 49132,
+        "seed": "seed_m",
+        "table_role": "appendix",
+        "unique_value_count": 46,
+        "upper_delta": -0.0066753968253968265
+      },
+      {
+        "baseline_correctness_sha256": "c302a6fcedf7dffc241420197a6baf41bc34f26bb423cbaff829dde109628b24",
+        "baseline_family": "linear_action_value_composition",
+        "baseline_metrics_path": "/root/jorjor_runs/2dfcb42/outputs/probes/limit_ar_action_value_only_seed_m_4layer_range_action_value_history_composition_only_50k/probe_metrics.json",
+        "baseline_top10": 0.1665106244402833,
+        "bootstrap_count": 10000,
+        "bootstrap_engine": "numpy_multinomial",
+        "bootstrap_seed": 20260603,
+        "bucket_count": 146,
+        "bucket_source": "train_config",
+        "confidence_level": 0.95,
+        "decision_point_lower_delta": -1.0,
+        "decision_point_mean_delta": -0.01245624033216641,
+        "decision_point_upper_delta": 1.0,
+        "dropped_fraction": 0.0,
+        "dropped_point_count": 0,
+        "gate": "C3_mlp_matched_composition",
+        "hand_count": 10000,
+        "layer": "encoder_layer_2",
+        "lower_delta": -0.014593048086650448,
+        "matched_bucket_count": 146,
+        "mean_delta": -0.0007926869801299128,
+        "mlp_correctness_sha256": "46404a7063d5270cf34e5a30a384cb6520f84598f530c22db1efae5c2d013db0",
+        "mlp_metrics_path": "/root/jorjor_runs/64a2220/outputs/probes/limit_ar_action_value_only_seed_m_4layer_range_residualize_action_value_history_composition_mlp_50k/probe_metrics.json",
+        "mlp_top10": 0.15405438410811692,
+        "model_family": "limit_ar_no_range_50k_4layer",
+        "paired_outcomes": {
+          "baseline_only_correct": 4927,
+          "both_correct": 3254,
+          "both_wrong": 36636,
+          "residual_only_correct": 4315
+        },
+        "probe_family": "mlp",
+        "resampling_unit": "matched_composition_bucket",
+        "sample_count": 49132,
+        "seed": "seed_m",
+        "singleton_bucket_count": 0,
+        "table_role": "appendix",
+        "unique_value_count": 113,
+        "upper_delta": 0.01320715871695406
+      }
+    ],
+    "seed_count": 3,
+    "version": "1.18"
+  },
+  "range_supervised_strict_gate": {
+    "bootstrap_count": 10000,
+    "bootstrap_seed": 20260603,
+    "checksum": "ccda890cbc4c2cfd4da7532dbfcf1f18c312e7431ed38518f2882fe3a50be136",
+    "commit": "64a2220",
+    "confidence_level": 0.95,
+    "final_diagnostic_label": "composition_shortcut_supported",
+    "locked_layer": "encoder_layer_2",
+    "model_family": "limit_ar_range_supervised_4layer",
+    "row_count": 9,
+    "rows": [
+      {
+        "baseline_checksum": "2c1b9a00538ae5e9bcd8cf13eb0088d07bc25e4834b78df443999c91fe7b88f8",
+        "baseline_correctness_sha256": "b561156524fc5ea11914bc7c43aa5735ba8917403a4c7f128ccb03d1e0c77311",
+        "baseline_probe_seed": 229,
+        "baseline_top10": 0.13500784929356358,
+        "bootstrap_count": 10000,
+        "bootstrap_engine": "numpy_multinomial",
+        "bootstrap_seed": 20260603,
+        "confidence_level": 0.95,
+        "decision_point_lower_delta": 0.009398764500805318,
+        "decision_point_mean_delta": 0.013068564088972253,
+        "decision_point_upper_delta": 0.016819914779098454,
+        "gate": "S5_action_value_residual",
+        "hand_count": 10000,
+        "layer": "encoder_layer_2",
+        "lower_delta": 0.009428253968253973,
+        "mean_delta": 0.013788611111111109,
+        "model_family": "limit_ar_range_supervised_4layer",
+        "opponent_hand_supervised": true,
+        "paired_outcomes": {
+          "baseline_only_correct": 4016,
+          "both_correct": 2606,
+          "both_wrong": 37770,
+          "residual_only_correct": 4657
+        },
+        "real_top10": 0.14807641338253583,
+        "resampling_unit": "hand_id",
+        "residual_checksum": "0a9774478702fc30cc647247cd94aced559b2237471e37be733600438097d4cb",
+        "residual_correctness_sha256": "ac6011a4dd2a9d400c176369dc2e9da5a571410184ccf6e59067c6926f96b998",
+        "residual_probe_seed": 229,
+        "sample_count": 49049,
+        "seed": "seed_d",
+        "supervision_status": "legacy_teacher_range_supervision_inferred",
+        "train_checksum": "085d9bc76cbd7540e88593daabaa8ea48d7e95d7b8c1408947a3d6a800a0df1f",
+        "unique_value_count": 48,
+        "upper_delta": 0.018125833333333334
+      },
+      {
+        "baseline_checksum": "17ab52002cd46ac9d8788fa0e3c4991fb7b793f67051fbb2d8ecd082d7a3686c",
+        "baseline_correctness_sha256": "ae9d42fced73c38c62fbe257422c1880a3d18f80a229c6c5cbc8480c16540814",
+        "baseline_probe_seed": 1703,
+        "baseline_top10": 0.1605333442068136,
+        "bootstrap_count": 10000,
+        "bootstrap_engine": "numpy_multinomial",
+        "bootstrap_seed": 20260603,
+        "confidence_level": 0.95,
+        "decision_point_lower_delta": -0.04452690166975881,
+        "decision_point_mean_delta": -0.04049012212277518,
+        "decision_point_upper_delta": -0.036616444779710086,
+        "gate": "S6_composition_residual",
+        "hand_count": 10000,
+        "layer": "encoder_layer_2",
+        "lower_delta": -0.05724619047619047,
+        "mean_delta": -0.05220992063492064,
+        "model_family": "limit_ar_range_supervised_4layer",
+        "opponent_hand_supervised": true,
+        "paired_outcomes": {
+          "baseline_only_correct": 6072,
+          "both_correct": 1802,
+          "both_wrong": 37089,
+          "residual_only_correct": 4086
+        },
+        "real_top10": 0.1200432220840384,
+        "resampling_unit": "hand_id",
+        "residual_checksum": "4d67509bd028b4c690aa71069a4cecc2b447de9b6be56a2825f2a35cf2afd282",
+        "residual_correctness_sha256": "c8c578e56ed39917fd48e8c1e98966b0895bec64317ac681639846a32ef554b3",
+        "residual_probe_seed": 1705,
+        "sample_count": 49049,
+        "seed": "seed_d",
+        "supervision_status": "legacy_teacher_range_supervision_inferred",
+        "train_checksum": "085d9bc76cbd7540e88593daabaa8ea48d7e95d7b8c1408947a3d6a800a0df1f",
+        "unique_value_count": 46,
+        "upper_delta": -0.04729499999999999
+      },
+      {
+        "baseline_checksum": "17ab52002cd46ac9d8788fa0e3c4991fb7b793f67051fbb2d8ecd082d7a3686c",
+        "baseline_correctness_sha256": "ae9d42fced73c38c62fbe257422c1880a3d18f80a229c6c5cbc8480c16540814",
+        "baseline_probe_seed": 1703,
+        "baseline_top10": 0.1605333442068136,
+        "bootstrap_count": 10000,
+        "bootstrap_engine": "numpy_multinomial",
+        "bootstrap_seed": 20260603,
+        "bucket_count": 146,
+        "bucket_source": "train_config",
+        "confidence_level": 0.95,
+        "decision_point_lower_delta": -1.0,
+        "decision_point_mean_delta": -0.04049012212277518,
+        "decision_point_upper_delta": 1.0,
+        "dropped_fraction": 0.0,
+        "dropped_point_count": 0,
+        "gate": "S7_matched_composition",
+        "hand_count": 10000,
+        "layer": "encoder_layer_2",
+        "lower_delta": -0.08136865552463933,
+        "matched_bucket_count": 146,
+        "mean_delta": -0.061522473413461176,
+        "model_family": "limit_ar_range_supervised_4layer",
+        "opponent_hand_supervised": true,
+        "paired_outcomes": {
+          "baseline_only_correct": 6072,
+          "both_correct": 1802,
+          "both_wrong": 37089,
+          "residual_only_correct": 4086
+        },
+        "real_top10": 0.1200432220840384,
+        "resampling_unit": "matched_composition_bucket",
+        "residual_checksum": "4d67509bd028b4c690aa71069a4cecc2b447de9b6be56a2825f2a35cf2afd282",
+        "residual_correctness_sha256": "c8c578e56ed39917fd48e8c1e98966b0895bec64317ac681639846a32ef554b3",
+        "residual_probe_seed": 1705,
+        "sample_count": 49049,
+        "seed": "seed_d",
+        "singleton_bucket_count": 0,
+        "supervision_status": "legacy_teacher_range_supervision_inferred",
+        "train_checksum": "085d9bc76cbd7540e88593daabaa8ea48d7e95d7b8c1408947a3d6a800a0df1f",
+        "unique_value_count": 118,
+        "upper_delta": -0.043119413587457724
+      },
+      {
+        "baseline_checksum": "1494e50269f4e7e3ac41a202cf1315d5bf02e17c0b04aa4089eecc376f9fc566",
+        "baseline_correctness_sha256": "5778af38de96b8e87fa6a0bdfafe0a5468a09b65b2eb736a0378e0876d187ded",
+        "baseline_probe_seed": 269,
+        "baseline_top10": 0.13525774034745108,
+        "bootstrap_count": 10000,
+        "bootstrap_engine": "numpy_multinomial",
+        "bootstrap_seed": 20260603,
+        "confidence_level": 0.95,
+        "decision_point_lower_delta": 0.005899344969282721,
+        "decision_point_mean_delta": 0.009845803328044266,
+        "decision_point_upper_delta": 0.013731233980227023,
+        "gate": "S5_action_value_residual",
+        "hand_count": 10000,
+        "layer": "encoder_layer_2",
+        "lower_delta": 0.005220357142857137,
+        "mean_delta": 0.009965833333333333,
+        "model_family": "limit_ar_range_supervised_4layer",
+        "opponent_hand_supervised": true,
+        "paired_outcomes": {
+          "baseline_only_correct": 4535,
+          "both_correct": 2114,
+          "both_wrong": 37490,
+          "residual_only_correct": 5019
+        },
+        "real_top10": 0.14510354367549533,
+        "resampling_unit": "hand_id",
+        "residual_checksum": "4c65060a1f879802a872ef33952286e3cf72f70a7ef46e2b8a5991460505395c",
+        "residual_correctness_sha256": "bf9d4195c4640aeeb9802cb3ac6e11636b5aaf73dbb59381aa82038708277595",
+        "residual_probe_seed": 269,
+        "sample_count": 49158,
+        "seed": "seed_f",
+        "supervision_status": "legacy_teacher_range_supervision_inferred",
+        "train_checksum": "75d18d2e0ec41fc1cc22b20bf6fa1b8f116596543c9e491ebef06b55f952d466",
+        "unique_value_count": 45,
+        "upper_delta": 0.014541785714285712
+      },
+      {
+        "baseline_checksum": "9039f507abba474c106663d918563ddb643a72472941029918261cef17a8ea8e",
+        "baseline_correctness_sha256": "1cb75021f825ed7413f7ce19567482cf4f219d5f2493cb5e8b59df7efccc51ef",
+        "baseline_probe_seed": 1713,
+        "baseline_top10": 0.16255746775702837,
+        "bootstrap_count": 10000,
+        "bootstrap_engine": "numpy_multinomial",
+        "bootstrap_seed": 20260603,
+        "confidence_level": 0.95,
+        "decision_point_lower_delta": -0.04878148012531022,
+        "decision_point_mean_delta": -0.04467228121567191,
+        "decision_point_upper_delta": -0.040644452581471986,
+        "gate": "S6_composition_residual",
+        "hand_count": 10000,
+        "layer": "encoder_layer_2",
+        "lower_delta": -0.06385999999999999,
+        "mean_delta": -0.05877146825396825,
+        "model_family": "limit_ar_range_supervised_4layer",
+        "opponent_hand_supervised": true,
+        "paired_outcomes": {
+          "baseline_only_correct": 6269,
+          "both_correct": 1722,
+          "both_wrong": 37094,
+          "residual_only_correct": 4073
+        },
+        "real_top10": 0.11788518654135645,
+        "resampling_unit": "hand_id",
+        "residual_checksum": "8e79d0b5b2c21913170905d98619d8a0d6ad68dc6fcb2bb62b5cb51f7eea55b1",
+        "residual_correctness_sha256": "daf8e88df2778d756a84f7c69a905a4db94074c887075b5949920e0916904524",
+        "residual_probe_seed": 1715,
+        "sample_count": 49158,
+        "seed": "seed_f",
+        "supervision_status": "legacy_teacher_range_supervision_inferred",
+        "train_checksum": "75d18d2e0ec41fc1cc22b20bf6fa1b8f116596543c9e491ebef06b55f952d466",
+        "unique_value_count": 43,
+        "upper_delta": -0.053744246031746025
+      },
+      {
+        "baseline_checksum": "9039f507abba474c106663d918563ddb643a72472941029918261cef17a8ea8e",
+        "baseline_correctness_sha256": "1cb75021f825ed7413f7ce19567482cf4f219d5f2493cb5e8b59df7efccc51ef",
+        "baseline_probe_seed": 1713,
+        "baseline_top10": 0.16255746775702837,
+        "bootstrap_count": 10000,
+        "bootstrap_engine": "numpy_multinomial",
+        "bootstrap_seed": 20260603,
+        "bucket_count": 146,
+        "bucket_source": "train_config",
+        "confidence_level": 0.95,
+        "decision_point_lower_delta": -1.0,
+        "decision_point_mean_delta": -0.04467228121567191,
+        "decision_point_upper_delta": 1.0,
+        "dropped_fraction": 0.0,
+        "dropped_point_count": 0,
+        "gate": "S7_matched_composition",
+        "hand_count": 10000,
+        "layer": "encoder_layer_2",
+        "lower_delta": -0.08418631395339288,
+        "matched_bucket_count": 146,
+        "mean_delta": -0.06749893038509344,
+        "model_family": "limit_ar_range_supervised_4layer",
+        "opponent_hand_supervised": true,
+        "paired_outcomes": {
+          "baseline_only_correct": 6269,
+          "both_correct": 1722,
+          "both_wrong": 37094,
+          "residual_only_correct": 4073
+        },
+        "real_top10": 0.11788518654135645,
+        "resampling_unit": "matched_composition_bucket",
+        "residual_checksum": "8e79d0b5b2c21913170905d98619d8a0d6ad68dc6fcb2bb62b5cb51f7eea55b1",
+        "residual_correctness_sha256": "daf8e88df2778d756a84f7c69a905a4db94074c887075b5949920e0916904524",
+        "residual_probe_seed": 1715,
+        "sample_count": 49158,
+        "seed": "seed_f",
+        "singleton_bucket_count": 0,
+        "supervision_status": "legacy_teacher_range_supervision_inferred",
+        "train_checksum": "75d18d2e0ec41fc1cc22b20bf6fa1b8f116596543c9e491ebef06b55f952d466",
+        "unique_value_count": 117,
+        "upper_delta": -0.05177372573568932
+      },
+      {
+        "baseline_checksum": "d752a2ad3b3cca77ae66f7c955f4bf88e99433b2a3882cbaa74c71febd102f68",
+        "baseline_correctness_sha256": "b0931e249c8ded452c95752294ef0650a5f014660f5ff91a4526ed3f6615ba2b",
+        "baseline_probe_seed": 277,
+        "baseline_top10": 0.1317632211049139,
+        "bootstrap_count": 10000,
+        "bootstrap_engine": "numpy_multinomial",
+        "bootstrap_seed": 20260603,
+        "confidence_level": 0.95,
+        "decision_point_lower_delta": 0.005719985343809795,
+        "decision_point_mean_delta": 0.009526523633106704,
+        "decision_point_upper_delta": 0.013373773561861335,
+        "gate": "S5_action_value_residual",
+        "hand_count": 10000,
+        "layer": "encoder_layer_2",
+        "lower_delta": -0.00035115079365079325,
+        "mean_delta": 0.00421936507936508,
+        "model_family": "limit_ar_range_supervised_4layer",
+        "opponent_hand_supervised": true,
+        "paired_outcomes": {
+          "baseline_only_correct": 4413,
+          "both_correct": 2060,
+          "both_wrong": 37772,
+          "residual_only_correct": 4881
+        },
+        "real_top10": 0.1412897447380206,
+        "resampling_unit": "hand_id",
+        "residual_checksum": "841ccafcb80d5babad99d12f165d4bb40b93cad5ff6004e0b10c320ddba60401",
+        "residual_correctness_sha256": "584afa872090b43e17c05a25174dd9583adac2071f0585c95317711a7e5527ef",
+        "residual_probe_seed": 277,
+        "sample_count": 49126,
+        "seed": "seed_g",
+        "supervision_status": "legacy_teacher_range_supervision_inferred",
+        "train_checksum": "aafe0050654de7a75cef71ee5676b237fdaf2a0222a2acb5facef3e054fe4eca",
+        "unique_value_count": 41,
+        "upper_delta": 0.008705833333333331
+      },
+      {
+        "baseline_checksum": "99c8126321704031285c4b1604da70fbeb9718844e940165d6673a807d9c4dab",
+        "baseline_correctness_sha256": "0c346cc3e1d9b1fde8d16961d178160e6fa14072e9f0d1edc5619156ec935e4a",
+        "baseline_probe_seed": 1723,
+        "baseline_top10": 0.16396612791597118,
+        "bootstrap_count": 10000,
+        "bootstrap_engine": "numpy_multinomial",
+        "bootstrap_seed": 20260603,
+        "confidence_level": 0.95,
+        "decision_point_lower_delta": -0.05569352277816228,
+        "decision_point_mean_delta": -0.05168342629157676,
+        "decision_point_upper_delta": -0.04767332980499125,
+        "gate": "S6_composition_residual",
+        "hand_count": 10000,
+        "layer": "encoder_layer_2",
+        "lower_delta": -0.07110984126984128,
+        "mean_delta": -0.06601253968253969,
+        "model_family": "limit_ar_range_supervised_4layer",
+        "opponent_hand_supervised": true,
+        "paired_outcomes": {
+          "baseline_only_correct": 6464,
+          "both_correct": 1591,
+          "both_wrong": 37146,
+          "residual_only_correct": 3925
+        },
+        "real_top10": 0.11228270162439441,
+        "resampling_unit": "hand_id",
+        "residual_checksum": "75aeb2170f4031d5759f49c26a6efe9ac5dfc1c5ea1e6c302ceba3bcf302e818",
+        "residual_correctness_sha256": "80bfe75402cd4d6438c8b773c4039f3392963f388197c13f3825088437818b73",
+        "residual_probe_seed": 1725,
+        "sample_count": 49126,
+        "seed": "seed_g",
+        "supervision_status": "legacy_teacher_range_supervision_inferred",
+        "train_checksum": "aafe0050654de7a75cef71ee5676b237fdaf2a0222a2acb5facef3e054fe4eca",
+        "unique_value_count": 41,
+        "upper_delta": -0.060949325396825405
+      },
+      {
+        "baseline_checksum": "99c8126321704031285c4b1604da70fbeb9718844e940165d6673a807d9c4dab",
+        "baseline_correctness_sha256": "0c346cc3e1d9b1fde8d16961d178160e6fa14072e9f0d1edc5619156ec935e4a",
+        "baseline_probe_seed": 1723,
+        "baseline_top10": 0.16396612791597118,
+        "bootstrap_count": 10000,
+        "bootstrap_engine": "numpy_multinomial",
+        "bootstrap_seed": 20260603,
+        "bucket_count": 146,
+        "bucket_source": "train_config",
+        "confidence_level": 0.95,
+        "decision_point_lower_delta": -1.0,
+        "decision_point_mean_delta": -0.05168342629157676,
+        "decision_point_upper_delta": 1.0,
+        "dropped_fraction": 0.0,
+        "dropped_point_count": 0,
+        "gate": "S7_matched_composition",
+        "hand_count": 10000,
+        "layer": "encoder_layer_2",
+        "lower_delta": -0.09340187030361204,
+        "matched_bucket_count": 146,
+        "mean_delta": -0.0740441119180205,
+        "model_family": "limit_ar_range_supervised_4layer",
+        "opponent_hand_supervised": true,
+        "paired_outcomes": {
+          "baseline_only_correct": 6464,
+          "both_correct": 1591,
+          "both_wrong": 37146,
+          "residual_only_correct": 3925
+        },
+        "real_top10": 0.11228270162439441,
+        "resampling_unit": "matched_composition_bucket",
+        "residual_checksum": "75aeb2170f4031d5759f49c26a6efe9ac5dfc1c5ea1e6c302ceba3bcf302e818",
+        "residual_correctness_sha256": "80bfe75402cd4d6438c8b773c4039f3392963f388197c13f3825088437818b73",
+        "residual_probe_seed": 1725,
+        "sample_count": 49126,
+        "seed": "seed_g",
+        "singleton_bucket_count": 0,
+        "supervision_status": "legacy_teacher_range_supervision_inferred",
+        "train_checksum": "aafe0050654de7a75cef71ee5676b237fdaf2a0222a2acb5facef3e054fe4eca",
+        "unique_value_count": 120,
+        "upper_delta": -0.05557729255645537
+      }
+    ],
+    "s5_min_lower_delta": -0.00035115079365079325,
+    "s6_min_lower_delta": -0.07110984126984128,
+    "s7_min_lower_delta": -0.09340187030361204,
+    "seed_count": 3,
+    "version": "1.17"
+  },
+  "synthetic_oracle_belief": [
+    {
+      "cases": [
+        {
+          "final_diagnostic_label": "belief_like_oracle_supported",
+          "mode": "oracle_belief",
+          "order_counterfactual_summary": {
+            "mean_posterior_js": 0.46187633282616897,
+            "mean_representation_js": 0.46187633282616897,
+            "pair_count": 4096,
+            "posterior_representation_correlation": 1.0000000000000002
+          },
+          "summary": {
+            "mean_posterior_js": 0.046896487992061385,
+            "mean_representation_js": 0.046896487992061385,
+            "non_final_transition_count": 2048,
+            "posterior_representation_correlation": 1.0,
+            "transition_count": 2560
+          }
+        },
+        {
+          "final_diagnostic_label": "composition_shortcut_supported",
+          "mode": "composition_shortcut",
+          "order_counterfactual_summary": {
+            "mean_posterior_js": 0.46187633282616897,
+            "mean_representation_js": 0.0,
+            "pair_count": 4096,
+            "posterior_representation_correlation": null
+          },
+          "summary": {
+            "mean_posterior_js": 0.046896487992061385,
+            "mean_representation_js": 0.19371807551967676,
+            "non_final_transition_count": 2048,
+            "posterior_representation_correlation": 0.13709986524676046,
+            "transition_count": 2560
+          }
+        }
+      ],
+      "checksum": "a44d30de787b6c3fd59f24d52e0d0293a086eed13043e897345eecedee770294",
+      "emission_mode": "position_dependent_order_sensitive",
+      "length": 6,
+      "max_order_pairs": 4096,
+      "observations": [
+        "x",
+        "y",
+        "z"
+      ],
+      "report_type": "synthetic_oracle_belief",
+      "seed": 20260602,
+      "sequence_count": 512,
+      "states": [
+        "A",
+        "B",
+        "C"
+      ],
+      "version": "1.7"
+    }
+  ],
+  "toy_imperfect_info_oracle": [
+    {
+      "cases": [
+        {
+          "final_diagnostic_label": "belief_like_oracle_supported",
+          "mode": "oracle_belief",
+          "order_counterfactual_summary": {
+            "mean_posterior_js": 0.3828322186581969,
+            "mean_representation_js": 0.3828322186581969,
+            "pair_count": 512,
+            "posterior_representation_correlation": 1.0000000000000002
+          },
+          "summary": {
+            "mean_posterior_js": 0.05166687653547463,
+            "mean_representation_js": 0.05166687653547463,
+            "non_final_transition_count": 768,
+            "posterior_representation_correlation": 1.0,
+            "transition_count": 1024
+          }
+        },
+        {
+          "final_diagnostic_label": "composition_shortcut_supported",
+          "mode": "composition_shortcut",
+          "order_counterfactual_summary": {
+            "mean_posterior_js": 0.3828322186581969,
+            "mean_representation_js": 0.0,
+            "pair_count": 512,
+            "posterior_representation_correlation": null
+          },
+          "summary": {
+            "mean_posterior_js": 0.05166687653547463,
+            "mean_representation_js": 0.13627304207029947,
+            "non_final_transition_count": 768,
+            "posterior_representation_correlation": 0.1760093983021495,
+            "transition_count": 1024
+          }
+        }
+      ],
+      "checksum": "94650576c5d7f2848fe74e2c3ed331e26bcd95591d498c829f6f00cf8f38e09f",
+      "claim_scope": "methodology_validation_only_not_poker_evidence",
+      "emission_mode": "toy_imperfect_information_position_dependent",
+      "length": 5,
+      "max_order_pairs": 512,
+      "report_type": "toy_imperfect_info_oracle",
+      "seed": 20260602,
+      "sequence_count": 256,
+      "signals": [
+        "quiet",
+        "probe",
+        "push"
+      ],
+      "states": [
+        "low",
+        "mid",
+        "high"
+      ],
+      "version": "1.15"
+    }
+  ]
+}

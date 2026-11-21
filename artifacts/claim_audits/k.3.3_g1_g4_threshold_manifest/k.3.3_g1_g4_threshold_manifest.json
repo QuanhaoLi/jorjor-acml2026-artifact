@@ -1,0 +1,62 @@
+{
+  "belief_report_checksum": "997802eebc4c36457454a79b353563db0b90415548e8d298f03f8728d54e18f8",
+  "belief_report_path": "outputs/inspect/belief_shortcut_report.json",
+  "checksum": "64a3f033b279bfaf8987f5b0bdcb7d61d6d7dd280ca98e59b1bf71a239de23cd",
+  "gate_count": 4,
+  "gates": [
+    {
+      "ci_or_permutation_rule": "Use paired/bucket bootstrap CI when archived; otherwise mark descriptive.",
+      "claim_if_fail": "No basis for later belief-vs-shortcut gates.",
+      "claim_if_pass": "Hidden states carry range-correlated information.",
+      "gate_id": "G1",
+      "gate_name": "naive probe positivity",
+      "observed_status": "positive_intermediate_layer_signal",
+      "pass_rule": "Pass if locked-layer or predeclared layer probe is above the stated prior baseline.",
+      "source_artifact": "checkpoints/remote_archive/v100s/881534f/outputs/tables/limit_ar_no_range_fresh50_control_pack.json",
+      "statistic": "positive intermediate-layer range probe",
+      "threshold": "delta > 0"
+    },
+    {
+      "ci_or_permutation_rule": "Permutation label controls plus positive minimum delta.",
+      "claim_if_fail": "Do not interpret probe signal as semantic range evidence.",
+      "claim_if_pass": "Probe signal is not explained by trivial label permutation artifact.",
+      "gate_id": "G2",
+      "gate_name": "label permutation control",
+      "observed_status": "passes",
+      "observed_value": 0.04433797299861908,
+      "pass_rule": "Pass if real-label delta is positive against global and within-bucket shuffled labels.",
+      "source_artifact": "checkpoints/remote_archive/v100s/881534f/outputs/tables/limit_ar_no_range_fresh50_control_pack.json",
+      "statistic": "real labels minus shuffled labels",
+      "threshold": "min_delta > 0"
+    },
+    {
+      "ci_or_permutation_rule": "Paired bootstrap CI over hands or matched buckets.",
+      "claim_if_fail": "Restrict claim to static prior/action-position information.",
+      "claim_if_pass": "The signal is history-associated rather than only a fixed prior.",
+      "gate_id": "G3",
+      "gate_name": "no-observation/prior control",
+      "observed_status": "passes",
+      "observed_value": 0.0021144841269841353,
+      "pass_rule": "Pass if ordered-history row beats no-observation or round-position-action prior with lower CI above zero.",
+      "source_artifact": "checkpoints/remote_archive/v100s/1d9574f/outputs/tables/limit_ar_no_range_history_composition_pack.json",
+      "statistic": "ordered history signal above prior/action-position baselines",
+      "threshold": "lower_delta > 0"
+    },
+    {
+      "ci_or_permutation_rule": "Paired bootstrap CI over hand ids.",
+      "claim_if_fail": "Do not claim history-driven evidence.",
+      "claim_if_pass": "The signal depends on history availability.",
+      "gate_id": "G4",
+      "gate_name": "history destruction control",
+      "observed_status": "passes",
+      "observed_value": 0.0013276587301587284,
+      "pass_rule": "Pass if normal history beats drop/shuffle/bagged controls with lower CI above zero.",
+      "source_artifact": "checkpoints/remote_archive/v100s/881534f/outputs/tables/limit_ar_no_range_fresh50_control_pack.json",
+      "statistic": "normal history minus destroyed history",
+      "threshold": "lower_delta > 0"
+    }
+  ],
+  "paper_use": "appendix protocol manifest and one-command reproduction manifest input",
+  "report_type": "k.3.3_g1_g4_threshold_manifest",
+  "version": "k.3.3"
+}

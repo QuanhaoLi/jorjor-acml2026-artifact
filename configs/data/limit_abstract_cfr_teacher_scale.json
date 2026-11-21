@@ -1,0 +1,9 @@
+{
+  "artifact_dir": "outputs/limit_abstract_cfr_teacher_scale",
+  "deal_sample_count": 120,
+  "evaluation_hand_count": 2000,
+  "hand_count": 500,
+  "iteration_count": 80,
+  "run_version": "0.6.2",
+  "seed": 181
+}

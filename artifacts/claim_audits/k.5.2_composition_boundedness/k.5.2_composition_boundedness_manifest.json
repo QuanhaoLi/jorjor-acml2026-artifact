@@ -1,0 +1,27 @@
+{
+  "archive_root": "checkpoints/remote_archive/v100s/2dfcb42",
+  "batch_size": 512,
+  "bootstrap_count": 1000,
+  "bootstrap_seed": 20260610,
+  "claim_scope": "poker_composition_boundedness_with_range_label_proxy_not_exact_oracle_posterior",
+  "composition_report_path": "outputs/k/k.3.1_composition_feature_sensitivity/k.3.1_composition_feature_sensitivity_report.json",
+  "expected_outputs": [
+    "k.5.2_composition_boundedness_report.json",
+    "k.5.2_composition_boundedness_report.md",
+    "k.5.2_composition_boundedness_manifest.json"
+  ],
+  "final_diagnostic_label": "composition_bounded_supported",
+  "matched_report_path": "outputs/inspect/matched_composition_report.json",
+  "max_pairs_per_bucket": 64,
+  "max_test_points": null,
+  "one_command_reproduction": ".venv/bin/python scripts/build_composition_boundedness_report.py --matched-report outputs/inspect/matched_composition_report.json --composition-report outputs/k/k.3.1_composition_feature_sensitivity/k.3.1_composition_feature_sensitivity_report.json --archive-root checkpoints/remote_archive/v100s/2dfcb42 --output-dir outputs/k/k.5.2_composition_boundedness --bootstrap-count 1000 --bootstrap-seed 20260610 --batch-size 512 --max-pairs-per-bucket 64 --seed-names seed_k seed_l seed_m",
+  "output_dir": "outputs/k/k.5.2_composition_boundedness",
+  "report_checksum": "0cac73232bc07954381e350d877ab5d005769387d21c225c90cd44904ce0ed8d",
+  "report_type": "k.5.2_composition_boundedness_manifest",
+  "seed_names": [
+    "seed_k",
+    "seed_l",
+    "seed_m"
+  ],
+  "version": "k.5.2"
+}

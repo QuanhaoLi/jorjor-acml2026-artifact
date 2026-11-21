@@ -1,0 +1,21 @@
+{
+  "_header": {},
+  "artifact_dir": "outputs/probes/limit_ar_teacher_range_smoke",
+  "batch_size": 64,
+  "checkpoint_path": "outputs/limit_ar_teacher_smoke_saved/model.pt",
+  "control_seed": 157,
+  "device": "cpu",
+  "epochs": 3,
+  "input_control": "none",
+  "layers": [
+    "embedding_final",
+    "encoder_layer_0",
+    "sequence_hidden"
+  ],
+  "learning_rate": 0.02,
+  "probe_seed": 151,
+  "random_label_control": true,
+  "run_version": "0.7.0-smoke",
+  "target": "opponent_hand",
+  "train_config": "configs/train/limit_ar_teacher_smoke_saved.json"
+}

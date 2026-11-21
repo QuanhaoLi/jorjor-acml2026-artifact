@@ -1,0 +1,106 @@
+{
+  "checksum": "641bb38a631268c4d3d1e7c7b2ebb7c569831a8c7c3e4a2e5749345aad22071b",
+  "claim_scope": "diagnostic_interpretation_not_ordered_belief",
+  "final_label": "cbps_supported",
+  "forbidden_claim": "The no-range poker AR model has ordered opponent-belief tracking.",
+  "gaps": [],
+  "git_commit": "3474759",
+  "output_contract": [
+    "k.5.3_cbps_claim_ladder.json",
+    "k.5.3_cbps_claim_ladder.md",
+    "k.5.3_cbps_manifest.json",
+    "paper_table_cbps_claim_ladder.md"
+  ],
+  "paper_safe_claim": "Positive hidden-state range probes are insufficient evidence for ordered belief tracking. For the no-range poker AR row, the best-supported diagnostic interpretation is composition-bounded predictive support: behavior prediction is positive, while strict matched-composition gates block an ordered-belief claim.",
+  "report_type": "k.5.3_cbps_claim_ladder",
+  "rows": [
+    {
+      "allowed_claim": "The audit can distinguish posterior, composition, and CBPS known states in a synthetic control.",
+      "capacity_sensitivity": "not_applicable",
+      "claim_scope": "diagnostic_label_validation",
+      "composition_bounded_gate": "cbps_supported",
+      "domain": "synthetic_latent_order",
+      "final_label": "synthetic_cbps_control_passed",
+      "label_artifact_gate": "not_applicable",
+      "latent_probe_gate": "cbps_supported",
+      "matched_range_label_proxy_gate": "not_applicable_exact_synthetic_posterior_available",
+      "model_or_state": "posterior/composition/CBPS known states",
+      "predictive_gate": "passed",
+      "supervision": "analytic known-control"
+    },
+    {
+      "allowed_claim": "The no-range poker AR row is behavior-predictive but composition-bounded under the locked audit.",
+      "capacity_sensitivity": "mlp_inconclusive",
+      "claim_scope": "diagnostic_interpretation_not_ordered_belief",
+      "composition_bounded_gate": "composition_bounded_supported",
+      "domain": "limit_holdem",
+      "final_label": "cbps_supported",
+      "label_artifact_gate": "passed_from_prior_gates",
+      "latent_probe_gate": "positive_before_strict_composition_gates",
+      "matched_range_label_proxy_gate": "range_label_proxy_tracking_not_supported",
+      "model_or_state": "no-range 4-layer AR, seeds k/l/m",
+      "oracle_positive_control": "poker_oracle_gate_accepts_ordered_target",
+      "predictive_gate": "predictive_supported",
+      "supervision": "action/value only"
+    }
+  ],
+  "sources": {
+    "capacity_report": {
+      "path": "outputs/k/k.2.3_strict_tables/probe_capacity_s6_s7_report.json",
+      "present": true,
+      "required": false,
+      "role": "capacity_report",
+      "sha256": "3ae076d89259a64ec43c4d4d719c2195269c08df6e8d578b98c85afdca835c08",
+      "size_bytes": 16535
+    },
+    "composition_boundedness_report": {
+      "path": "outputs/k/k.5.2_composition_boundedness/k.5.2_composition_boundedness_report.json",
+      "present": true,
+      "required": true,
+      "role": "k.5.2_composition_boundedness_report.json",
+      "sha256": "e4cdcb668f5939e07e7ffbb07dffdf4d612792b13ee4547723a1c7342fdc9025",
+      "size_bytes": 12976
+    },
+    "composition_sensitivity_report": {
+      "path": "outputs/k/k.3.1_composition_feature_sensitivity/k.3.1_composition_feature_sensitivity_report.json",
+      "present": true,
+      "required": false,
+      "role": "composition_sensitivity_report",
+      "sha256": "73201bae8d6c0cab61900c931bc866b3b12b21390f037571a7f4102daa366dac",
+      "size_bytes": 2238
+    },
+    "poker_oracle_report": {
+      "path": "outputs/k/k.3.0_poker_oracle_positive_control/k.3.0_poker_oracle_positive_control_report.json",
+      "present": true,
+      "required": false,
+      "role": "poker_oracle_report",
+      "sha256": "8c348f9e80c7f56c509e8b2f36b64950dd6afbadbdea949bf0980d1e03a9c99f",
+      "size_bytes": 2946
+    },
+    "predictive_link_report": {
+      "path": "outputs/k/k.5.1_full_poker_predictive_link/k.5.1_poker_predictive_link_report.json",
+      "present": true,
+      "required": true,
+      "role": "k.5.1_poker_predictive_link_report.json",
+      "sha256": "c87a6b0cbff7cc773611a5660421acbf920ecfa8482565f084317c00dc4728f5",
+      "size_bytes": 19053
+    },
+    "synthetic_cbps_report": {
+      "path": "outputs/k/k.5.0_synthetic_cbps_control/k.5.0_synthetic_cbps_report.json",
+      "present": true,
+      "required": true,
+      "role": "k.5.0_synthetic_cbps_report.json",
+      "sha256": "3659c81eb0e00ddb4824f885a348dbc85974b6f3b6ad3f395547a353a33bace2",
+      "size_bytes": 9635
+    },
+    "threshold_manifest": {
+      "path": "outputs/k/k.3.3_g1_g4_threshold_manifest/k.3.3_g1_g4_threshold_manifest.json",
+      "present": true,
+      "required": false,
+      "role": "threshold_manifest",
+      "sha256": "8aade96fc80668fb4d8956a0fb0ce6b3bd2cb35fd211d99da5decbf3018e2dde",
+      "size_bytes": 3480
+    }
+  },
+  "version": "k.5.3"
+}

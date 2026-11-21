@@ -1,0 +1,296 @@
+{
+  "aggregate": {
+    "label_counts": {
+      "range_subspace_behavior_footprint_not_supported": 3
+    },
+    "metrics": {
+      "probe_top10_accuracy": {
+        "mean": 0.12538886070251465,
+        "seed_ci": {
+          "lower_delta": 0.12354486435651779,
+          "mean_delta": 0.12538886070251465,
+          "upper_delta": 0.1284867376089096
+        }
+      },
+      "random_ablation_policy_js_mean": {
+        "mean": 0.004285645247681764,
+        "seed_ci": {
+          "lower_delta": 0.0030340195775765805,
+          "mean_delta": 0.004285645247681764,
+          "upper_delta": 0.006088125871391337
+        }
+      },
+      "random_ablation_value_abs_delta_mean": {
+        "mean": 0.19311063797307723,
+        "seed_ci": {
+          "lower_delta": 0.17278224106631893,
+          "mean_delta": 0.19311063797307723,
+          "upper_delta": 0.2190387308157621
+        }
+      },
+      "range_ablation_policy_js": {
+        "mean": 0.00021381500676568934,
+        "seed_ci": {
+          "lower_delta": 0.00016428381781302668,
+          "mean_delta": 0.00021381500676568934,
+          "upper_delta": 0.000309810963902377
+        }
+      },
+      "range_ablation_value_abs_delta": {
+        "mean": 0.028981879102028884,
+        "seed_ci": {
+          "lower_delta": 0.016982007256614185,
+          "mean_delta": 0.028981879102028884,
+          "upper_delta": 0.04468262121838005
+        }
+      },
+      "range_minus_random_policy_js_delta": {
+        "mean": -0.004071830240916046,
+        "seed_ci": {
+          "lower_delta": -0.005778314907488907,
+          "mean_delta": -0.004071830240916046,
+          "upper_delta": -0.0028666693389949234
+        }
+      },
+      "range_minus_random_value_delta": {
+        "mean": -0.16412875887104836,
+        "seed_ci": {
+          "lower_delta": -0.20205672355914794,
+          "mean_delta": -0.16412875887104836,
+          "upper_delta": -0.14282832081877064
+        }
+      }
+    },
+    "seed_count": 3
+  },
+  "allowed_paper_claim": "Top range-probe subspace ablation can be compared with same-rank random subspace ablation as a behavior-footprint stress test. It is not a causal mediation proof.",
+  "archive_root": "checkpoints/remote_archive/v100s/2dfcb42",
+  "batch_size": 512,
+  "bootstrap_count": 1000,
+  "bootstrap_seed": 20260610,
+  "checksum": "35cb7ca973e31f6e318a1211aeea4473957cd3a46bfd23856e80903dbec8045c",
+  "claim_scope": "range_probe_subspace_behavior_footprint_stress_not_causal_mediation",
+  "confidence_level": 0.95,
+  "device": "cpu",
+  "final_diagnostic_label": "range_subspace_behavior_footprint_not_supported",
+  "forbidden_paper_claim": "This subspace ablation proves the range-correlated hidden directions causally drive policy.",
+  "locked_layer": "sequence_hidden",
+  "max_subspace_rank": 16,
+  "max_test_points": null,
+  "max_train_points": 30000,
+  "probe_epochs": 20,
+  "probe_learning_rate": 0.01,
+  "probe_top10_floor": 0.08,
+  "random_subspace_count": 8,
+  "report_type": "k.6.3_range_subspace_ablation",
+  "rows": [
+    {
+      "checkpoint_load_info": {
+        "checkpoint_embedding_compat": false,
+        "checkpoint_embedding_rows": 185,
+        "model_embedding_rows": 185
+      },
+      "checkpoint_path": "checkpoints/remote_archive/v100s/2dfcb42/outputs/limit_ar_action_value_only_seed_k_50k_4layer/model.pt",
+      "checkpoint_sha256": "f7538bd7c09929b754de06738479d87bb3eaa646cca14ad4523f8dbbefa39376",
+      "final_diagnostic_label": "range_subspace_behavior_footprint_not_supported",
+      "locked_layer": "sequence_hidden",
+      "max_subspace_rank": 16,
+      "probe_full_row_rank": 96,
+      "probe_top10_accuracy": 0.12354486435651779,
+      "probe_top10_floor": 0.08,
+      "probe_top_singular_values": [
+        25.011852264404297,
+        9.255892753601074,
+        8.592353820800781,
+        7.435057163238525,
+        7.071035385131836,
+        6.552074909210205,
+        6.277872562408447,
+        5.9307732582092285,
+        5.482539653778076,
+        5.185632705688477,
+        5.033374786376953,
+        4.790920734405518,
+        4.464345455169678,
+        4.313207149505615,
+        4.1578874588012695,
+        3.9575517177581787
+      ],
+      "random_subspace_count": 8,
+      "seed": "seed_k",
+      "subspace_rank": 16,
+      "summary": {
+        "random_ablation_policy_argmax_changed_rate_mean": 0.013007780921584479,
+        "random_ablation_policy_js_max": 0.007546323094872014,
+        "random_ablation_policy_js_mean": 0.003734790294077375,
+        "random_ablation_policy_js_min": 0.0014553805441445786,
+        "random_ablation_value_abs_delta_max": 0.2539332881843161,
+        "random_ablation_value_abs_delta_mean": 0.18751094203715069,
+        "random_ablation_value_abs_delta_min": 0.09627748700449802,
+        "range_ablation_policy_argmax_changed_rate": 0.0022837510105092967,
+        "range_ablation_policy_js": 0.00016428381781302668,
+        "range_ablation_value_abs_delta": 0.04468262121838005,
+        "range_minus_random_policy_changed_delta_ci": {
+          "lower_delta": -0.011393492320129345,
+          "mean_delta": -0.010724029911075182,
+          "upper_delta": -0.010054567502021019
+        },
+        "range_minus_random_policy_js_delta_ci": {
+          "lower_delta": -0.0035846533741474406,
+          "mean_delta": -0.003570506476264309,
+          "upper_delta": -0.0035559066175646268
+        },
+        "range_minus_random_value_delta_ci": {
+          "lower_delta": -0.1434963838051654,
+          "mean_delta": -0.14282832081877064,
+          "upper_delta": -0.14219385813872282
+        }
+      },
+      "test_points": 49480,
+      "train_config_path": "configs/train/limit_ar_action_value_only_seed_k_50k_4layer.json",
+      "train_config_sha256": "e0fcb9cff00ff9a3d2f057d352ad8d47e2083112190c7100644828e3182b5f66",
+      "train_points": 30000
+    },
+    {
+      "checkpoint_load_info": {
+        "checkpoint_embedding_compat": false,
+        "checkpoint_embedding_rows": 185,
+        "model_embedding_rows": 185
+      },
+      "checkpoint_path": "checkpoints/remote_archive/v100s/2dfcb42/outputs/limit_ar_action_value_only_seed_l_50k_4layer/model.pt",
+      "checkpoint_sha256": "e90a135e2d007088f8547b71dec72c8db3d37a494e5a789ad4adbdf7ea9d15b7",
+      "final_diagnostic_label": "range_subspace_behavior_footprint_not_supported",
+      "locked_layer": "sequence_hidden",
+      "max_subspace_rank": 16,
+      "probe_full_row_rank": 96,
+      "probe_top10_accuracy": 0.1284867376089096,
+      "probe_top10_floor": 0.08,
+      "probe_top_singular_values": [
+        29.200496673583984,
+        8.972067832946777,
+        7.768674373626709,
+        7.018845081329346,
+        6.98046350479126,
+        6.5184783935546875,
+        6.260395526885986,
+        6.171262264251709,
+        5.569217205047607,
+        5.240286350250244,
+        4.886053562164307,
+        4.656351089477539,
+        4.347131252288818,
+        4.213529586791992,
+        4.055434703826904,
+        3.888939380645752
+      ],
+      "random_subspace_count": 8,
+      "seed": "seed_l",
+      "subspace_rank": 16,
+      "summary": {
+        "random_ablation_policy_argmax_changed_rate_mean": 0.03891246092005359,
+        "random_ablation_policy_js_max": 0.01708625414019621,
+        "random_ablation_policy_js_mean": 0.006088125871391337,
+        "random_ablation_policy_js_min": 0.0009051148858365403,
+        "random_ablation_value_abs_delta_max": 0.2629092343052043,
+        "random_ablation_value_abs_delta_mean": 0.17278224106631893,
+        "random_ablation_value_abs_delta_min": 0.12954468778315084,
+        "range_ablation_policy_argmax_changed_rate": 0.008628040115311219,
+        "range_ablation_policy_js": 0.000309810963902377,
+        "range_ablation_value_abs_delta": 0.025281008831092418,
+        "range_minus_random_policy_changed_delta_ci": {
+          "lower_delta": -0.031421291972877505,
+          "mean_delta": -0.030284420804742376,
+          "upper_delta": -0.0292642819440497
+        },
+        "range_minus_random_policy_js_delta_ci": {
+          "lower_delta": -0.005804735434992399,
+          "mean_delta": -0.005778314907488907,
+          "upper_delta": -0.005750022365213364
+        },
+        "range_minus_random_value_delta_ci": {
+          "lower_delta": -0.14820876150301657,
+          "mean_delta": -0.1475012322352265,
+          "upper_delta": -0.14678641372415818
+        }
+      },
+      "test_points": 49258,
+      "train_config_path": "configs/train/limit_ar_action_value_only_seed_l_50k_4layer.json",
+      "train_config_sha256": "bd388e4bf883cfafc98893a56ebf4f52675ed692576ede813b3aa3230390fbc0",
+      "train_points": 30000
+    },
+    {
+      "checkpoint_load_info": {
+        "checkpoint_embedding_compat": false,
+        "checkpoint_embedding_rows": 185,
+        "model_embedding_rows": 185
+      },
+      "checkpoint_path": "checkpoints/remote_archive/v100s/2dfcb42/outputs/limit_ar_action_value_only_seed_m_50k_4layer/model.pt",
+      "checkpoint_sha256": "ff22975f8ebf4f137034992d7a3ff6f8a0cfb5c7e00870c9edb74a983cf850d1",
+      "final_diagnostic_label": "range_subspace_behavior_footprint_not_supported",
+      "locked_layer": "sequence_hidden",
+      "max_subspace_rank": 16,
+      "probe_full_row_rank": 96,
+      "probe_top10_accuracy": 0.12413498014211655,
+      "probe_top10_floor": 0.08,
+      "probe_top_singular_values": [
+        29.220457077026367,
+        9.28137493133545,
+        8.448407173156738,
+        7.414453983306885,
+        7.082913875579834,
+        6.606013298034668,
+        5.9513726234436035,
+        5.763375282287598,
+        5.7057881355285645,
+        5.393247604370117,
+        5.097747802734375,
+        4.94285774230957,
+        4.751594066619873,
+        4.581097602844238,
+        4.072390079498291,
+        3.991959571838379
+      ],
+      "random_subspace_count": 8,
+      "seed": "seed_m",
+      "subspace_rank": 16,
+      "summary": {
+        "random_ablation_policy_argmax_changed_rate_mean": 0.0191397663437271,
+        "random_ablation_policy_js_max": 0.005803162945759662,
+        "random_ablation_policy_js_mean": 0.00303401957757658,
+        "random_ablation_policy_js_min": 0.0013769494991805822,
+        "random_ablation_value_abs_delta_max": 0.2758811211924984,
+        "random_ablation_value_abs_delta_mean": 0.21903873081576214,
+        "random_ablation_value_abs_delta_min": 0.17503185426429235,
+        "range_ablation_policy_argmax_changed_rate": 0.007876740210046406,
+        "range_ablation_policy_js": 0.00016735023858166436,
+        "range_ablation_value_abs_delta": 0.016982007256614185,
+        "range_minus_random_policy_changed_delta_ci": {
+          "lower_delta": -0.012082247822193276,
+          "mean_delta": -0.011263026133680697,
+          "upper_delta": -0.010525217780672474
+        },
+        "range_minus_random_policy_js_delta_ci": {
+          "lower_delta": -0.0028878616258359606,
+          "mean_delta": -0.0028666693389949234,
+          "upper_delta": -0.0028485824290859973
+        },
+        "range_minus_random_value_delta_ci": {
+          "lower_delta": -0.20306244389599865,
+          "mean_delta": -0.20205672355914794,
+          "upper_delta": -0.20092642248366793
+        }
+      },
+      "test_points": 49132,
+      "train_config_path": "configs/train/limit_ar_action_value_only_seed_m_50k_4layer.json",
+      "train_config_sha256": "7ebfa4da517382bd29c83d6d5ef3eff7824aae8995cd0807901155286ac94188",
+      "train_points": 30000
+    }
+  ],
+  "seed_names": [
+    "seed_k",
+    "seed_l",
+    "seed_m"
+  ],
+  "train_config_dir": "configs/train",
+  "version": "k.6.3"
+}

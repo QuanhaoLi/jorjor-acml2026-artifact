@@ -1,0 +1,107 @@
+{
+  "checksum": "3a4b982e6309e93136e011293dac406f584cc892de8d6368639de382bac8eb10",
+  "figure_id": "Figure 3",
+  "metric": "top10_correct_delta",
+  "rows": [
+    {
+      "ci_lower": 0.008763730158730155,
+      "ci_upper": 0.017700476190476194,
+      "claim_gate": "composition_nuisance:ordered_residual_vs_action_value",
+      "color": "#3972b8",
+      "comparison": "ordered residual vs action/value",
+      "delta": 0.013215833333333359,
+      "layer": "encoder_layer_2",
+      "layer_role": "locked_candidate",
+      "seed": "seed_k"
+    },
+    {
+      "ci_lower": 0.022743809523809517,
+      "ci_upper": 0.033565000000000005,
+      "claim_gate": "composition_nuisance:action_value_composition_only_vs_action_value",
+      "color": "#d07a24",
+      "comparison": "action/value+composition vs action/value",
+      "delta": 0.02816063492063491,
+      "layer": "nuisance",
+      "layer_role": "nuisance_baseline",
+      "seed": "seed_k"
+    },
+    {
+      "ci_lower": -0.0648413888888889,
+      "ci_upper": -0.05420944444444444,
+      "claim_gate": "composition_nuisance:composition_residual_vs_action_value_composition",
+      "color": "#8f4ca6",
+      "comparison": "residual vs action/value+composition",
+      "delta": -0.05881972222222232,
+      "layer": "encoder_layer_2",
+      "layer_role": "locked_candidate",
+      "seed": "seed_k"
+    },
+    {
+      "ci_lower": -0.003296349206349196,
+      "ci_upper": 0.006614365079365069,
+      "claim_gate": "composition_nuisance:ordered_residual_vs_action_value",
+      "color": "#3972b8",
+      "comparison": "ordered residual vs action/value",
+      "delta": 0.001843928571428576,
+      "layer": "encoder_layer_2",
+      "layer_role": "locked_candidate",
+      "seed": "seed_l"
+    },
+    {
+      "ci_lower": 0.02268742063492064,
+      "ci_upper": 0.03152742063492064,
+      "claim_gate": "composition_nuisance:action_value_composition_only_vs_action_value",
+      "color": "#d07a24",
+      "comparison": "action/value+composition vs action/value",
+      "delta": 0.027355912698412692,
+      "layer": "nuisance",
+      "layer_role": "nuisance_baseline",
+      "seed": "seed_l"
+    },
+    {
+      "ci_lower": -0.06668083333333333,
+      "ci_upper": -0.055650674603174625,
+      "claim_gate": "composition_nuisance:composition_residual_vs_action_value_composition",
+      "color": "#8f4ca6",
+      "comparison": "residual vs action/value+composition",
+      "delta": -0.060874365079364987,
+      "layer": "encoder_layer_2",
+      "layer_role": "locked_candidate",
+      "seed": "seed_l"
+    },
+    {
+      "ci_lower": 0.0012528571428571326,
+      "ci_upper": 0.011241349206349201,
+      "claim_gate": "composition_nuisance:ordered_residual_vs_action_value",
+      "color": "#3972b8",
+      "comparison": "ordered residual vs action/value",
+      "delta": 0.006416587301587335,
+      "layer": "encoder_layer_2",
+      "layer_role": "locked_candidate",
+      "seed": "seed_m"
+    },
+    {
+      "ci_lower": 0.020861507936507935,
+      "ci_upper": 0.030928333333333332,
+      "claim_gate": "composition_nuisance:action_value_composition_only_vs_action_value",
+      "color": "#d07a24",
+      "comparison": "action/value+composition vs action/value",
+      "delta": 0.02622892857142848,
+      "layer": "nuisance",
+      "layer_role": "nuisance_baseline",
+      "seed": "seed_m"
+    },
+    {
+      "ci_lower": -0.07210480158730159,
+      "ci_upper": -0.06180571428571429,
+      "claim_gate": "composition_nuisance:composition_residual_vs_action_value_composition",
+      "color": "#8f4ca6",
+      "comparison": "residual vs action/value+composition",
+      "delta": -0.06681821428571436,
+      "layer": "encoder_layer_2",
+      "layer_role": "locked_candidate",
+      "seed": "seed_m"
+    }
+  ],
+  "title": "Composition gate per seed"
+}

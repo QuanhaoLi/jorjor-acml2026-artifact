@@ -1,0 +1,56 @@
+{
+  "checksum": "e9bb0bcabf0037aec3db295ac83eebbc00d537334eff0c1d93094077f63e71a0",
+  "figure_id": "Figure 5",
+  "metric": "order_counterfactual_js",
+  "rows": [
+    {
+      "diagnosis": "belief_like_oracle_supported",
+      "mode": "oracle_belief",
+      "posterior_js": 0.46187633282616897,
+      "representation_js": 0.46187633282616897,
+      "setting": "analytic ordered",
+      "source": "analytic"
+    },
+    {
+      "diagnosis": "composition_shortcut_supported",
+      "mode": "composition_shortcut",
+      "posterior_js": 0.46187633282616897,
+      "representation_js": 0.0,
+      "setting": "analytic shortcut",
+      "source": "analytic"
+    },
+    {
+      "diagnosis": "belief_like_oracle_supported",
+      "mode": "ordered_belief_ar",
+      "posterior_js": 0.46246365307401965,
+      "representation_js": 0.46246365307401954,
+      "setting": "learned ordered",
+      "source": "learned"
+    },
+    {
+      "diagnosis": "composition_shortcut_supported",
+      "mode": "composition_biased_ar",
+      "posterior_js": 0.46246365307401965,
+      "representation_js": 0.0,
+      "setting": "learned shortcut",
+      "source": "learned"
+    },
+    {
+      "diagnosis": "belief_like_oracle_supported",
+      "mode": "oracle_belief",
+      "posterior_js": 0.3828322186581969,
+      "representation_js": 0.3828322186581969,
+      "setting": "toy ordered",
+      "source": "toy"
+    },
+    {
+      "diagnosis": "composition_shortcut_supported",
+      "mode": "composition_shortcut",
+      "posterior_js": 0.3828322186581969,
+      "representation_js": 0.0,
+      "setting": "toy shortcut",
+      "source": "toy"
+    }
+  ],
+  "title": "Oracle validation ordered vs shortcut"
+}

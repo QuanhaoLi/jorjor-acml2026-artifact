@@ -1,0 +1,18 @@
+{
+  "run_version": "0.2.3",
+  "train_config": "configs/train/leduc_tiny_teacher_10k.json",
+  "checkpoint_path": "outputs/leduc_tiny_teacher_10k/model.pt",
+  "artifact_dir": "outputs/probes/leduc_tiny_teacher_value",
+  "target": "value",
+  "layers": [
+    "embedding_pool",
+    "body_hidden"
+  ],
+  "probe_seed": 71,
+  "control_seed": 73,
+  "epochs": 20,
+  "learning_rate": 0.01,
+  "batch_size": 512,
+  "device": "auto",
+  "random_label_control": true
+}

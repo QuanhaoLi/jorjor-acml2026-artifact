@@ -1,0 +1,8 @@
+{
+  "artifact_dir": "outputs/leduc_cfr_teacher_smoke",
+  "evaluation_hand_count": 500,
+  "hand_count": 100,
+  "iteration_count": 200,
+  "run_version": "0.5.0",
+  "seed": 149
+}

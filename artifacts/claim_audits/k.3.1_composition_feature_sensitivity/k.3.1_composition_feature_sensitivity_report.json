@@ -1,0 +1,47 @@
+{
+  "belief_report_checksum": "997802eebc4c36457454a79b353563db0b90415548e8d298f03f8728d54e18f8",
+  "belief_report_path": "outputs/inspect/belief_shortcut_report.json",
+  "checksum": "176ea22e75ecba83c3f9b2d5ad603b2582c9069dffa462cf7b340f088743d65b",
+  "final_diagnostic_label": "full_composition_only_blocks",
+  "interpretation": "Only the full visible-history composition gate is decisive; weaker variants are proxy confounds.",
+  "matched_report_checksum": "5119135bf1e832dd1fc6a467e727073ea870a5c21e4320dceee809f0c8eecd06",
+  "matched_report_path": "outputs/inspect/matched_composition_report.json",
+  "report_type": "k.3.1_composition_feature_sensitivity",
+  "rows": [
+    {
+      "definition": "history length + action counts + last action",
+      "evidence_type": "proxy_confound_positive",
+      "gate_label": "visible_shortcut_proxy_positive",
+      "lower_delta": 0.0021144841269841353,
+      "mean_delta": 0.0021144841269841353,
+      "paper_use": "appendix sensitivity only; not a decisive residual block",
+      "source_metric": "presence_last_action_min_lower_delta",
+      "upper_delta": null,
+      "variant": "C_min"
+    },
+    {
+      "definition": "C_min + acting player, round, legal actions, action label, and value bucket",
+      "evidence_type": "proxy_confound_positive",
+      "gate_label": "visible_shortcut_proxy_positive",
+      "lower_delta": 0.021482023809523812,
+      "mean_delta": 0.021482023809523812,
+      "paper_use": "appendix sensitivity only; not a decisive residual block",
+      "source_metric": "action_value_composition_min_lower_delta",
+      "upper_delta": null,
+      "variant": "C_mid"
+    },
+    {
+      "definition": "full matched visible-history composition used by the main S6/S7 gate",
+      "evidence_type": "decisive_residual_block",
+      "gate_label": "composition_shortcut_supported",
+      "lower_delta": -0.09394764581772785,
+      "mean_delta": -0.05236912806317674,
+      "paper_use": "main-text decisive gate for no-range AR shortcut diagnosis",
+      "source_metric": "matched_composition_min_bucket_bootstrap_lower_delta",
+      "upper_delta": -0.04544155627213806,
+      "variant": "C_full"
+    }
+  ],
+  "variant_count": 3,
+  "version": "k.3.1"
+}

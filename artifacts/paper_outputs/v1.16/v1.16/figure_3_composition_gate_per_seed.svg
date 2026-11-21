@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="580" viewBox="0 0 1180 580" role="img">
+<title>Composition gate per seed</title>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<style>text{font-family:Arial,Helvetica,sans-serif;letter-spacing:0}.title{font-size:24px;font-weight:700;fill:#1f1f1f}</style>
+<line x1="86.0" y1="78.0" x2="86.0" y2="450.0" stroke="#333333" stroke-width="1.5"/>
+<line x1="86.0" y1="450.0" x2="1100.0" y2="450.0" stroke="#333333" stroke-width="1.5"/>
+<line x1="86.0" y1="207.4" x2="1100.0" y2="207.4" stroke="#222222" stroke-width="1.5"/>
+<line x1="86.0" y1="450.0" x2="1100.0" y2="450.0" stroke="#e0e0e0" stroke-width="1.0"/>
+<text x="28.0" y="454.0" font-size="12" text-anchor="start" fill="#555555">-0.075</text>
+<line x1="86.0" y1="369.1" x2="1100.0" y2="369.1" stroke="#e0e0e0" stroke-width="1.0"/>
+<text x="28.0" y="373.1" font-size="12" text-anchor="start" fill="#555555">-0.050</text>
+<line x1="86.0" y1="288.3" x2="1100.0" y2="288.3" stroke="#e0e0e0" stroke-width="1.0"/>
+<text x="28.0" y="292.3" font-size="12" text-anchor="start" fill="#555555">-0.025</text>
+<line x1="86.0" y1="207.4" x2="1100.0" y2="207.4" stroke="#e0e0e0" stroke-width="1.0"/>
+<text x="28.0" y="211.4" font-size="12" text-anchor="start" fill="#555555">+0.000</text>
+<line x1="86.0" y1="126.5" x2="1100.0" y2="126.5" stroke="#e0e0e0" stroke-width="1.0"/>
+<text x="28.0" y="130.5" font-size="12" text-anchor="start" fill="#555555">+0.025</text>
+<rect x="154.0" y="164.6" width="54.0" height="42.8" fill="#3972b8" opacity="1.000"/>
+<line x1="181.0" y1="179.0" x2="181.0" y2="150.1" stroke="#222222" stroke-width="1.6"/>
+<line x1="173.0" y1="179.0" x2="189.0" y2="179.0" stroke="#222222" stroke-width="1.6"/>
+<line x1="173.0" y1="150.1" x2="189.0" y2="150.1" stroke="#222222" stroke-width="1.6"/>
+<rect x="228.0" y="116.3" width="54.0" height="91.1" fill="#d07a24" opacity="1.000"/>
+<line x1="255.0" y1="133.8" x2="255.0" y2="98.8" stroke="#222222" stroke-width="1.6"/>
+<line x1="247.0" y1="133.8" x2="263.0" y2="133.8" stroke="#222222" stroke-width="1.6"/>
+<line x1="247.0" y1="98.8" x2="263.0" y2="98.8" stroke="#222222" stroke-width="1.6"/>
+<rect x="302.0" y="207.4" width="54.0" height="190.3" fill="#8f4ca6" opacity="1.000"/>
+<line x1="329.0" y1="417.1" x2="329.0" y2="382.7" stroke="#222222" stroke-width="1.6"/>
+<line x1="321.0" y1="417.1" x2="337.0" y2="417.1" stroke="#222222" stroke-width="1.6"/>
+<line x1="321.0" y1="382.7" x2="337.0" y2="382.7" stroke="#222222" stroke-width="1.6"/>
+<text x="255.0" y="508.0" font-size="14" text-anchor="middle" fill="#222222">seed_k</text>
+<rect x="492.0" y="201.4" width="54.0" height="6.0" fill="#3972b8" opacity="1.000"/>
+<line x1="519.0" y1="218.1" x2="519.0" y2="186.0" stroke="#222222" stroke-width="1.6"/>
+<line x1="511.0" y1="218.1" x2="527.0" y2="218.1" stroke="#222222" stroke-width="1.6"/>
+<line x1="511.0" y1="186.0" x2="527.0" y2="186.0" stroke="#222222" stroke-width="1.6"/>
+<rect x="566.0" y="118.9" width="54.0" height="88.5" fill="#d07a24" opacity="1.000"/>
+<line x1="593.0" y1="134.0" x2="593.0" y2="105.4" stroke="#222222" stroke-width="1.6"/>
+<line x1="585.0" y1="134.0" x2="601.0" y2="134.0" stroke="#222222" stroke-width="1.6"/>
+<line x1="585.0" y1="105.4" x2="601.0" y2="105.4" stroke="#222222" stroke-width="1.6"/>
+<rect x="640.0" y="207.4" width="54.0" height="196.9" fill="#8f4ca6" opacity="1.000"/>
+<line x1="667.0" y1="423.1" x2="667.0" y2="387.4" stroke="#222222" stroke-width="1.6"/>
+<line x1="659.0" y1="423.1" x2="675.0" y2="423.1" stroke="#222222" stroke-width="1.6"/>
+<line x1="659.0" y1="387.4" x2="675.0" y2="387.4" stroke="#222222" stroke-width="1.6"/>
+<text x="593.0" y="508.0" font-size="14" text-anchor="middle" fill="#222222">seed_l</text>
+<rect x="830.0" y="186.6" width="54.0" height="20.8" fill="#3972b8" opacity="1.000"/>
+<line x1="857.0" y1="203.3" x2="857.0" y2="171.0" stroke="#222222" stroke-width="1.6"/>
+<line x1="849.0" y1="203.3" x2="865.0" y2="203.3" stroke="#222222" stroke-width="1.6"/>
+<line x1="849.0" y1="171.0" x2="865.0" y2="171.0" stroke="#222222" stroke-width="1.6"/>
+<rect x="904.0" y="122.5" width="54.0" height="84.8" fill="#d07a24" opacity="1.000"/>
+<line x1="931.0" y1="139.9" x2="931.0" y2="107.3" stroke="#222222" stroke-width="1.6"/>
+<line x1="923.0" y1="139.9" x2="939.0" y2="139.9" stroke="#222222" stroke-width="1.6"/>
+<line x1="923.0" y1="107.3" x2="939.0" y2="107.3" stroke="#222222" stroke-width="1.6"/>
+<rect x="978.0" y="207.4" width="54.0" height="216.1" fill="#8f4ca6" opacity="1.000"/>
+<line x1="1005.0" y1="440.6" x2="1005.0" y2="407.3" stroke="#222222" stroke-width="1.6"/>
+<line x1="997.0" y1="440.6" x2="1013.0" y2="440.6" stroke="#222222" stroke-width="1.6"/>
+<line x1="997.0" y1="407.3" x2="1013.0" y2="407.3" stroke="#222222" stroke-width="1.6"/>
+<text x="931.0" y="508.0" font-size="14" text-anchor="middle" fill="#222222">seed_m</text>
+<rect x="690.0" y="61.0" width="14.0" height="14.0" fill="#3972b8" opacity="1.000"/>
+<text x="712.0" y="72.0" font-size="12" text-anchor="start" fill="#333333">ordered residual vs action/value</text>
+<rect x="690.0" y="83.0" width="14.0" height="14.0" fill="#d07a24" opacity="1.000"/>
+<text x="712.0" y="94.0" font-size="12" text-anchor="start" fill="#333333">action/value+composition vs action/value</text>
+<rect x="690.0" y="105.0" width="14.0" height="14.0" fill="#8f4ca6" opacity="1.000"/>
+<text x="712.0" y="116.0" font-size="12" text-anchor="start" fill="#333333">residual vs action/value+composition</text>
+<text x="34.0" y="42.0" font-size="24" text-anchor="start" fill="#222222" class="title">Composition gate per seed</text>
+<text x="86.0" y="542.0" font-size="13" text-anchor="start" fill="#555555">Delta top10 with confidence intervals; main rows use locked encoder_layer_2 where applicable.</text>
+</svg>

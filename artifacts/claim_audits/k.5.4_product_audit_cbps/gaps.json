@@ -1,0 +1,10 @@
+{
+  "gaps": [
+    "optional order-counterfactual report is missing",
+    "optional prefix trajectory report is missing",
+    "optional prefix composition baseline report is missing",
+    "optional synthetic oracle-belief validation report is missing",
+    "optional learned synthetic belief validation report is missing",
+    "optional explicit belief-state validation report is missing"
+  ]
+}

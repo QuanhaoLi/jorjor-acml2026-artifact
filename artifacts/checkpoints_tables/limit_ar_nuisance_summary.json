@@ -1,0 +1,68 @@
+{
+  "base_range_commits": {
+    "seed_a": "ff94fab",
+    "seed_b": "3239624",
+    "seed_c": "3239624"
+  },
+  "full_control_commit": "349304c",
+  "history_control_commit": "cc431cf",
+  "rows": [
+    {
+      "checksums": {
+        "full_action_value_only": "18b5ec3af775390c4fef2d9b880f818600294f664aa04cce5780984bca193d34",
+        "full_hidden": "4e5c6ff77c0abe598f85a430b4b9e9c3f1f2d0df8dfb37acf556d520823a8107",
+        "full_residualize_action_value": "d15b913535ec1945eb8cd4742e2e993be3dcc4f5f37f2a57c5811981689aa402",
+        "history_only_action_value_only": "c8b9e78435769b94351669f7cf5d1064235cfa782e3e9c41b3d6708363c3b75f",
+        "history_only_hidden": "cf60eeb3b0c9f2f8894d5345241b442f006e33142295ba7e20b46ee18f276431",
+        "history_only_residualize_action_value": "5a6bcae130867b1702106a9103a3869f688fda561be1c70a0624548c6edab399"
+      },
+      "full_action_value_only_top10": 0.13394799828529358,
+      "full_hidden_top10": 0.14451465010643005,
+      "full_residual_delta_vs_only": 0.01833626627922058,
+      "full_residualize_action_value_top10": 0.15228426456451416,
+      "history_only_action_value_only_top10": 0.13052937388420105,
+      "history_only_hidden_top10": 0.14596498012542725,
+      "history_only_residual_delta_vs_only": 0.013985276222229004,
+      "history_only_residualize_action_value_top10": 0.14451465010643005,
+      "seed": "seed_a"
+    },
+    {
+      "checksums": {
+        "full_action_value_only": "a0696c93ade55f8ee59325577addb70d2a2a616697400e405d42c5007e0f9a50",
+        "full_hidden": "8ec28cf49e5fd9470b42649c843605129e0d2172291fbaf0e5e2e545ed1d9cd9",
+        "full_residualize_action_value": "ea2735554bf2f978858358ab0ee0721b03c724248fe1b9b23237582aada5071e",
+        "history_only_action_value_only": "547e47e70d1da39515ffdde207350ecaf893562581fed1414a5784ee9c90e723",
+        "history_only_hidden": "7e530fda95a4eaf8c75cb30e6bb12e43c3d86310571cb1f56b5d34fdb8c6a61c",
+        "history_only_residualize_action_value": "58b5041edb68e7c17c4330bd6512550e209e26f4547bfa74b0a666339776de5a"
+      },
+      "full_action_value_only_top10": 0.12888844311237335,
+      "full_hidden_top10": 0.13851453363895416,
+      "full_residual_delta_vs_only": 0.0170229971408844,
+      "full_residualize_action_value_top10": 0.14591144025325775,
+      "history_only_action_value_only_top10": 0.1324348896741867,
+      "history_only_hidden_top10": 0.1381092220544815,
+      "history_only_residual_delta_vs_only": 0.01408451795578003,
+      "history_only_residualize_action_value_top10": 0.14651940762996674,
+      "seed": "seed_b"
+    },
+    {
+      "checksums": {
+        "full_action_value_only": "a39c0fc42c20be3e94fe6e0e6bc4b7ac71f83ced46b0ac2076519a2b54f87502",
+        "full_hidden": "60442dcaba56df325c499b6167f7394637207a3110e0a22597fd26db4cbb4c17",
+        "full_residualize_action_value": "cb6fa4d31c54151d2dd54c5f596b398fb96d9c6952eb6a66f0f39e9befff40aa",
+        "history_only_action_value_only": "78f99b4631da1a66da1f32ed7a416aca6b5ca925761a60fcf352c0e1727cb4f8",
+        "history_only_hidden": "da26f7f21af60f239c0eee6f66f88cd507e2ba4c2585b113c3421bcc5705e75a",
+        "history_only_residualize_action_value": "ad5f284255861f3ce53a002c1b969a778a5d97dc7ce983f5040b80a760359bfc"
+      },
+      "full_action_value_only_top10": 0.13012315332889557,
+      "full_hidden_top10": 0.1322430819272995,
+      "full_residual_delta_vs_only": 0.009792044758796692,
+      "full_residualize_action_value_top10": 0.13991519808769226,
+      "history_only_action_value_only_top10": 0.12971936166286469,
+      "history_only_hidden_top10": 0.14284272491931915,
+      "history_only_residual_delta_vs_only": 0.009489193558692932,
+      "history_only_residualize_action_value_top10": 0.13920855522155762,
+      "seed": "seed_c"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "artifact_dir": "outputs/limit_ar_teacher_seed_c_10k",
+  "batch_size": 512,
+  "data_seed": 79,
+  "data_source": "teacher",
+  "device": "auto",
+  "epochs": 6,
+  "hand_count": 10000,
+  "hidden_size": 64,
+  "learning_rate": 0.003,
+  "num_heads": 4,
+  "num_layers": 1,
+  "run_version": "0.4.13",
+  "save_model": true,
+  "seed": 107,
+  "split_seed": 97,
+  "test_fraction": 0.2,
+  "train_fraction": 0.6,
+  "validation_fraction": 0.2
+}

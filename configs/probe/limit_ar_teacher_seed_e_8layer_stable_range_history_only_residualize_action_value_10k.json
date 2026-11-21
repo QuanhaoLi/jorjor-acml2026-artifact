@@ -1,0 +1,29 @@
+{
+  "_header": {},
+  "artifact_dir": "outputs/probes/limit_ar_teacher_seed_e_8layer_stable_range_history_only_residualize_action_value_10k",
+  "batch_size": 512,
+  "checkpoint_path": "outputs/limit_ar_teacher_seed_e_10k_8layer_stable/model.pt",
+  "control_seed": 251,
+  "device": "auto",
+  "epochs": 20,
+  "feature_control": "residualize_action_value",
+  "input_control": "history_only",
+  "layers": [
+    "embedding_final",
+    "encoder_layer_0",
+    "encoder_layer_1",
+    "encoder_layer_2",
+    "encoder_layer_3",
+    "encoder_layer_4",
+    "encoder_layer_5",
+    "encoder_layer_6",
+    "encoder_layer_7",
+    "sequence_hidden"
+  ],
+  "learning_rate": 0.02,
+  "probe_seed": 257,
+  "random_label_control": true,
+  "run_version": "0.9.2",
+  "target": "opponent_hand",
+  "train_config": "configs/train/limit_ar_teacher_seed_e_10k_8layer_stable.json"
+}

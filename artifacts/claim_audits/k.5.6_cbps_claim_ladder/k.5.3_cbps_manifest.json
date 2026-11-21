@@ -1,0 +1,35 @@
+{
+  "claim_scope": "diagnostic_interpretation_not_ordered_belief",
+  "final_label": "cbps_supported",
+  "input_report_paths": {
+    "behavior_link_report": "outputs/k/k.5.5_representation_behavior_link/k.5.5_representation_behavior_link_report.json",
+    "capacity_report": "outputs/k/k.2.3_strict_tables/probe_capacity_s6_s7_report.json",
+    "composition_boundedness_report": "outputs/k/k.5.2_composition_boundedness/k.5.2_composition_boundedness_report.json",
+    "composition_sensitivity_report": "outputs/k/k.3.1_composition_feature_sensitivity/k.3.1_composition_feature_sensitivity_report.json",
+    "poker_oracle_report": "outputs/k/k.3.0_poker_oracle_positive_control/k.3.0_poker_oracle_positive_control_report.json",
+    "predictive_link_report": "outputs/k/k.5.1_full_poker_predictive_link/k.5.1_poker_predictive_link_report.json",
+    "synthetic_cbps_report": "outputs/k/k.5.0_synthetic_cbps_control/k.5.0_synthetic_cbps_report.json",
+    "threshold_manifest": "outputs/k/k.3.3_g1_g4_threshold_manifest/k.3.3_g1_g4_threshold_manifest.json"
+  },
+  "input_sha256": {
+    "behavior_link_report": "c741c3ddd4a03edf7f96bf1775bdfe79438ef54027d1c3e3e11cac762cf26721",
+    "capacity_report": "3ae076d89259a64ec43c4d4d719c2195269c08df6e8d578b98c85afdca835c08",
+    "composition_boundedness_report": "e4cdcb668f5939e07e7ffbb07dffdf4d612792b13ee4547723a1c7342fdc9025",
+    "composition_sensitivity_report": "73201bae8d6c0cab61900c931bc866b3b12b21390f037571a7f4102daa366dac",
+    "poker_oracle_report": "8c348f9e80c7f56c509e8b2f36b64950dd6afbadbdea949bf0980d1e03a9c99f",
+    "predictive_link_report": "c87a6b0cbff7cc773611a5660421acbf920ecfa8482565f084317c00dc4728f5",
+    "synthetic_cbps_report": "3659c81eb0e00ddb4824f885a348dbc85974b6f3b6ad3f395547a353a33bace2",
+    "threshold_manifest": "8aade96fc80668fb4d8956a0fb0ce6b3bd2cb35fd211d99da5decbf3018e2dde"
+  },
+  "one_command_reproduction": "see scripts/build_cbps_claim_ladder.py --help for all optional inputs",
+  "output_dir": "outputs/k/k.5.6_cbps_claim_ladder",
+  "output_paths": [
+    "k.5.3_cbps_claim_ladder.json",
+    "k.5.3_cbps_claim_ladder.md",
+    "k.5.3_cbps_manifest.json",
+    "paper_table_cbps_claim_ladder.md"
+  ],
+  "output_sha256": "e95d7bef664f8dc1bfaac86a78763ab14d72cf6221d4e0651e325bf009cf21e0",
+  "report_type": "k.5.3_cbps_manifest",
+  "version": "k.5.6"
+}

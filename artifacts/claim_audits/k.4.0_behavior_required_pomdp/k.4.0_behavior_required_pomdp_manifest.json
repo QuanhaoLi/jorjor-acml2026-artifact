@@ -1,0 +1,27 @@
+{
+  "behavior_only_partial_support": true,
+  "case_labels": {
+    "behavior_only_gru_hidden_probe": "inconclusive",
+    "behavior_only_gru_q_head": "inconclusive",
+    "behavior_only_gru_q_probe": "inconclusive",
+    "composition_shortcut_state": "composition_shortcut_supported",
+    "oracle_posterior_state": "behavior_only_belief_like_supported"
+  },
+  "claim_scope": "behavior_only_belief_required_non_poker_positive_control_not_poker_claim_upgrade",
+  "one_command_reproduction": ".venv/bin/python scripts/build_behavior_required_pomdp_report.py --output-dir outputs/k/k.4.0_behavior_required_pomdp --length 6 --epochs 80 --hidden-size 48 --bootstrap-count 1000 --max-order-pairs 4096 --trajectory-min-posterior-js 0.02",
+  "output_dir": "outputs/k/k.4.0_behavior_required_pomdp",
+  "preflight": {
+    "behavior_disagreement_fraction": 0.703369140625,
+    "behavior_disagreement_threshold": 0.25,
+    "belief_required": true,
+    "composition_action_accuracy_upper_bound": 0.490234375,
+    "length": 6,
+    "matched_bucket_count": 25,
+    "matched_pair_count": 4096,
+    "mean_posterior_js": 0.5112950996327847,
+    "signal_probability": 0.76
+  },
+  "report_checksum": "c9565e3086a6bca51130ebae4098a4bd7cecde83b6bf6c6ee1d4f41a8a037d00",
+  "report_type": "k.4.0_behavior_required_pomdp_manifest",
+  "version": "k.4.0"
+}

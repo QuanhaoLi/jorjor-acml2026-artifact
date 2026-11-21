@@ -1,0 +1,101 @@
+{
+  "schema_version": "1.0",
+  "sources": [
+    {
+      "path": "outputs/inspect/belief_shortcut_report.json",
+      "present": true,
+      "required": true,
+      "role": "belief_shortcut_report.json",
+      "sha256": "997802eebc4c36457454a79b353563db0b90415548e8d298f03f8728d54e18f8",
+      "size_bytes": 2757
+    },
+    {
+      "path": "outputs/inspect/belief_shortcut_report.md",
+      "present": true,
+      "required": true,
+      "role": "belief_shortcut_report.md",
+      "sha256": "661859a2fbd15173eb035cd5030f295afb55f9949ddcff0c76019cb3741feec9",
+      "size_bytes": 1561
+    },
+    {
+      "path": "outputs/inspect/matched_composition_report.json",
+      "present": true,
+      "required": true,
+      "role": "matched_composition_report.json",
+      "sha256": "5119135bf1e832dd1fc6a467e727073ea870a5c21e4320dceee809f0c8eecd06",
+      "size_bytes": 2794
+    },
+    {
+      "path": "outputs/inspect/matched_composition_report.md",
+      "present": true,
+      "required": true,
+      "role": "matched_composition_report.md",
+      "sha256": "3489517c25db15d9217a4790d8fbc5cd3e0e836158890ac66ff200bc079b8ed1",
+      "size_bytes": 726
+    },
+    {
+      "path": "outputs/inspect/claim_gate_matrix.json",
+      "present": true,
+      "required": true,
+      "role": "claim_gate_matrix.json",
+      "sha256": "48bece990cb029ecd8fe615c9b09b80936a3bc9d7b961c5221a4c625f036e2ce",
+      "size_bytes": 1372
+    },
+    {
+      "path": "outputs/inspect/claim_gate_matrix.md",
+      "present": true,
+      "required": true,
+      "role": "claim_gate_matrix.md",
+      "sha256": "9e22eca52ee2d0850d1fd21a0eddf4429e31eae938cc5874e85b23ea637ff49e",
+      "size_bytes": 829
+    },
+    {
+      "path": "outputs/k/k.5.3_cbps_claim_ladder/k.5.3_cbps_claim_ladder.json",
+      "present": true,
+      "required": false,
+      "role": "cbps_claim_ladder",
+      "sha256": "3bf22d4970dc0a16b1ae06372771ad714b5402218d7d3a867b62b9d5e813d1cb",
+      "size_bytes": 4852
+    },
+    {
+      "path": "outputs/k/k.5.3_cbps_claim_ladder/k.5.3_cbps_claim_ladder.md",
+      "present": true,
+      "required": false,
+      "role": "cbps_claim_ladder_md",
+      "sha256": "fbc596e993661fa79869a8c0402777938532f1af0a28b584be2cdf16d86b4509",
+      "size_bytes": 1055
+    },
+    {
+      "path": "outputs/k/k.5.3_cbps_claim_ladder/k.5.3_cbps_manifest.json",
+      "present": true,
+      "required": false,
+      "role": "cbps_claim_ladder_manifest",
+      "sha256": "6cf2160e6eed134c038359610e750fa360f8c7afe46758ae9b40e290e7aec613",
+      "size_bytes": 2116
+    },
+    {
+      "path": "outputs/k/k.5.3_cbps_claim_ladder/paper_table_cbps_claim_ladder.md",
+      "present": true,
+      "required": false,
+      "role": "cbps_claim_ladder_paper_table",
+      "sha256": "946aa33839c5dc30b1354088eb14cd0ab3a29eba8c784d71b48821347ce57991",
+      "size_bytes": 633
+    },
+    {
+      "path": "outputs/k/k.2.3_strict_tables/limit_ar_range_supervised_positive_control_pack.json",
+      "present": true,
+      "required": false,
+      "role": "range_supervised_strict_gate",
+      "sha256": "bafcae1853cb08e1ed9f0ba5b355efd0b84672639cc81782f55495778a9b2cc8",
+      "size_bytes": 16188
+    },
+    {
+      "path": "outputs/k/k.2.3_strict_tables/probe_capacity_s6_s7_report.json",
+      "present": true,
+      "required": false,
+      "role": "probe_capacity_s6_s7",
+      "sha256": "3ae076d89259a64ec43c4d4d719c2195269c08df6e8d578b98c85afdca835c08",
+      "size_bytes": 16535
+    }
+  ]
+}

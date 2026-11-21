@@ -1,0 +1,14 @@
+{
+  "claim_scope": "rank_sensitivity_stress_not_causal_mediation",
+  "expected_outputs": [
+    "k.6.5_range_subspace_rank_sensitivity_report.json",
+    "k.6.5_range_subspace_rank_sensitivity_report.md",
+    "k.6.5_range_subspace_rank_sensitivity_manifest.json"
+  ],
+  "final_diagnostic_label": "range_subspace_rank_sensitivity_not_supported",
+  "one_command_reproduction": ".venv/bin/python scripts/build_range_subspace_rank_sensitivity_report.py --archive-root checkpoints/remote_archive/v100s/2dfcb42 --output-dir outputs/k/k.6.5_range_subspace_rank_sensitivity --bootstrap-count 1000 --bootstrap-seed 20260610 --batch-size 512 --locked-layer sequence_hidden --probe-epochs 20 --probe-learning-rate 0.01 --random-subspace-count 8 --probe-top10-floor 0.08 --max-train-points 30000 --rank-grid 1 2 4 8 16 32 --seed-names seed_k seed_l seed_m",
+  "output_dir": "outputs/k/k.6.5_range_subspace_rank_sensitivity",
+  "report_checksum": "0ee12bb04c902024a9df01e65406e98ad8d14f22c1ab43aacf6ae0c4c33f8c67",
+  "report_type": "k.6.5_range_subspace_rank_sensitivity_manifest",
+  "version": "k.6.5"
+}

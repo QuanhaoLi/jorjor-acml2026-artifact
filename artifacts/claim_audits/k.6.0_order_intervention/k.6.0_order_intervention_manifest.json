@@ -1,0 +1,14 @@
+{
+  "claim_scope": "input_level_order_stress_not_legal_poker_causality",
+  "expected_outputs": [
+    "k.6.0_order_intervention_report.json",
+    "k.6.0_order_intervention_report.md",
+    "k.6.0_order_intervention_manifest.json"
+  ],
+  "final_diagnostic_label": "order_sensitive_stress_supported",
+  "one_command_reproduction": ".venv/bin/python scripts/build_order_intervention_report.py --archive-root checkpoints/remote_archive/v100s/2dfcb42 --output-dir outputs/k/k.6.0_order_intervention --bootstrap-count 1000 --bootstrap-seed 20260610 --batch-size 512 --locked-layer encoder_layer_2 --min-pairs-for-label 100 --movement-epsilon 1e-06 --max-pairs 10000 --seed-names seed_k seed_l seed_m",
+  "output_dir": "outputs/k/k.6.0_order_intervention",
+  "report_checksum": "ed2f32b3e225637e7c0b21943e91e3012edcc25bf2d2ffa83c0ca966d7fdd7a4",
+  "report_type": "k.6.0_order_intervention_manifest",
+  "version": "k.6.0"
+}

@@ -1,0 +1,7 @@
+{
+  "artifact_dir": "outputs/limit_baseline_smoke",
+  "data_source": "teacher",
+  "hand_count": 100,
+  "run_version": "0.4.4",
+  "seed": 67
+}

@@ -1,0 +1,18 @@
+{
+  "run_version": "0.1.2",
+  "data_source": "random",
+  "seed": 23,
+  "data_seed": 11,
+  "split_seed": 19,
+  "hand_count": 40,
+  "artifact_dir": "outputs/leduc_tiny_smoke",
+  "train_fraction": 0.8,
+  "validation_fraction": 0.1,
+  "test_fraction": 0.1,
+  "epochs": 4,
+  "learning_rate": 0.01,
+  "hidden_size": 32,
+  "batch_size": 0,
+  "device": "cpu",
+  "save_model": true
+}

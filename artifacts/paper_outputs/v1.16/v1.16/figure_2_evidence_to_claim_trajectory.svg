@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="540" viewBox="0 0 1200 540" role="img">
+<title>Stronger gates change the supported claim</title>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<style>text{font-family:Arial,Helvetica,sans-serif;letter-spacing:0}.title{font-size:24px;font-weight:700;fill:#1f1f1f}</style>
+<rect x="90.0" y="236.0" width="1050.0" height="154.0" fill="#f5e8dd" opacity="0.750"/>
+<rect x="90.0" y="82.0" width="1050.0" height="154.0" fill="#e8f1fb" opacity="0.750"/>
+<line x1="90.0" y1="82.0" x2="90.0" y2="390.0" stroke="#333333" stroke-width="1.5"/>
+<line x1="90.0" y1="390.0" x2="1140.0" y2="390.0" stroke="#333333" stroke-width="1.5"/>
+<line x1="90.0" y1="107.7" x2="1140.0" y2="107.7" stroke="#d6d6d6" stroke-width="1.0"/>
+<text x="18.0" y="111.7" font-size="13" text-anchor="start" fill="#454545">belief-like signal</text>
+<line x1="90.0" y1="193.2" x2="1140.0" y2="193.2" stroke="#d6d6d6" stroke-width="1.0"/>
+<text x="18.0" y="197.2" font-size="13" text-anchor="start" fill="#454545">nuisance-controlled</text>
+<line x1="90.0" y1="278.8" x2="1140.0" y2="278.8" stroke="#d6d6d6" stroke-width="1.0"/>
+<text x="18.0" y="282.8" font-size="13" text-anchor="start" fill="#454545">weak order evidence</text>
+<line x1="90.0" y1="364.3" x2="1140.0" y2="364.3" stroke="#d6d6d6" stroke-width="1.0"/>
+<text x="18.0" y="368.3" font-size="13" text-anchor="start" fill="#454545">shortcut-supported</text>
+<path d="M 90.0 107.7 L 265.0 107.7 L 440.0 193.2 L 615.0 193.2 L 790.0 193.2 L 965.0 364.3 L 1140.0 364.3" fill="none" stroke="#2f5f9f" stroke-width="4" stroke-linecap="round"/>
+<circle cx="90.0" cy="107.7" r="8.0" fill="#2f5f9f"/>
+<text x="90.0" y="422.0" font-size="13" text-anchor="middle" fill="#222222">naive probe</text>
+<text x="90.0" y="462.0" font-size="11" text-anchor="middle" fill="#565656">positive_intermediate_layer_si</text>
+<circle cx="265.0" cy="107.7" r="8.0" fill="#2f5f9f"/>
+<text x="265.0" y="422.0" font-size="13" text-anchor="middle" fill="#222222">label control</text>
+<text x="265.0" y="462.0" font-size="11" text-anchor="middle" fill="#565656">passes</text>
+<text x="265.0" y="91.7" font-size="12" text-anchor="middle" fill="#222222">+0.044</text>
+<circle cx="440.0" cy="193.2" r="8.0" fill="#2f5f9f"/>
+<text x="440.0" y="422.0" font-size="13" text-anchor="middle" fill="#222222">no-observation</text>
+<text x="440.0" y="462.0" font-size="11" text-anchor="middle" fill="#565656">passes</text>
+<text x="440.0" y="177.2" font-size="12" text-anchor="middle" fill="#222222">+0.002</text>
+<circle cx="615.0" cy="193.2" r="8.0" fill="#2f5f9f"/>
+<text x="615.0" y="422.0" font-size="13" text-anchor="middle" fill="#222222"><tspan x="615.0" dy="0">history</tspan><tspan x="615.0" dy="16">destruction</tspan></text>
+<text x="615.0" y="462.0" font-size="11" text-anchor="middle" fill="#565656">passes</text>
+<text x="615.0" y="177.2" font-size="12" text-anchor="middle" fill="#222222">+0.001</text>
+<circle cx="790.0" cy="193.2" r="8.0" fill="#2f5f9f"/>
+<text x="790.0" y="422.0" font-size="13" text-anchor="middle" fill="#222222"><tspan x="790.0" dy="0">action/value</tspan><tspan x="790.0" dy="16">control</tspan></text>
+<text x="790.0" y="462.0" font-size="11" text-anchor="middle" fill="#565656">nuisance-controlled positive</text>
+<text x="790.0" y="177.2" font-size="12" text-anchor="middle" fill="#222222">+0.007</text>
+<circle cx="965.0" cy="364.3" r="8.0" fill="#2f5f9f"/>
+<text x="965.0" y="422.0" font-size="13" text-anchor="middle" fill="#222222"><tspan x="965.0" dy="0">composition</tspan><tspan x="965.0" dy="16">control</tspan></text>
+<text x="965.0" y="462.0" font-size="11" text-anchor="middle" fill="#565656">composition_shortcut_supported</text>
+<text x="965.0" y="389.3" font-size="12" text-anchor="middle" fill="#222222">-0.072</text>
+<circle cx="1140.0" cy="364.3" r="8.0" fill="#2f5f9f"/>
+<text x="1140.0" y="422.0" font-size="13" text-anchor="middle" fill="#222222">matched-composition</text>
+<text x="1140.0" y="462.0" font-size="11" text-anchor="middle" fill="#565656">composition_shortcut_supported</text>
+<text x="1140.0" y="389.3" font-size="12" text-anchor="middle" fill="#222222">-0.094</text>
+<text x="34.0" y="42.0" font-size="24" text-anchor="start" fill="#222222" class="title">Stronger gates change the supported claim</text>
+<text x="90.0" y="504.0" font-size="13" text-anchor="start" fill="#555555">Y axis: supported claim level; numeric gate metrics are attached to the JSON artifact.</text>
+</svg>
